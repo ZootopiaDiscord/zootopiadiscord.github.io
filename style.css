@@ -67,6 +67,56 @@ h1{
   background:rgba(255,255,255,0.4);
 }
 
+.channels table tr td:nth-child(odd){
+  width:160px;
+}
+.channels table tr td:nth-child(odd):before{
+  content:'# ';
+}
+
+.mods{
+  display:flex;
+  flex-wrap: wrap;
+}
+.mods h1{
+  flex-basis:100%;
+  margin-right:-5%;
+}
+.mod{
+  position:relative;
+  box-sizing: border-box;
+  margin:5px 5% 0 0;
+  font-size:0;
+}
+.mod img{
+  max-width:200px;
+  max-height:200px;
+}
+.mod h2{
+  box-sizing: border-box;
+  position:absolute;
+  margin:0;
+  padding:10px;
+  width:100%;
+  bottom:0%;
+  left:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,0) , rgba(0,0,0,0.66)); 
+  font-family: 'Roboto', sans-serif;
+  font-weight:100;
+  font-size:1.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor:default;
+}
+.update{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:25px;
+}
+
 .grey{background:rgba(46,49,54,0.75)}
 .green{background:rgba(63,73,69,0.75)}
 
