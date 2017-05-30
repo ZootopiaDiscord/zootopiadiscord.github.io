@@ -66,6 +66,21 @@ h1{
 .header-link:hover:before{
   background:rgba(255,255,255,0.4);
 }
+
+.bukoya{
+  position:fixed;
+  height:100%;
+  width:20%;
+  right:0;
+  pointer-events:none;
+  bottom:-3px;
+  opacity:0.33;
+  background:url("http://i.imgur.com/pauNFjf.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:bottom;
+}
+
 .rules ul{
   list-style:decimal;
   margin:0;
@@ -89,6 +104,7 @@ h1{
 .mods{
   display:flex;
   flex-wrap: wrap;
+  padding-bottom: 40px;
 }
 .mods h1{
   flex-basis:100%;
@@ -97,7 +113,7 @@ h1{
 .mod{
   position:relative;
   box-sizing: border-box;
-  margin:5px 5% 0 0;
+  margin:5px 40px 0 0;
   font-size:0;
 }
 .mod img{
