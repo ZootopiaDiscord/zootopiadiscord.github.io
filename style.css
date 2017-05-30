@@ -20,328 +20,61 @@ h1{
   padding-bottom:25px;
 }
 
-.grey{background:rgba(46,49,54,0.75)}
-.green{background:rgba(63,73,69,0.75)}
-
 .header{
-  height:25vh;                                                                  /*compatibility*/
-  height:25vmax;
-  padding:0;
-  
+  padding:5%;
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  background:url('img/header.jpg');
+  background-position:center;
+  background-size:cover;
+}
+.logo{
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-basis: 100%;
 }
-
-.header img{
-  z-index:10;
-  max-height:12.5vh;                                                            /*compatibility*/
-  max-height:10vmax;
-  max-width:80%;
-  pointer-events:none;
-}                                                                                                                            
-
-.header-background{
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background-size:cover !important;
-  background-position:center !important;
-  filter:brightness(0.5)grayscale(100%);
-  transition:200ms;
-}
-.header:hover .header-background{
-  filter:brightness(1)grayscale(0%);
-}
-.header:hover > .header-text{
-  transform:scale(1.5)rotate(-5deg);
-  opacity:0;
-  visibility:hidden;
-}
-.header-text{
-  z-index:10;
-  font-size:4vh;                                                                /*compatibility*/
-  font-size:3vmax;
-  pointer-events:none;
-  transition:200ms;
-}
-
-/*
-
-#header-TITLE .header-background{
-  background:url('URL');
-}
-
-*/
-
-
-#header-index .header-background{
-  background:url('http://i.imgur.com/HfS8my3.jpg');
-}
-#header-minecraft .header-background{
-  background:url('img/minecraft-background.jpg');
-}
-#header-events .header-background{
-  background:url('http://i.imgur.com/jJEXtu6.jpg');
-}
-#header-mods .header-background{
-  background:url('http://i.imgur.com/0mwE4c7.jpg');
-}
-
-.header-links{
-  z-index:20;
-  width:100%;
-  height:20%;
-  font-size:0;
-  background:rgba(255,255,255,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.logo img{
+  max-width:;
 }
 .header-link{
-  height:100%;
-  font-family: 'Shadows Into Light', cursive;
-  font-size:2rem;
-  font-weight:300;
-  text-align:center;
-  color:black;
-  text-decoration:none;
-  
+  z-index: 1;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: 33.33333%;
-}
-.header-link:hover{
-  background:rgba(255,255,255,0.5);
-}
-.header-link img{
-  max-height:50%;
-  max-width:50%;
-}
-
-.header-back{
-  z-index:20;
-  position:absolute;
-  left:0;
-  height:100%;
-  width:20%;
-  background: linear-gradient(to left, rgba(0,0,0,0.5) , rgba(0,0,0,0));
-  color:rgba(255,255,255,0.25);
-  text-decoration:none;
-  font-size:4rem;                                                               /*compatibility*/
-  font-size:4vmax;
-  transform:rotate(180deg);
-  
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-.header-back:hover{
-  background: linear-gradient(to left, rgba(0,0,0,0.55) , rgba(0,0,0,0));
-  color:rgba(255,255,255,1); 
-}
-
-.rules ul{
-  list-style:decimal;
-  margin:0;
-  padding-left:28px;
-}
-.rules ol{
-  list-style:lower-alpha; 
-  padding-left:28px;
-}
-.rules ul > li{
-  padding-bottom:15px;
-}
-
-.channels td:nth-child(odd){
-  width:160px;
-}
-.channels td:nth-child(odd):before{
-  content:"# ";
-}
-
-.bukoya{
-  position:fixed;
-  height:100%;
-  width:20%;
-  right:0;
-  pointer-events:none;
-  bottom:-3px;
-  opacity:0.33;
-  background:url("http://i.imgur.com/pauNFjf.png");
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:bottom;
-}
-
-.update{
-  padding:1%;
-  text-align:center;
-  font-size:0.75rem;
-}
-.people{
-  padding:0 25px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap:wrap;
-}
-.person{
-  display:inline-block;
-  margin:50px 25px;
+  margin:5% 2.5% 0 2.5%;
   width:200px;
+  height:100px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:100;
+  font-size:220%;
+  text-decoration: none;
+  color:black;
 }
-.person img{
+.header-link:before{
+  z-index: -1;
+  box-sizing: border-box;
+  position:absolute;
+  content:'';
   width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.25);
+  border:1px solid rgba(255,255,255,0.15);
+  transform:skew(-20deg);
 }
-.person li{
-  list-style:none;
-}
-.person li:nth-child(odd){
-  font-weight:700;
-  margin-top:20px;
-}
-
-/*
-.centered-header{
-  padding-top:25px;
-  text-align:center;
-}
-*/
-
-/* INDEX SPECIFIC */
-
-#header-index{  
-  display: flex;
-  justify-content: center;
-  align-items: initial;
-  flex-wrap:wrap;
+.header-link:hover:before{
+  background:rgba(255,255,255,0.4);
 }
 
-#header-index .header-background{
-  filter:brightness(1)grayscale(0%);
-}
-.tiles{
-  padding:50px;
-  max-width:1200px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap:wrap;
-}
-.tiles a{
-  width:250px;
-  height:175px;
-  margin:50px;
-  background:rgba(0,0,0,0.5);
-  box-shadow:0 2px 3px rgba(0,0,0,0.3);
-  color:white;
-  text-decoration:none;
-  font-size:160%;
-  font-weight:300;
-  transition:200ms;
-
-  display: flex;
-  justify-content: center;
-  align-items:center;
-}
-#events:hover{
-  background:rgba(10,8,0,0.4);
-}
-#minecraft:hover{
-  background:rgba(0,10,0,0.4);
-}
-#bots:hover{
-  background:rgba(10,0,0,0.4);
-  cursor:not-allowed;
-}
-#mods:hover{
-  background:rgba(0,0,10,0.4);
-}
-#rp-server:hover{
-  background:rgba(0,10,10,0.4);
-  cursor:not-allowed;
-}
-
-/* MINECRAFT SPECIFIC */
-
-.minecraft-commands td:nth-child(odd){
-  width:180px;
-}
-.minecraft-commands td:nth-child(odd):before{
-  content:"/";
-}
-
-/* EVENTS SPECIFIC */
-
-.event ul{
-  padding:0;
-  margin:0;
-}
-.event li{
-  list-style:none;
-  
-}
-.event li:nth-child(odd){
-  font-weight:bold;
-  margin-top:20px;
-}
-.event li:first-child{
-  margin-top:0;
-}
-
+.grey{background:rgba(46,49,54,0.75)}
+.green{background:rgba(63,73,69,0.75)}
 
 @media only screen and (min-width : 768px) {
 
 section{
   padding-left:10%;
   padding-right:10%;
-}
-
-.header{
-  height:20vh;                                                                  /*compatibility*/
-  height:15vmax;
-}
-
-.header-links{
-  height:0;
-}
-.header-link{
-  position:absolute;
-  height:50%;
-  right:0;
-  top:0;
-  width:10%;
-  
-}
-#header-link-join{
-  box-sizing:border-box;
-  left:30px;
-  top:30px;
-  height:calc(100% - 60px);
-  background:rgba(255,255,255,0.5);
-  border:5px solid rgba(255,255,255,0.25);
-}
-#header-link-join:hover{
-  background:rgba(255,255,255,0.66);
-  border:0;
-}
-#header-link-znn{
-}
-#header-link-rocks{
-  top:50%;
-}
-.header-link img{
-  max-height:75%;
-  max-width:75%;
-}
-
-.header-back{
-  width:10%;
 }
 
 }
@@ -352,32 +85,6 @@ section{
   padding-left:20%;
   padding-right:20%;
 }
-
-.people{
-  flex-wrap:nowrap !important;
-}
-
-
-#header-link-join{ 
-  left:75px;
-  top:75px;
-  height:calc(100% - 150px);
-}
-
-}
-
-
-@media only screen and (min-width : 2550px) {
-
-.tiles{
-  max-width:100%;
-}
-#header-link-join{ 
-  left:100px;
-  top:100px;
-  height:calc(100% - 200px);
-}
-
 
 }
 
