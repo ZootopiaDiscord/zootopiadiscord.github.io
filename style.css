@@ -66,6 +66,18 @@ h1{
 .header-link:hover:before{
   background:rgba(255,255,255,0.4);
 }
+.rules ul{
+  list-style:decimal;
+  margin:0;
+  padding-left:28px;
+}
+.rules ol{
+  list-style:lower-alpha; 
+  padding-left:28px;
+}
+.rules ul > li{
+  padding-bottom:15px;
+}
 
 .channels table tr td:nth-child(odd){
   width:160px;
@@ -115,6 +127,7 @@ h1{
   justify-content: center;
   align-items: center;
   padding-top:25px;
+  font-size:85%;
 }
 
 .grey{background:rgba(46,49,54,0.75)}
