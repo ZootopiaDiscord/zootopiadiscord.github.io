@@ -21,7 +21,7 @@ h1{
 }
 
 .header{
-  padding:5%;
+  padding:8vmin;
   display:flex;
   justify-content: center;
   flex-wrap:wrap;
@@ -34,16 +34,13 @@ h1{
   justify-content: center;
   flex-basis: 100%;
 }
-.logo img{
-  max-width:;
-}
 .header-link{
   z-index: 1;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:5% 2.5% 0 2.5%;
+  margin:8vmin 4vmin 0 8vmin;
   width:200px;
   height:100px;
   font-family: 'Roboto', sans-serif;
