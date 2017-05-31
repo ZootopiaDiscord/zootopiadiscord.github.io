@@ -114,8 +114,8 @@ h1{
   font-size:0;
 }
 .mod img{
-  max-width:200px;
-  max-height:200px;
+  width:200px;
+  height:200px;
 }
 .mod h2{
   box-sizing: border-box;
