@@ -33,6 +33,12 @@ h1{
   display: flex;
   justify-content: center;
   flex-basis: 100%;
+  height:200px;
+  align-self: center;
+  background:url('img/zootopia-discord-logo-v1.png');
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
 }
 .header-link{
   z-index: 1;
@@ -40,9 +46,9 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin:8vmin 0 0 0;
   width:100%;
   height:100px;
-  margin:8vmin 0 0 0;
   font-family: 'Roboto', sans-serif;
   font-weight:100;
   font-size:220%;
@@ -151,11 +157,11 @@ section{
 }
 
 .header-link{
-  margin:8vmin 4vmin 0 8vmin;
+  margin:8vmin 4vmin 0 4vmin;
   width:200px;
 }
 .header-link:before{
-  //transform:skew(-20deg);
+  transform:skew(-20deg);
 }
 .mods{
   padding-bottom: 40px;
