@@ -40,9 +40,9 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:8vmin 4vmin 0 8vmin;
-  width:200px;
+  width:100%;
   height:100px;
+  margin:8vmin 0 0 0;
   font-family: 'Roboto', sans-serif;
   font-weight:100;
   font-size:220%;
@@ -58,7 +58,6 @@ h1{
   height:100%;
   background:rgba(255,255,255,0.25);
   border:1px solid rgba(255,255,255,0.15);
-  transform:skew(-20deg);
 }
 .header-link:hover:before{
   background:rgba(255,255,255,0.4);
@@ -101,7 +100,6 @@ h1{
 .mods{
   display:flex;
   flex-wrap: wrap;
-  padding-bottom: 40px;
 }
 .mods h1{
   flex-basis:100%;
@@ -110,12 +108,11 @@ h1{
 .mod{
   position:relative;
   box-sizing: border-box;
-  margin:5px 40px 0 0;
+  margin:2.5vw;
   font-size:0;
 }
 .mod img{
-  width:200px;
-  height:200px;
+  width:calc(40vw);
 }
 .mod h2{
   box-sizing: border-box;
@@ -151,6 +148,24 @@ h1{
 section{
   padding-left:10%;
   padding-right:10%;
+}
+
+.header-link{
+  margin:8vmin 4vmin 0 8vmin;
+  width:200px;
+}
+.header-link:before{
+  //transform:skew(-20deg);
+}
+.mods{
+  padding-bottom: 40px;
+}
+.mod{
+  margin:5px 40px 0 0;
+}
+.mod img{
+  width:200px;
+  height:200px;
 }
 
 }
