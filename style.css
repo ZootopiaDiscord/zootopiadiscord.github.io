@@ -64,6 +64,7 @@ h1{
   height:100%;
   background:rgba(255,255,255,0.25);
   border:1px solid rgba(255,255,255,0.15);
+  transition:200ms;
 }
 .header-link:hover:before{
   background:rgba(255,255,255,0.4);
@@ -101,6 +102,13 @@ h1{
 .rules ol > li > ol > li{
   list-style: lower-roman;
   margin-top:2px;
+}
+
+.channels{
+  padding-bottom:15px;
+}
+.channels table tr td{
+  padding-bottom:10px;
 }
 
 .channels table tr td:nth-child(odd){
@@ -171,10 +179,16 @@ section{
   transform:skew(-20deg);
 }
 .mods{
-  padding-bottom: 40px;
+  margin-left:40px;
+  padding:0;
+  justify-content: center;
+}
+.mods h1{
+  margin-right:0;
+  padding-left:20%;
 }
 .mod{
-  margin:5px 40px 0 0;
+  margin:5px 40px 40px 0;
 }
 .mod img{
   width:200px;
