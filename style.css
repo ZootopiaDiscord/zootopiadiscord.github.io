@@ -121,10 +121,11 @@ h1{
 .mods{
   display:flex;
   flex-wrap: wrap;
+  padding:0 2.5vw 25px 2.5vw;
 }
 .mods h1{
   flex-basis:100%;
-  margin-right:-5%;
+  margin-left:2.5vw;
 }
 .mod{
   position:relative;
@@ -133,7 +134,7 @@ h1{
   font-size:0;
 }
 .mod img{
-  width:calc(40vw);
+  width:calc(42.5vw);
 }
 .mod h2{
   box-sizing: border-box;
