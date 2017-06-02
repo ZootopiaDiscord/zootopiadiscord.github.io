@@ -186,7 +186,7 @@ section{
 }
 .mods h1{
   margin-right:0;
-  margin-left:calc(10% - 40px);
+  margin-left:calc(10vw - 40px);
 }
 .mod{
   margin:5px 40px 40px 0;
@@ -205,7 +205,7 @@ section{
   padding-right:20%;
 }
 .mods h1{
-  margin-left:calc(20% - 40px);
+  margin-left:calc(20vw - 40px);
 }
 }
 
