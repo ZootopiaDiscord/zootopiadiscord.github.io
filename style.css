@@ -88,12 +88,19 @@ h1{
   margin:0;
   padding-left:28px;
 }
+.rules ul > li{
+  padding-bottom:25px;
+}
 .rules ol{
   list-style:lower-alpha; 
   padding-left:28px;
 }
-.rules ul > li{
-  padding-bottom:15px;
+.rules ol > li{
+  margin-top:10px;
+}
+.rules ol > li > ol > li{
+  list-style: lower-roman;
+  margin-top:2px;
 }
 
 .channels table tr td:nth-child(odd){
