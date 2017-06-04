@@ -148,11 +148,7 @@ h1{
   font-family: 'Roboto', sans-serif;
   font-weight:100;
   font-size:1.5rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor:default;
+  pointer-events: none;
 }
 .update{
   display: flex;
