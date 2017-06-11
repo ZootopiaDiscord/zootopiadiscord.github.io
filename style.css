@@ -11,6 +11,7 @@ section{
   padding-right:5%;
   padding-bottom:25px;
   margin:0 auto;
+  transition:500ms;
 }
 
 h1{
@@ -69,6 +70,9 @@ h1{
 .header-link:hover:before{
   background:rgba(255,255,255,0.4);
 }
+#join-button{
+  cursor:pointer;
+}
 
 .bukoya{
   position:fixed;
@@ -82,6 +86,46 @@ h1{
   background-size:contain;
   background-repeat:no-repeat;
   background-position:bottom;
+  transition:500ms;
+}
+
+.modal{
+  z-index:100;
+  position:fixed;
+  overflow: hidden;
+  width:80%;
+  top:110%;
+  left:50%;
+  transform:translateX(-50%);
+  padding:4vmin 4vmin 0 4vmin;
+  background:rgba(0,0,0,0.66);
+  box-shadow:0 3px 20px rgba(0,0,0,0.25);
+  border-radius:25px;
+  text-align:justify;
+  transition:500ms;
+}
+.modal-show{
+  top:50%;
+  transform:translateX(-50%)translateY(-50%);
+}
+.modal-link{
+  box-sizing: border-box;
+  width:120%;
+  margin-left:-10%;
+  margin-top:4vmin;
+  padding:4vmin;
+  background:rgba(255,255,255,0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size:200%;
+  font-weight:100;
+  color:white;
+  text-decoration:none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-link:hover{
+  background:rgba(255,255,255,0.125);
 }
 
 .rules ul{
@@ -160,6 +204,7 @@ h1{
 
 .grey{background:rgba(46,49,54,0.75)}
 .green{background:rgba(63,73,69,0.75)}
+.blur{filter:blur(20px)}
 
 @media only screen and (min-width : 768px) {
 
@@ -174,6 +219,12 @@ section{
 }
 .header-link:before{
   transform:skew(-20deg);
+}
+.modal{
+  max-width:500px;
+}
+.modal-link{
+  padding:2vmin;
 }
 .mods{
   margin-left:40px;
