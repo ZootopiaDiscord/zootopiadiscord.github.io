@@ -123,6 +123,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  transition:200ms;
 }
 .modal-link:hover{
   background:rgba(255,255,255,0.125);
