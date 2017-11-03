@@ -4,7 +4,9 @@ html,body{
   background:#36393E;
   color:white;
 }
-
+a {
+    color: lightblue;
+}
 section{
   position:relative;
   padding-left:5%;
