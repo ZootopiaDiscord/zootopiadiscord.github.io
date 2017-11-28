@@ -100,7 +100,6 @@ h1{
   top:110%;
   left:50%;
   transform:translateX(-50%);
-  padding:4vmin 4vmin 0 4vmin;
   background:rgba(0,0,0,0.66);
   box-shadow:0 3px 20px rgba(0,0,0,0.25);
   border-radius:25px;
@@ -112,11 +111,12 @@ h1{
   top:50%;
   transform:translateX(-50%)translateY(-50%);
 }
+.modal-text{
+  margin:4vmin;
+}
 .modal-link{
   box-sizing: border-box;
-  width:200%;
-  margin-left:-50%;
-  margin-top:4vmin;
+  width:100%;
   padding:4vmin;
   background:rgba(255,255,255,0.1);
   font-family: 'Roboto', sans-serif;
