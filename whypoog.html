@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<title>Why Poog?</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="When in doubt, blame poog.">
+	
+	<style>
+		body, html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background-color: #64A4D4;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url(whypoog.jpg);
+			background-position: center;
+		}
+		
+		.text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			color: white;
+			font-family: sans-serif;
+			margin: 20px;
+			font-size: 11px;
+		}	
+		
+		.privacy {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			color: white;
+			font-family: sans-serif;
+			margin: 20px;
+			font-size: 11px;
+		}		
+		
+		.text a, .privacy a {
+			color: white !important;	
+		}
+		
+		.sound {
+			height: 100vh;	
+		}
+		
+		.icon {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="sound" onclick="play()">
+		<audio id="audio" src="whypoog.mp3"></audio></div>
+		<span class="text">Art credit: <a href="http://briskby.tumblr.com/" target="_blank">Rose</a> (check out her art, it's amazing) <br>Site created by <a href="https://rampantleaf.github.io/">RampantLeaf</a></span>
+		<img src="whypoog.jpg" class="icon">
+	
+		<script>
+  			function play(){
+    	   		var audio = document.getElementById("audio");
+    	   		audio.play();
+    	    }
+   		</script>
+</body>
+</html>
