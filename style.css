@@ -5,7 +5,7 @@ html,body{
   color:white;
 }
 a {
-    color: lightblue;
+  color: lightblue;
 }
 section{
   position:relative;
@@ -60,27 +60,23 @@ h1{
   justify-content: center;
   align-items: center;
   margin:8vmin 0 0 0;
+  padding:30px;
   width:100%;
-  height:100px;
-  font-family: 'Roboto', sans-serif;
-  font-weight:100;
-  font-size:220%;
+  font-family: 'Exo', sans-serif;
+  font-size:300%;
+  font-weight:900;
   text-decoration: none;
-  color:black;
-}
-.header-link:before{
-  z-index: -1;
-  box-sizing: border-box;
-  position:absolute;
-  content:'';
-  width:100%;
-  height:100%;
+  color:#64BE8C;
+  text-shadow:1px 2px 1px rgba(0,0,0,0.5);
   background:rgba(255,255,255,0.25);
-  border:1px solid rgba(255,255,255,0.15);
-  transition:200ms;
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius: 1000px;
+  transition:500ms;
 }
-.header-link:hover:before{
+.header-link:hover{
   background:rgba(255,255,255,0.4);
+  border:1px solid rgba(255,255,255,0);
+  transition:100ms;
 }
 #join-button{
   cursor:pointer;
@@ -223,52 +219,51 @@ h1{
 
 @media only screen and (min-width : 768px) {
 
-section{
-  padding-left:10%;
-  padding-right:10%;
-}
+  section{
+    padding-left:10%;
+    padding-right:10%;
+  }
 
-.header-link{
-  margin:8vmin 4vmin 0 4vmin;
-  width:200px;
-}
-.header-link:before{
-  transform:skew(-20deg);
-}
-.modal{
-  max-width:500px;
-}
-.modal-link{
-  padding:2vmin;
-}
-.mods{
-  margin-left:40px;
-  padding:0;
-  justify-content: center;
-}
-.mods h1{
-  margin-right:0;
-  margin-left:calc(10vw - 40px);
-}
-.mod{
-  margin:5px 40px 40px 0;
-}
-.mod img{
-  width:200px;
-  height:200px;
-}
-
+  .header-link{
+    margin:8vmin 4vmin 0 4vmin;
+    width:200px;
+  }
+  .header-link:before{
+    transform:skew(-20deg);
+  }
+  .modal{
+    max-width:500px;
+  }
+  .modal-link{
+    padding:2vmin;
+  }
+  .mods{
+    margin-left:40px;
+    padding:0;
+    justify-content: center;
+  }
+  .mods h1{
+    margin-right:0;
+    margin-left:calc(10vw - 40px);
+  }
+  .mod{
+    margin:5px 40px 40px 0;
+  }
+  .mod img{
+    width:200px;
+    height:200px;
+  }
 }
 
 @media only screen and (min-width : 1450px) {
 
-section{
-  padding-left:20%;
-  padding-right:20%;
-}
-.mods h1{
-  margin-left:calc(20vw - 40px);
-}
+  section{
+    padding-left:20%;
+    padding-right:20%;
+  }
+  .mods h1{
+    margin-left:calc(20vw - 40px);
+  }
 }
 
 }
