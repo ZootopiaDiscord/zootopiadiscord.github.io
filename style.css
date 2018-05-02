@@ -60,7 +60,7 @@ h1{
   justify-content: center;
   align-items: center;
   margin:8vmin 0 0 0;
-  padding:30px;
+  padding:30px 60px;
   width:100%;
   font-family: 'Exo', sans-serif;
   font-size:300%;
@@ -226,7 +226,7 @@ h1{
 
   .header-link{
     margin:8vmin 4vmin 0 4vmin;
-    width:200px;
+    width:auto;
   }
   .header-link:before{
     transform:skew(-20deg);
