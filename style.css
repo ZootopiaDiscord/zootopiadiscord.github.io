@@ -217,7 +217,13 @@ h1{
 
 .grey{background:rgba(46,49,54,0.75)}
 .green{background:rgba(63,73,69,0.75)}
-.blur{filter:blur(20px)}
+.blur{
+  filter:blur(20px);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .backBlur{-webkit-backdrop-filter:blur(7.5px);backdrop-filter:blur(7.5px);}
 
 @media only screen and (min-width : 768px) {
