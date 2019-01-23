@@ -35,7 +35,7 @@ h1{
   display: flex;
   justify-content: center;
   flex-basis: 100%;
-  height: 15vh;
+  height:200px;
   align-self: center;
   background:url('img/zootopia-discord-logo-v1.png');
   background-position:center;
@@ -60,9 +60,10 @@ h1{
   justify-content: center;
   align-items: center;
   margin:8vmin 0 0 0;
-  padding:10px 30px;
+  padding:30px 60px;
+  width:100%;
   font-family: 'Exo', sans-serif;
-  font-size:200%;
+  font-size:300%;
   font-weight:900;
   text-decoration: none;
   color:#64BE8C;
@@ -100,24 +101,20 @@ h1{
   z-index:100;
   position:fixed;
   overflow: hidden;
-  width:calc(100% - 8vmin);
-  max-width:500px;
-  top:50%;
+  width:80%;
+  top:110%;
   left:50%;
   transform:translateX(-50%);
-  background:rgba(0,0,0,0.5);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.33);
-  border: 1px solid rgba(0, 0, 0, 0.33);
+  background:rgba(0,0,0,0.66);
+  box-shadow:0 3px 20px rgba(0,0,0,0.25);
   border-radius:25px;
   text-align:justify;
-  transition:300ms;
-  transform:translate(-50%, -50%)scale(0);
-  opacity: 0;
+  transition:500ms;
 }
 .modal-show{
   visibility:visible;
-  opacity: 1;
-  transform:translate(-50%, -50%)scale(1);
+  top:50%;
+  transform:translateX(-50%)translateY(-50%);
 }
 .modal-text{
   margin:4vmin;
@@ -125,7 +122,7 @@ h1{
 .modal-link{
   box-sizing: border-box;
   width:100%;
-  padding:3.5vmin;
+  padding:4vmin;
   background:rgba(255,255,255,0.1);
   font-family: 'Roboto', sans-serif;
   font-size:200%;
@@ -217,13 +214,7 @@ h1{
 
 .grey{background:rgba(46,49,54,0.75)}
 .green{background:rgba(63,73,69,0.75)}
-.blur{
-  filter:blur(20px);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+.blur{filter:blur(20px)}
 .backBlur{-webkit-backdrop-filter:blur(7.5px);backdrop-filter:blur(7.5px);}
 
 @media only screen and (min-width : 768px) {
@@ -233,13 +224,9 @@ h1{
     padding-right:10%;
   }
 
-  .logo{
-      height: 200px;
-  }
   .header-link{
     margin:8vmin 4vmin 0 4vmin;
-    padding: 30px 60px;
-    font-size: 300%;
+    width:auto;
   }
   .header-link:before{
     transform:skew(-20deg);
