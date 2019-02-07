@@ -32,8 +32,9 @@ h1{
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: 20px;
-  margin-bottom: 20px;
+  justify-content: center;
+  padding-top: 40px;
+  margin-bottom: 40px;
 }
 .sectionHead:after{
   position: absolute;
@@ -41,7 +42,7 @@ h1{
   height: 2px;
   width: 350px;
   top: 100%;
-  background: linear-gradient(90deg, #4BB77A 40%, #90DA6E 80%, rgba(144, 218, 111, 0) 100%);;
+  background: linear-gradient(90deg, rgba(75, 183, 122,0), #4BB77A 15%, #90DA6E 85%, rgba(144, 218, 111, 0) 100%);
 }
 .sectionHead img:nth-child(2){
   height: 50px;
@@ -228,6 +229,7 @@ h1{
 }
 .roles ul li:nth-child(odd){
   font-weight: 700;
+  font-size: 125%;
 }
 .roles ul li:nth-child(even){
   margin-top: 10px;
@@ -249,10 +251,13 @@ h1{
   box-sizing: border-box;
   margin:2.5vw;
   font-size:0;
+  transition: 500ms;
+}
+.mod:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.66);
 }
 .mod:hover img{
   transform: scale(1.1);
-  
 }
 .mod:hover h2{
   opacity: 0;
