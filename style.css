@@ -175,6 +175,19 @@ h1{
   content:'# ';
 }
 
+.roles ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.roles ul li:nth-child(odd){
+  font-weight: 700;
+}
+.roles ul li:nth-child(even){
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
 .mods{
   display:flex;
   flex-wrap: wrap;
