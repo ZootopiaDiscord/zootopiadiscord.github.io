@@ -1,3 +1,9 @@
+:root {
+  --channel-background: #3C414E;
+  --channel-color: #738BD7;
+  --channel-background-active: #6172AA;
+}
+
 html,body{
   margin:0;
   font-family: 'Open Sans', sans-serif;
@@ -20,6 +26,29 @@ h1{
   margin:0;
   padding-top:25px;
   padding-bottom:25px;
+}
+
+.sectionHead{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.sectionHead:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 350px;
+  top: 100%;
+  background: linear-gradient(90deg, #4BB77A 40%, #90DA6E 80%, rgba(144, 218, 111, 0) 100%);;
+}
+.sectionHead img:nth-child(2){
+  height: 50px;
+  margin-left: 10px;
+}
+.roles > .sectionHead > img:nth-child(2){
+  margin-top: 8px;
 }
 
 .header{
@@ -171,8 +200,25 @@ h1{
 .channels table tr td:nth-child(odd){
   width:160px;
 }
-.channels table tr td:nth-child(odd):before{
-  content:'# ';
+.channels table tr td a{
+  background: var(--channel-background);
+  color: var(--channel-color);
+  text-decoration: none;
+  transition: 100ms;
+}
+.channels table tr td a:before{
+  content:'#';
+  color:var(--channel-color);
+  background: var(--channel-background);
+  transition: 100ms;
+}
+.channels table tr td a:hover{
+  background: var(--channel-background-active);
+  color: white;
+}
+.channels table tr td a:hover:before{
+  background: var(--channel-background-active);
+  color: white;
 }
 
 .roles ul{
@@ -198,13 +244,22 @@ h1{
   margin-left:2.5vw;
 }
 .mod{
+  overflow:hidden;
   position:relative;
   box-sizing: border-box;
   margin:2.5vw;
   font-size:0;
 }
+.mod:hover img{
+  transform: scale(1.1);
+  
+}
+.mod:hover h2{
+  opacity: 0;
+}
 .mod img{
   width:calc(42.5vw);
+  transition: 500ms;
 }
 .mod h2{
   box-sizing: border-box;
@@ -219,7 +274,9 @@ h1{
   font-weight:100;
   font-size:1.5rem;
   pointer-events: none;
+  transition: 500ms;
 }
+
 .update{
   display: flex;
   justify-content: center;
