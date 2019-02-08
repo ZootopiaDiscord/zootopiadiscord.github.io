@@ -36,7 +36,7 @@ section{
 }
 
 .section-collapse{
-  max-height: 160px;
+  max-height: 120px;
 }
 .section-collapse .sectionHead:before{
   transform: rotate(180deg);
@@ -62,39 +62,39 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
-  margin-bottom: 40px;
+  padding-top: 30px;
+  margin-bottom: 30px;
   cursor: pointer;
 }
 .sectionHead:before{
   z-index: 1;
   position: absolute;
   content: '';
-  top: 66px;
-  left: calc(50% - 170px);
+  top: 46px;
+  left: 20px;
   width: 0; 
   height: 0;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-bottom: 26px solid #4BB77A;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 22px solid #4BB77A;
   transition: 500ms;
 }
 .sectionHead:after{
   position: absolute;
   content: '';
   height: 2px;
-  width: 350px;
+  width: 100%;
   top: 100%;
   background: linear-gradient(90deg, rgba(75, 183, 122,0), #4BB77A 15%, #90DA6E 85%, rgba(144, 218, 111, 0) 100%);
   transition: 500ms;
 }
+.sectionHead img{
+  height: 60px;
+}
 .sectionHead img:nth-child(2){
-  height: 50px;
+  height: 35px;
   margin-left: 10px;
   transition: 500ms;
-}
-.roles > .sectionHead > img:nth-child(2){
-  margin-top: 8px;
 }
 .sectionHead:hover > img:nth-child(2){
   filter: var(--header-hue-rotate);
@@ -103,6 +103,9 @@ h1{
 .sectionHead:hover:after{
   filter: var(--header-hue-rotate);
   transition: 100ms;
+}
+.roles > .sectionHead > img:nth-child(2){
+  margin-top: 8px;
 }
 
 /* header */
@@ -230,6 +233,12 @@ h1{
   background:rgba(255,255,255,0.125);
 }
 
+/* info */
+
+.info article{
+  text-align: justify;
+}
+
 /* rules */
 
 .rules ul{
@@ -287,6 +296,10 @@ h1{
 
 /* roles */
 
+.roles article{
+  text-align: justify;
+}
+
 .roles ul{
   margin: 0;
   padding: 0;
@@ -303,12 +316,10 @@ h1{
 
 /* mods */
 
-.mods{
-  padding:0 2.5vw 25px 2.5vw;
-}
 .mods article{
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .mods h1{
   flex-basis:100%;
@@ -318,8 +329,10 @@ h1{
   overflow:hidden;
   position:relative;
   box-sizing: border-box;
-  margin:2.5vw;
-  font-size:0;
+  width: 42.5vw;
+  height: 42.5vw;
+  margin-bottom: 5vmin;
+  font-size: 0;
   transition: 500ms;
 }
 .mod:hover{
@@ -332,8 +345,9 @@ h1{
   opacity: 0;
 }
 .mod img{
-  width:calc(42.5vw);
   transition: 500ms;
+  width: 100%;
+  height: 100;
 }
 .mod h2{
   box-sizing: border-box;
@@ -394,10 +408,29 @@ h1{
   :root {
     --section-padding: 10vw;
   }
-  .sectionHead:before{
-    left: calc(50% - 230px);
+  .section-collapse{
+    max-height: 160px;
   }
-
+  .sectionHead{
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+  .sectionHead:before{
+    top: 66px;
+    left: calc(50% - 230px);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 26px solid #4BB77A;
+  }
+  .sectionHead:after{
+    width: 350px;
+  }
+  .sectionHead img{
+    height: 80px;
+  }
+  .sectionHead img:nth-child(2){
+    height: 50px;
+  }
   .logo{
       height: 200px;
   }
@@ -419,16 +452,17 @@ h1{
     margin: 0 2.5vw;
     padding:0;
   }
-  .mods article{
-    justify-content: center;
-  }
   .mods h1{
     margin-right:0;
     margin-left:calc(var(--section-padding) - 40px);
   }
-  .mod img{
+  .mods article{
+    justify-content: center;
+  }
+  .mod{
     width:200px;
     height:200px;
+    margin: 20px;
   }
 }
 
