@@ -4,6 +4,8 @@
   --channel-background: #3C414E;
   --channel-color: #738BD7;
   --channel-background-active: #6172AA;
+
+  --header-hue-rotate: hue-rotate(45deg);
 }
 
 html,body{
@@ -14,8 +16,16 @@ html,body{
 }
 a {
   color: lightblue;
+  text-decoration: none;
+}
+
+/* sections */
+
+section a:hover {
+  text-decoration: underline;
 }
 section{
+  box-sizing: border-box;
   position:relative;
   padding-left:var(--section-padding);
   padding-right:var(--section-padding);
@@ -25,18 +35,19 @@ section{
   transition: max-height 500ms;
 }
 
-/* sections */
-
 .section-collapse{
-  max-height: 100px;
+  max-height: 160px;
+}
+.section-collapse .sectionHead:before{
+  transform: rotate(180deg);
+}
+.section-collapse article{
+  transform-origin: top;
+  transform: scale(0);
 }
 
 article{
   transition: 500ms;
-}
-.article-hide{
-  transform-origin: top;
-  transform: scale(0);
 }
 
 h1{
@@ -53,6 +64,20 @@ h1{
   justify-content: center;
   padding-top: 40px;
   margin-bottom: 40px;
+  cursor: pointer;
+}
+.sectionHead:before{
+  z-index: 1;
+  position: absolute;
+  content: '';
+  top: 66px;
+  left: calc(50% - 170px);
+  width: 0; 
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 26px solid #4BB77A;
+  transition: 500ms;
 }
 .sectionHead:after{
   position: absolute;
@@ -61,13 +86,23 @@ h1{
   width: 350px;
   top: 100%;
   background: linear-gradient(90deg, rgba(75, 183, 122,0), #4BB77A 15%, #90DA6E 85%, rgba(144, 218, 111, 0) 100%);
+  transition: 500ms;
 }
 .sectionHead img:nth-child(2){
   height: 50px;
   margin-left: 10px;
+  transition: 500ms;
 }
 .roles > .sectionHead > img:nth-child(2){
   margin-top: 8px;
+}
+.sectionHead:hover > img:nth-child(2){
+  filter: var(--header-hue-rotate);
+  transition: 100ms;
+}
+.sectionHead:hover:after{
+  filter: var(--header-hue-rotate);
+  transition: 100ms;
 }
 
 /* header */
@@ -359,6 +394,9 @@ h1{
   :root {
     --section-padding: 10vw;
   }
+  .sectionHead:before{
+    left: calc(50% - 230px);
+  }
 
   .logo{
       height: 200px;
@@ -378,7 +416,7 @@ h1{
     padding:2vmin;
   }
   .mods{
-    margin-left:40px;
+    margin: 0 2.5vw;
     padding:0;
   }
   .mods article{
@@ -387,9 +425,6 @@ h1{
   .mods h1{
     margin-right:0;
     margin-left:calc(var(--section-padding) - 40px);
-  }
-  .mod{
-    margin:5px 40px 40px 0;
   }
   .mod img{
     width:200px;
