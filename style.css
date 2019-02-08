@@ -320,10 +320,22 @@ h1{
 
 .update{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-top:25px;
   font-size:85%;
+}
+
+.update ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.update ul li:first-child{
+  margin-bottom: 10px;
 }
 
 /* modifiers */
