@@ -11,4 +11,8 @@ $(document).ready(function(){
         $('.header-link').css({"pointer-events" : "initial"});
         $('html,body').css({"overflow" : "initial"});
     });
+    $('h1').click(function(){
+        $(this).parent("section").toggleClass("section-collapse");
+        $(this).next("article").toggleClass("article-hide");
+    });
 });
