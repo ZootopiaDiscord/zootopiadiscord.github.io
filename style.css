@@ -24,6 +24,9 @@ section{
   max-height: 500vh;
   transition: max-height 500ms;
 }
+
+/* sections */
+
 .section-collapse{
   max-height: 100px;
 }
@@ -66,6 +69,8 @@ h1{
 .roles > .sectionHead > img:nth-child(2){
   margin-top: 8px;
 }
+
+/* header */
 
 .header{
   padding:8vmin;
@@ -126,6 +131,8 @@ h1{
   cursor:pointer;
 }
 
+/* background */
+
 .bukoya{
   position:fixed;
   height:100%;
@@ -139,6 +146,8 @@ h1{
   background-repeat:no-repeat;
   background-position:bottom;
 }
+
+/* modal */
 
 .modal{
   visibility:hidden;
@@ -186,6 +195,8 @@ h1{
   background:rgba(255,255,255,0.125);
 }
 
+/* rules */
+
 .rules ul{
   list-style:decimal;
   margin:0;
@@ -205,6 +216,8 @@ h1{
   list-style: lower-roman;
   margin-top:2px;
 }
+
+/* channels */
 
 .channels{
   padding-bottom:15px;
@@ -237,6 +250,8 @@ h1{
   color: white;
 }
 
+/* roles */
+
 .roles ul{
   margin: 0;
   padding: 0;
@@ -250,6 +265,8 @@ h1{
   margin-top: 10px;
   margin-bottom: 25px;
 }
+
+/* mods */
 
 .mods{
   padding:0 2.5vw 25px 2.5vw;
@@ -299,6 +316,8 @@ h1{
   transition: 500ms;
 }
 
+/* update */
+
 .update{
   display: flex;
   justify-content: center;
@@ -306,6 +325,8 @@ h1{
   padding-top:25px;
   font-size:85%;
 }
+
+/* modifiers */
 
 .grey{background:rgba(46,49,54,0.75)}
 .green{background:rgba(63,73,69,0.75)}
@@ -318,6 +339,8 @@ h1{
 }
 .blur h1, .blur a{pointer-events: none}
 .backBlur{-webkit-backdrop-filter:blur(7.5px);backdrop-filter:blur(7.5px);}
+
+/* scaling */
 
 @media only screen and (min-width : 768px) {
 
