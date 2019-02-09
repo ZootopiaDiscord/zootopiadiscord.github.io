@@ -50,7 +50,7 @@ article{
   transition: 500ms;
 }
 
-h1{
+h1{ /* legacy, kept for old subpages */
   font-size:2.5rem;
   margin:0;
   padding-top:25px;
@@ -63,7 +63,7 @@ h1{
   align-items: center;
   justify-content: center;
   padding-top: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   cursor: pointer;
 }
 .sectionHead:before{
@@ -84,7 +84,7 @@ h1{
   content: '';
   height: 2px;
   width: 100%;
-  top: 100%;
+  top: calc(100% - 30px);
   background: linear-gradient(90deg, rgba(75, 183, 122,0), #4BB77A 15%, #90DA6E 85%, rgba(144, 218, 111, 0) 100%);
   transition: 500ms;
 }
@@ -347,7 +347,7 @@ h1{
 .mod img{
   transition: 500ms;
   width: 100%;
-  height: 100;
+  height: 100%;
 }
 .mod h2{
   box-sizing: border-box;
@@ -398,7 +398,7 @@ h1{
   -ms-user-select: none;
   user-select: none;
 }
-.blur h1, .blur a{pointer-events: none}
+.blur a, .blur .sectionHead{pointer-events: none}
 .backBlur{-webkit-backdrop-filter:blur(7.5px);backdrop-filter:blur(7.5px);}
 
 /* scaling */
@@ -413,7 +413,7 @@ h1{
   }
   .sectionHead{
     padding-top: 40px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
   .sectionHead:before{
     top: 66px;
@@ -424,6 +424,7 @@ h1{
   }
   .sectionHead:after{
     width: 350px;
+    top: calc(100% - 40px);
   }
   .sectionHead img{
     height: 80px;
@@ -451,10 +452,6 @@ h1{
   .mods{
     margin: 0 2.5vw;
     padding:0;
-  }
-  .mods h1{
-    margin-right:0;
-    margin-left:calc(var(--section-padding) - 40px);
   }
   .mods article{
     justify-content: center;
