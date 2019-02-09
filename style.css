@@ -21,9 +21,6 @@ a {
 
 /* sections */
 
-section a:hover {
-  text-decoration: underline;
-}
 section{
   box-sizing: border-box;
   position:relative;
@@ -90,22 +87,20 @@ h1{ /* legacy, kept for old subpages */
 }
 .sectionHead img{
   height: 60px;
+  transform-origin: right;
 }
 .sectionHead img:nth-child(2){
   height: 35px;
   margin-left: 10px;
+  margin-top: 5px;
   transition: 500ms;
 }
-.sectionHead:hover > img:nth-child(2){
-  filter: var(--header-hue-rotate);
-  transition: 100ms;
+.rules > .sectionHead > img:nth-child(1), .channels > .sectionHead > img:nth-child(1){
+  transform: scale(0.8);
 }
-.sectionHead:hover:after{
-  filter: var(--header-hue-rotate);
-  transition: 100ms;
-}
-.roles > .sectionHead > img:nth-child(2){
-  margin-top: 8px;
+.mods > .sectionHead > img:nth-child(2){
+  margin-top: 0;
+  height: 28px;
 }
 
 /* header */
@@ -235,6 +230,9 @@ h1{ /* legacy, kept for old subpages */
 
 /* info */
 
+.info{
+  padding-top: var(--section-padding);
+}
 .info article{
   text-align: justify;
 }
@@ -316,6 +314,9 @@ h1{ /* legacy, kept for old subpages */
 
 /* mods */
 
+.mods{
+  padding-bottom: 0;
+}
 .mods article{
   display:flex;
   flex-wrap: wrap;
@@ -386,6 +387,9 @@ h1{ /* legacy, kept for old subpages */
 .update ul li:first-child{
   margin-bottom: 10px;
 }
+.update ul li:last-child{
+  margin-top: 10px;
+}
 
 /* modifiers */
 
@@ -423,7 +427,7 @@ h1{ /* legacy, kept for old subpages */
     border-bottom: 26px solid #4BB77A;
   }
   .sectionHead:after{
-    width: 350px;
+    width: 420px;
     top: calc(100% - 40px);
   }
   .sectionHead img{
@@ -431,6 +435,17 @@ h1{ /* legacy, kept for old subpages */
   }
   .sectionHead img:nth-child(2){
     height: 50px;
+  }
+  .sectionHead:hover > img:nth-child(2){
+    filter: var(--header-hue-rotate);
+    transition: 100ms;
+  }
+  .sectionHead:hover:after{
+    filter: var(--header-hue-rotate);
+    transition: 100ms;
+  }
+  .mods > .sectionHead > img:nth-child(2){
+    height: 40px;
   }
   .logo{
       height: 200px;
@@ -449,9 +464,12 @@ h1{ /* legacy, kept for old subpages */
   .modal-link{
     padding:2vmin;
   }
+  .info{
+    padding-top: calc(var(--section-padding) / 2);
+  }
   .mods{
     margin: 0 2.5vw;
-    padding:0;
+    padding: 0 0 20px 0;
   }
   .mods article{
     justify-content: center;
