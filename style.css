@@ -305,6 +305,7 @@ h1{ /* legacy, kept for old subpages */
   background: var(--channel-background);
   color: var(--channel-color);
   text-decoration: none;
+  cursor: pointer;
   transition: 100ms;
 }
 .channels li:nth-child(even) a:before, .channel:before{
@@ -331,10 +332,14 @@ h1{ /* legacy, kept for old subpages */
   text-align: center;
 }
 .channels input{
+  cursor: pointer;
   /*-moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   */
+}
+.channels label{
+  cursor: pointer;
 }
 
 /* roles */
@@ -354,7 +359,7 @@ h1{ /* legacy, kept for old subpages */
 }
 .roles ul li:nth-child(even){
   margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 /* mods */
@@ -449,6 +454,12 @@ h1{ /* legacy, kept for old subpages */
 }
 .blur a, .blur .sectionHead{pointer-events: none}
 .backBlur{-webkit-backdrop-filter:blur(7.5px);backdrop-filter:blur(7.5px);}
+.command{
+  padding: 0 2px;
+  color: rgba(255, 255, 255, 0.8);
+  background: #2F3136;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25);
+}
 
 /* scaling */
 

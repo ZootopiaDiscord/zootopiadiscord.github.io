@@ -30,4 +30,14 @@ $(document).ready(function () {
                 break;
         }
     });
+    $('.channel').click(function () {
+        $('html, body').animate({
+            scrollTop: $(".channels").offset().top
+        }, 300);
+        setTimeout(() => {
+            if ($(".channels").hasClass("section-collapse")) {
+                $(".channels").removeClass("section-collapse");
+            }
+        }, 300);
+    })
 });
