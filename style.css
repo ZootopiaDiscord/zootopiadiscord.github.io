@@ -1,6 +1,9 @@
 :root {
   --section-padding: 5vw;
 
+  --sectionHead-padding: 30px;
+  --sectionHead-size: 60px;
+
   --channel-background: #3C414E;
   --channel-color: #738BD7;
   --channel-background-active: #6172AA;
@@ -33,7 +36,7 @@ section{
 }
 
 .section-collapse{
-  max-height: 120px;
+  max-height: calc(var(--sectionHead-padding) * 2 + var(--sectionHead-size));
 }
 .section-collapse .sectionHead:before{
   transform: rotate(180deg);
@@ -59,8 +62,8 @@ h1{ /* legacy, kept for old subpages */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: var(--sectionHead-padding);
+  padding-bottom: var(--sectionHead-padding);
   cursor: pointer;
 }
 .sectionHead:before{
@@ -86,7 +89,8 @@ h1{ /* legacy, kept for old subpages */
   transition: 500ms;
 }
 .sectionHead img{
-  height: 60px;
+  height: 60px; /* fallback for IE */
+  height: var(--sectionHead-size);
   transform-origin: right;
 }
 .sectionHead img:nth-child(2){
@@ -408,12 +412,11 @@ h1{ /* legacy, kept for old subpages */
 /* scaling */
 
 @media only screen and (min-width : 768px) {
-
   :root {
     --section-padding: 10vw;
-  }
-  .section-collapse{
-    max-height: 160px;
+    
+    --sectionHead-padding: 40px;
+    --sectionHead-size: 80px;
   }
   .sectionHead{
     padding-top: 40px;
@@ -481,8 +484,16 @@ h1{ /* legacy, kept for old subpages */
   }
 }
 
-@media only screen and (min-width : 1450px) {
+@media only screen and (min-width : 1000px) {
+  :root {
+    --section-padding: 15vw;
+  }
+  .modal-link{
+    padding:1.5vmin;
+  }
+}
 
+@media only screen and (min-width : 1450px) {
   :root {
     --section-padding: 20vw;
   }
