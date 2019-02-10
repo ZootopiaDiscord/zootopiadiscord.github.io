@@ -53,7 +53,7 @@
         <div class="header-link" id="join-button">JOIN</div>
     </section>
 
-    <section class="info">
+    <section class="info section-collapse">
         <article>
             This server aims to be the best place to chat and discuss about all things Zootopia, as well as meet other
             fans and like-minded individuals.
@@ -75,7 +75,7 @@
         </article>
     </section>
 
-    <section class="rules">
+    <section class="rules section-collapse">
 
         <div class="sectionHead">
             <img src="img/headers/rules-img.png">
@@ -163,7 +163,7 @@
         </article>
     </section>
 
-    <section class="channels grey backBlur section-collapse" id="channels-all">
+    <section class="channels grey backBlur" id="channels-all">
 
         <div class="sectionHead">
             <img src="img/headers/channels-img.png">
@@ -171,6 +171,15 @@
         </div>
 
         <article>
+
+            <div id="channel-checkboxes">
+                <input type="checkbox" id="verified-channels" name="verified channels" checked>
+                <label for="verified-channels">Verified</label>
+
+                <input type="checkbox" id="nsfw-channels" name="nsfw channels">
+                <label for="nsfw-channels">NSFW</label>
+            </div>
+
             <ul>
                 <li>
                     General
@@ -181,10 +190,10 @@
                 <li>
                     General discussion
                 </li>
-                <li>
+                <li class="verified">
                     <a href="https://discordapp.com/channels/164188105031680000/183684545952874496">lounge</a>
                 </li>
-                <li>
+                <li class="verified">
                     A cozy corner for verified members. Serious discussion only, please.
                 </li>
                 <li>
@@ -193,10 +202,10 @@
                 <li>
                     Zootopia and related discussion only
                 </li>
-                <li>
+                <li class="verified">
                     <a href="https://discordapp.com/channels/164188105031680000/329478900646150159">rp-lite</a>
                 </li>
-                <li>
+                <li class="verified">
                     For light, unplanned RP
                 </li>
             </ul>
@@ -217,7 +226,7 @@
                     This channel is for submitting your work to ZNN
                 </li>
             </ul>
-            <ul>
+            <ul class="verified">
                 <li>
                     Hobbies
                 </li>
@@ -243,7 +252,7 @@
                     <a href="https://discordapp.com/channels/164188105031680000/289242794051108864">nerdcorner</a>
                 </li>
                 <li>
-                    Discuss coding/math/science and related topics
+                    Discuss coding / math / science and related topics
                 </li>
                 <li>
                     <a href="https://discordapp.com/channels/164188105031680000/178728057237012480">gaming</a>
@@ -258,14 +267,31 @@
                     Visit our dedicated Zootopia Role-Playing server
                 </li>
             </ul>
+            <ul class="nsfw verified channelCategory-hideNSFW">
+                <li>
+                    NSFW
+                </li>
+                <li>
+                    <a href="https://discordapp.com/channels/164188105031680000/164417080911855616">nsfw</a>
+                </li>
+                <li>
+                    NSFW discussion. NSFW specific rules are pinned.
+                </li>
+                <li>
+                    <a href="https://discordapp.com/channels/164188105031680000/339778846565859328">nsfw-images</a>
+                </li>
+                <li>
+                    NSFW images. NSFW specific rules are pinned.
+                </li>
+            </ul>
             <ul>
                 <li>
                     Meta
                 </li>
-                <li>
+                <li class="verified">
                     <a href="https://discordapp.com/channels/164188105031680000/495394279896907797">submissions</a>
                 </li>
-                <li>
+                <li class="verified">
                     Submissions for server events, like fanfic/art competitions
                 </li>
                 <li>
@@ -274,16 +300,16 @@
                 <li>
                     Leave any serious feedback and suggestions you have
                 </li>
-                <li>
+                <li class="verified">
                     <a href="https://discordapp.com/channels/164188105031680000/332010507437342721">voting</a>
                 </li>
-                <li>
+                <li class="verified">
                     Vote for changes to the server
                 </li>
-                <li>
+                <li class="verified">
                     <a href="https://discordapp.com/channels/164188105031680000/210760739940597761">events</a>
                 </li>
-                <li>
+                <li class="verified">
                     Various events including movie nights and gaming sessions
                 </li>
                 <li>

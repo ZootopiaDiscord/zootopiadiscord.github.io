@@ -321,11 +321,20 @@ h1{ /* legacy, kept for old subpages */
   background: var(--channel-background-active);
   color: white;
 }
-.channelCategory-hide{
+.channelCategory-hide, .channelCategory-hideVerified, .channelCategory-hideNSFW{
   display: none !important;
 }
 .channelCategory-closed:before{
   transform: rotate(-90deg)translate(5px, calc(-50% + 5px)) !important;
+}
+#channel-checkboxes{
+  text-align: center;
+}
+.channels input{
+  /*-moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  */
 }
 
 /* roles */

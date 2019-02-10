@@ -14,8 +14,20 @@ $(document).ready(function () {
     $('.sectionHead').click(function () {
         $(this).parent("section").toggleClass("section-collapse");
     });
-    $('.channels article ul li:first-child').click(function(){
+    $('.channels article ul li:first-child').click(function () {
         $(this).parent("ul").children("li").not(".channels article ul li:first-child").toggleClass("channelCategory-hide");
         $(this).parent("ul").children("li:first-child").toggleClass("channelCategory-closed");
+    });
+    $('.channels input').click(function () {
+        switch ($(this).attr('id')) {
+            case "verified-channels":
+                $('.verified').toggleClass("channelCategory-hideVerified");
+                break;
+            case "nsfw-channels":
+                $('.nsfw').toggleClass("channelCategory-hideNSFW");
+                break;
+            default:
+                break;
+        }
     });
 });
