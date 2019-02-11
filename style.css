@@ -9,6 +9,11 @@
   --channel-background-active: #6172AA;
 
   --header-hue-rotate: hue-rotate(45deg);
+
+  --role-color-zootopian: #1DAE86;
+  --role-color-znn: #E54D42;
+  --role-color-nighthowler: #0B2CFB;
+  --role-color-zpd: #3C8DAE;
 }
 
 html,body{
@@ -349,17 +354,56 @@ h1{ /* legacy, kept for old subpages */
 }
 
 .roles ul{
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .roles ul li:nth-child(odd){
-  font-weight: 700;
-  font-size: 125%;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 100px;
+  padding: 4px 12px 4px 30px;
+}
+.roles ul li:nth-child(odd):before{
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 8px;
+  transform: translate(0, -50%);
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 100%;
 }
 .roles ul li:nth-child(even){
   margin-top: 10px;
   margin-bottom: 30px;
+}
+#role-zootopian{
+  border: 1px solid var(--role-color-zootopian);
+}
+#role-znn{
+  border: 1px solid var(--role-color-znn);
+}
+#role-nighthowler{
+  border: 1px solid var(--role-color-nighthowler);
+}
+#role-zpd{
+  border: 1px solid var(--role-color-zpd);
+}
+#role-zootopian:before{
+  background: var(--role-color-zootopian)
+}
+#role-znn:before{
+  background: var(--role-color-znn)
+}
+#role-nighthowler:before{
+  background: var(--role-color-nighthowler)
+}
+#role-zpd:before{
+  background: var(--role-color-zpd)
 }
 
 /* mods */
