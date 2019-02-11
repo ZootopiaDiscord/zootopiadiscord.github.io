@@ -426,7 +426,7 @@ h1{ /* legacy, kept for old subpages */
   box-sizing: border-box;
   width: 42.5vw;
   height: 42.5vw;
-  margin-bottom: 5vmin;
+  margin-bottom: 5vw;
   font-size: 0;
   transition: 500ms;
 }
@@ -506,6 +506,12 @@ h1{ /* legacy, kept for old subpages */
 }
 
 /* scaling */
+
+@media only screen and (min-width : 540px) {
+  .mod{
+    width: calc(80vw / 3);
+    height: calc(80vw / 3);
+  }
 
 @media only screen and (min-width : 768px) {
   :root {

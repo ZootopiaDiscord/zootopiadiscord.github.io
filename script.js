@@ -31,13 +31,19 @@ $(document).ready(function () {
         }
     });
     $('.channel').click(function () {
-        $('html, body').animate({
+        let scrollPosition = $(window).scrollTop();
+        let channelsPosition = $(".channels").offset();
+        let posDifference = channelsPosition.top - scrollPosition;
+        if (posDifference < 0) {
+            posDifference = posDifference * (-1);
+        }
+        $('html').animate({
             scrollTop: $(".channels").offset().top
-        }, 300);
+        }, posDifference / 2);
         setTimeout(() => {
             if ($(".channels").hasClass("section-collapse")) {
                 $(".channels").removeClass("section-collapse");
             }
-        }, 300);
+        }, posDifference / 2);
     })
 });
