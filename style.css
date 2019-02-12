@@ -1,8 +1,11 @@
 :root {
   --section-padding: 5vw;
+  --section-collapse-time: 500ms;
 
   --sectionHead-padding: 30px;
   --sectionHead-size: 60px;
+  --sectionHead-color-arrow: #90DA6E;
+  --sectionHead-hover-time: 200ms;
 
   --channel-background: #3C414E;
   --channel-color: #738BD7;
@@ -37,7 +40,7 @@ section{
   padding-bottom:25px;
   margin:0 auto;
   max-height: 500vh;
-  transition: max-height 500ms;
+  transition: max-height var(--section-collapse-time);
 }
 
 .section-collapse{
@@ -52,7 +55,7 @@ section{
 
 article{
   transform-origin: top;
-  transition: 500ms;
+  transition: var(--section-collapse-time);
 }
 
 h1{ /* legacy, kept for old subpages */
@@ -66,7 +69,6 @@ h1{ /* legacy, kept for old subpages */
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   padding-top: var(--sectionHead-padding);
   padding-bottom: var(--sectionHead-padding);
   cursor: pointer;
@@ -76,13 +78,13 @@ h1{ /* legacy, kept for old subpages */
   position: absolute;
   content: '';
   top: 46px;
-  left: 20px;
+  right: 0;
   width: 0; 
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 22px solid #4BB77A;
-  transition: 500ms;
+  border-bottom: 22px solid var(--sectionHead-color-arrow);
+  transition: var(--sectionHead-hover-time), transform var(--section-collapse-time);
 }
 .sectionHead:after{
   position: absolute;
@@ -90,22 +92,19 @@ h1{ /* legacy, kept for old subpages */
   height: 2px;
   width: 100%;
   top: calc(100% - 30px);
-  background: linear-gradient(90deg, rgba(75, 183, 122,0), #4BB77A 15%, #90DA6E 85%, rgba(144, 218, 111, 0) 100%);
-  transition: 500ms;
+  background: linear-gradient(90deg, #4BB77A, var(--sectionHead-color-arrow));
+  transition: var(--sectionHead-hover-time);
 }
 .sectionHead img{
+  left: 0;
   height: 60px; /* fallback for IE */
   height: var(--sectionHead-size);
-  transform-origin: right;
 }
 .sectionHead img:nth-child(2){
-  height: 35px;
   margin-left: 10px;
   margin-top: 5px;
-  transition: 500ms;
-}
-.rules > .sectionHead > img:nth-child(1), .channels > .sectionHead > img:nth-child(1){
-  transform: scale(0.8);
+  height: 35px;
+  transition: 200ms;
 }
 .mods > .sectionHead > img:nth-child(2){
   margin-top: 0;
@@ -537,13 +536,11 @@ h1{ /* legacy, kept for old subpages */
   }
   .sectionHead:before{
     top: 66px;
-    left: calc(50% - 230px);
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
-    border-bottom: 26px solid #4BB77A;
+    border-bottom: 26px solid var(--sectionHead-color-arrow);
   }
   .sectionHead:after{
-    width: 420px;
     top: calc(100% - 40px);
   }
   .sectionHead img{
@@ -556,9 +553,11 @@ h1{ /* legacy, kept for old subpages */
     filter: var(--header-hue-rotate);
     transition: 100ms;
   }
-  .sectionHead:hover:after{
+  .sectionHead:hover:before, .sectionHead:hover:after{
     filter: var(--header-hue-rotate);
-    transition: 100ms;
+  }
+  .mods .sectionHead{
+    margin: 0 calc(var(--section-padding) - 20px);
   }
   .mods > .sectionHead > img:nth-child(2){
     height: 40px;
