@@ -47,11 +47,11 @@ section{
   transform: rotate(180deg);
 }
 .section-collapse article{
-  transform-origin: top;
   transform: scale(0);
 }
 
 article{
+  transform-origin: top;
   transition: 500ms;
 }
 
@@ -409,16 +409,26 @@ h1{ /* legacy, kept for old subpages */
 /* mods */
 
 .mods{
-  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 2.5vw;
+  padding: 0 0 2.5vw 0;
 }
 .mods article{
+  position: relative;
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  max-width: 1000px;
 }
 .mods h1{
-  flex-basis:100%;
-  margin-left:calc(var(--section-padding) / 2);
+  flex-basis: 100%;
+  margin-left: calc(var(--section-padding) / 2);
+}
+.mods .sectionHead{
+  margin: 0 2.5vw;
+  flex-basis: 100%;
 }
 .mod{
   overflow:hidden;
@@ -426,9 +436,10 @@ h1{ /* legacy, kept for old subpages */
   box-sizing: border-box;
   width: 42.5vw;
   height: 42.5vw;
-  margin-bottom: 5vw;
+  margin: 2.5vw;
   font-size: 0;
   transition: 500ms;
+  transition-property: hover, box-shadow;
 }
 .mod:hover{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
@@ -573,15 +584,12 @@ h1{ /* legacy, kept for old subpages */
     padding-top: calc(var(--section-padding) / 2);
   }
   .mods{
-    margin: 0 2.5vw;
+    margin: 0 20px;
     padding: 0 0 20px 0;
   }
-  .mods article{
-    justify-content: center;
-  }
   .mod{
-    width:200px;
-    height:200px;
+    width: 200px;
+    height: 200px;
     margin: 20px;
   }
 }
