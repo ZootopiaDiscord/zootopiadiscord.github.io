@@ -32,13 +32,13 @@ $(document).ready(function () {
     });
     $('.channel').click(function () {
         let scrollPosition = $(window).scrollTop();
-        let channelsPosition = $(".channels").offset();
-        let posDifference = channelsPosition.top - scrollPosition;
+        let channelsPosition = $(".channels").offset().top;
+        let posDifference = channelsPosition - scrollPosition;
         if (posDifference < 0) {
             posDifference = posDifference * (-1);
         }
-        $('html').animate({
-            scrollTop: $(".channels").offset().top
+        $('html, body').animate({
+            scrollTop: channelsPosition
         }, posDifference / 2);
         setTimeout(() => {
             if ($(".channels").hasClass("section-collapse")) {
