@@ -17,6 +17,10 @@
   --role-color-znn: #E54D42;
   --role-color-nighthowler: #0B2CFB;
   --role-color-zpd: #3C8DAE;
+
+  --zindex-bukoya: 10;
+  --zindex-section: 20;
+  --zindex-modal: 100;
 }
 
 html,body{
@@ -33,6 +37,7 @@ a {
 /* sections */
 
 section{
+  z-index: var(--zindex-section);
   box-sizing: border-box;
   position:relative;
   padding-left:var(--section-padding);
@@ -74,7 +79,6 @@ h1{ /* legacy, kept for old subpages */
   cursor: pointer;
 }
 .sectionHead:before{
-  z-index: 1;
   position: absolute;
   content: '';
   top: 46px;
@@ -121,6 +125,7 @@ h1{ /* legacy, kept for old subpages */
   background:url('img/header.jpg');
   background-position:center;
   background-size:cover;
+  border-radius: 0 0 20px 20px;
 }
 .logo{
   display: flex;
@@ -145,7 +150,6 @@ h1{ /* legacy, kept for old subpages */
   background-repeat:no-repeat;
 }
 .header-link{
-  z-index: 1;
   position: relative;
   display: flex;
   justify-content: center;
@@ -161,6 +165,7 @@ h1{ /* legacy, kept for old subpages */
   background:rgba(255,255,255,0.25);
   border:1px solid rgba(255,255,255,0.2);
   border-radius: 1000px;
+  cursor: pointer;
   transition:500ms;
 }
 .header-link:hover{
@@ -168,13 +173,11 @@ h1{ /* legacy, kept for old subpages */
   border:1px solid rgba(255,255,255,0);
   transition:100ms;
 }
-#join-button{
-  cursor:pointer;
-}
 
 /* background */
 
 .bukoya{
+  z-index: var(--zindex-bukoya);
   position:fixed;
   height:100%;
   width:20%;
@@ -192,7 +195,7 @@ h1{ /* legacy, kept for old subpages */
 
 .modal{
   visibility:hidden;
-  z-index:100;
+  z-index:var(--zindex-modal);
   position:fixed;
   overflow: hidden;
   width:calc(100% - 8vmin);
@@ -234,15 +237,6 @@ h1{ /* legacy, kept for old subpages */
 }
 .modal-link:hover{
   background:rgba(255,255,255,0.125);
-}
-
-/* info */
-
-.info{
-  padding-top: var(--section-padding);
-}
-.info article{
-  text-align: justify;
 }
 
 /* rules */
@@ -506,7 +500,7 @@ h1{ /* legacy, kept for old subpages */
   -ms-user-select: none;
   user-select: none;
 }
-.blur a, .blur .sectionHead{pointer-events: none}
+.blur a, .blur .sectionHead, .blur .channel{pointer-events: none}
 .backBlur{-webkit-backdrop-filter:blur(7.5px);backdrop-filter:blur(7.5px);}
 .command{
   padding: 0 2px;
@@ -522,6 +516,7 @@ h1{ /* legacy, kept for old subpages */
     width: calc(80vw / 3);
     height: calc(80vw / 3);
   }
+}
 
 @media only screen and (min-width : 768px) {
   :root {
@@ -578,9 +573,6 @@ h1{ /* legacy, kept for old subpages */
   }
   .modal-link{
     padding:2vmin;
-  }
-  .info{
-    padding-top: calc(var(--section-padding) / 2);
   }
   .mods{
     margin: 0 20px;
