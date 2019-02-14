@@ -137,6 +137,24 @@ h1{ /* legacy, kept for old subpages */
   background:url('img/header.jpg');
   background-position:center;
   background-size:cover;
+  -webkit-clip-path: polygon(
+    /* outside */
+    0 0, 100% 0,
+    /* outer right */
+    100% calc(95% - var(--wave-side-1)), 95% calc(95% - var(--wave-side-2)), 90% calc(95% - var(--wave-side-3)), 85% calc(95% - var(--wave-side-4)), 80% calc(95% - var(--wave-side-5)),
+    /* top right */
+    75% calc(95% - var(--wave-top)),
+    /* inner right */
+    70% calc(95% - var(--wave-middle-1)), 65% calc(95% - var(--wave-middle-2)), 60% calc(95% - var(--wave-middle-3)), 55% calc(95% - var(--wave-middle-4)),
+    /* middle */
+    50% 95%,
+    /* inner left */
+    45% calc(95% + var(--wave-middle-4)), 40% calc(95% + var(--wave-middle-3)), 35% calc(95% + var(--wave-middle-2)), 30% calc(95% + var(--wave-middle-1)),
+    /* top left */
+    25% calc(95% + var(--wave-top)),
+    /* outer left */
+    20% calc(95% + var(--wave-side-5)), 15% calc(95% + var(--wave-side-4)), 10% calc(95% + var(--wave-side-3)), 5% calc(95% + var(--wave-side-2)), 0% calc(95% + var(--wave-side-1))
+    );
   clip-path: polygon(
     /* outside */
     0 0, 100% 0,
@@ -157,6 +175,7 @@ h1{ /* legacy, kept for old subpages */
     );
   }
   .header-removeClip{
+    -webkit-clip-path: none !important;
     clip-path: none !important;
   }
 .logo{
@@ -186,11 +205,11 @@ h1{ /* legacy, kept for old subpages */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 21vw;
-  height: 21vw;
-  margin: 8vw 0 3vw 0;
+  width: 23vmin;
+  height: 23vmin;
+  margin: 12vmin 0 8vmin 0;
   font-family: 'Exo', sans-serif;
-  font-size: 7vw;
+  font-size: 7vmin;
   font-weight:900;
   text-decoration: none;
   color:#64BE8C;
@@ -271,6 +290,31 @@ h1{ /* legacy, kept for old subpages */
 }
 .modal-link:hover{
   background:rgba(255,255,255,0.125);
+}
+
+/* info */
+
+.info{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.info article{
+  display: grid;
+  max-width: 750px;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+}
+.info article p{
+  align-self: end;
+  margin: 0;
+}
+.info article p:first-child{
+  font-weight: bold;
+  font-size: 150%;
+}
+.info article p:not(:first-child){
+  text-align: justify;
 }
 
 /* rules */
@@ -585,6 +629,24 @@ h1{ /* legacy, kept for old subpages */
   }
   .sectionHead:hover:before, .sectionHead:hover:after{
     filter: var(--header-hue-rotate);
+  }
+  .info{
+    margin-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .info article{
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+  }
+  .info article p:first-child{
+    font-size: 170%;
+  }
+  .info article p:not(:first-child){
+    font-size: 80%;
+  }
+  .info article p:nth-child(3){
+    grid-column: 2;
   }
   .mods .sectionHead{
     margin: 0 calc(var(--section-padding) - 20px);
