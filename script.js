@@ -3,7 +3,7 @@ $(document).ready(function () {
     /* open modal */
     $('#join-button').click(function () {
         $('.modal').addClass("modal-show");
-        $('section,.bukoya').addClass("blur");
+        $('section,.bukoya,.scroll-indicator').addClass("blur");
         $('.header').addClass("header-removeClip");
         $('.header-link').css({ "pointer-events": "none" });
         $('html,body').css({ "overflow": "hidden" });
@@ -12,7 +12,7 @@ $(document).ready(function () {
     /* close modal */
     $('section').mouseup(function () {
         $('.modal').removeClass("modal-show");
-        $('section,.bukoya').removeClass("blur");
+        $('section,.bukoya,.scroll-indicator').removeClass("blur");
         $('.header').removeClass("header-removeClip");
         $('.header-link').css({ "pointer-events": "initial" });
         $('html,body').css({ "overflow": "initial" });
@@ -64,6 +64,9 @@ $(document).ready(function () {
     /* hide scroll indicator */
     $(window).scroll(function () {
         $('.scroll-indicator').addClass("scroll-indicator-hide");
+        setTimeout(() => {
+            $('.scroll-indicator').css({"display" : "none"});
+        }, 250);
     });
 
     /* scroll to rules when scroll indicator clicked */

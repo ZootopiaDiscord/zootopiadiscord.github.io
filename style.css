@@ -259,7 +259,7 @@ h1{ /* legacy, kept for old subpages */
   border: 1px solid rgba(114, 200, 119, 1);
   border-radius: 50px;
   cursor: pointer;
-  transition: 250ms;
+  transition: transform 250ms;
 }
 .scroll-indicator:active{
   transform: scale(0.75);
@@ -618,7 +618,7 @@ h1{ /* legacy, kept for old subpages */
   -ms-user-select: none;
   user-select: none;
 }
-.blur a, .blur .sectionHead, .blur .channel{pointer-events: none}
+.blur a, .blur .sectionHead, .blur .channel, .blur + .scroll-indicator{pointer-events: none}
 .backBlur{-webkit-backdrop-filter:blur(7.5px);backdrop-filter:blur(7.5px);}
 .command{
   padding: 0 2px;
