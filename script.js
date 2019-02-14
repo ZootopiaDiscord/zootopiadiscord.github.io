@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+    /* open modal */
     $('#join-button').click(function () {
         $('.modal').addClass("modal-show");
         $('section,.bukoya').addClass("blur");
@@ -6,6 +8,8 @@ $(document).ready(function () {
         $('.header-link').css({ "pointer-events": "none" });
         $('html,body').css({ "overflow": "hidden" });
     });
+
+    /* close modal */
     $('section').mouseup(function () {
         $('.modal').removeClass("modal-show");
         $('section,.bukoya').removeClass("blur");
@@ -13,13 +17,19 @@ $(document).ready(function () {
         $('.header-link').css({ "pointer-events": "initial" });
         $('html,body').css({ "overflow": "initial" });
     });
+
+    /* collapse / open sections */
     $('.sectionHead').click(function () {
         $(this).parent("section").toggleClass("section-collapse");
     });
+
+    /* collapse / open channel category */
     $('.channels article ul li:first-child').click(function () {
         $(this).parent("ul").children("li").not(".channels article ul li:first-child").toggleClass("channelCategory-hide");
         $(this).parent("ul").children("li:first-child").toggleClass("channelCategory-closed");
     });
+
+    /* filter channels */
     $('.channels input').click(function () {
         switch ($(this).attr('id')) {
             case "verified-channels":
@@ -32,6 +42,8 @@ $(document).ready(function () {
                 break;
         }
     });
+
+    /* scroll to channel */
     $('.channel').click(function () {
         let scrollPosition = $(window).scrollTop();
         let channelsPosition = $(".channels").offset().top;
@@ -47,5 +59,17 @@ $(document).ready(function () {
                 $(".channels").removeClass("section-collapse");
             }
         }, posDifference / 2);
-    })
+    });
+
+    /* hide scroll indicator */
+    $(window).scroll(function () {
+        $('.scroll-indicator').addClass("scroll-indicator-hide");
+    });
+
+    /* scroll to rules when scroll indicator clicked */
+    $('.scroll-indicator').click(function () {
+        $('html, body').animate({
+            scrollTop: $('.rules').offset().top
+        }, 500);
+    });
 });
