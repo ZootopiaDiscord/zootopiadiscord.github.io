@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    if($(window).scrollTop() == 0){
-        $('.scroll-indicator').css({"display" : "grid"});
+    if ($(window).scrollTop() == 0) {
+        $('.scroll-indicator').css({ "display": "grid" });
     }
 
     /* open modal */
@@ -69,12 +69,12 @@ $(document).ready(function () {
     $(window).scroll(function () {
         $('.scroll-indicator').addClass("scroll-indicator-hide");
         setTimeout(() => {
-            $('.scroll-indicator').css({"display" : "none"});
+            $('.scroll-indicator').css({ "display": "none" });
         }, 250);
     });
 
     /* scroll to rules when scroll indicator clicked */
-    $('body').on('click', '.scroll-indicator', function(){
+    $('body').on('click', '.scroll-indicator', function () {
         $('html, body').animate({
             scrollTop: $('.rules').offset().top
         }, 500);

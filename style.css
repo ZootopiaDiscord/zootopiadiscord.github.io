@@ -90,7 +90,7 @@ h1{ /* legacy, kept for old subpages */
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-bottom: 22px solid var(--sectionHead-color-arrow);
-  transition: var(--sectionHead-hover-time), transform var(--section-collapse-time);
+  transition: var(--section-collapse-time);
 }
 .sectionHead:after{
   position: absolute;
@@ -608,8 +608,13 @@ h1{ /* legacy, kept for old subpages */
 
 /* modifiers */
 
-.grey{background:rgba(46,49,54,0.75)}
-.green{background:rgba(63,73,69,0.75)}
+.grey{background:rgba(46,49,54,1)}
+.green{background:rgba(63,73,69,1)}
+
+@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+  .grey{background:rgba(46,49,54,0.75)}
+  .green{background:rgba(63,73,69,0.75)}
+}
 .blur{
   filter:blur(20px);
   -webkit-user-select: none;
