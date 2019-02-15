@@ -4,7 +4,6 @@
 
   --sectionHead-padding: 30px;
   --sectionHead-size: 60px;
-  --sectionHead-color-arrow: #90DA6E;
   --sectionHead-hover-time: 200ms;
 
   --channel-background: #3C414E;
@@ -13,6 +12,8 @@
 
   --header-hue-rotate: hue-rotate(45deg);
 
+  --zootopia-gradient-light: #90DA6E;
+  --zootopia-gradient-dark: #4BB77A;
   --role-color-zootopian: #1DAE86;
   --role-color-znn: #E54D42;
   --role-color-nighthowler: #0B2CFB;
@@ -89,7 +90,7 @@ h1{ /* legacy, kept for old subpages */
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 22px solid var(--sectionHead-color-arrow);
+  border-bottom: 22px solid var(--zootopia-gradient-light);
   transition: var(--section-collapse-time);
 }
 .sectionHead:after{
@@ -98,7 +99,7 @@ h1{ /* legacy, kept for old subpages */
   height: 2px;
   width: 100%;
   top: calc(100% - 30px);
-  background: linear-gradient(90deg, #4BB77A, var(--sectionHead-color-arrow));
+  background: linear-gradient(90deg, var(--zootopia-gradient-dark), var(--zootopia-gradient-light));
   transition: var(--sectionHead-hover-time);
 }
 .sectionHead img{
@@ -254,7 +255,7 @@ h1{ /* legacy, kept for old subpages */
   grid-row-gap: 4px;
   left: calc(var(--section-padding) / 2 - 2px);
   bottom: 0;
-  background: linear-gradient(var(--sectionHead-color-arrow), #4BB77A);
+  background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
   cursor: pointer;
   transition: transform 250ms;
 }
@@ -264,7 +265,7 @@ h1{ /* legacy, kept for old subpages */
 
 .scroll-indicator div{
   display: none;
-  background: linear-gradient(var(--sectionHead-color-arrow), #4BB77A);
+  background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
   -webkit-clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
   clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
   animation-name: flashScrollIndicator;
@@ -350,6 +351,9 @@ h1{ /* legacy, kept for old subpages */
 .info article p:first-child{
   font-weight: bold;
   font-size: 150%;
+  background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .info article p:not(:first-child){
   text-align: justify;
@@ -677,7 +681,7 @@ h1{ /* legacy, kept for old subpages */
     top: 66px;
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
-    border-bottom: 26px solid var(--sectionHead-color-arrow);
+    border-bottom: 26px solid var(--zootopia-gradient-light);
   }
   .sectionHead:after{
     top: calc(100% - 40px);
