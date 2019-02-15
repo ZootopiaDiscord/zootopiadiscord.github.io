@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    if($(window).scrollTop() == 0){
+        $('.scroll-indicator').css({"display" : "grid"});
+    }
+
     /* open modal */
     $('#join-button').click(function () {
         $('.modal').addClass("modal-show");
@@ -70,7 +74,7 @@ $(document).ready(function () {
     });
 
     /* scroll to rules when scroll indicator clicked */
-    $('.scroll-indicator').click(function () {
+    $('body').on('click', '.scroll-indicator', function(){
         $('html, body').animate({
             scrollTop: $('.rules').offset().top
         }, 500);

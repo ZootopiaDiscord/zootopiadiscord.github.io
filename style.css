@@ -121,15 +121,15 @@ h1{ /* legacy, kept for old subpages */
 
 .header{
   --wave-side-1: 0%;
-  --wave-side-2: 1.2%;
-  --wave-side-3: 2.5%;
-  --wave-side-4: 3.7%;
+  --wave-side-2: 1.4%;
+  --wave-side-3: 2.7%;
+  --wave-side-4: 3.8%;
   --wave-side-5: 4.6%;
   --wave-top: 5%;
   --wave-middle-1: 4.6%;
   --wave-middle-2: 3.8%;
   --wave-middle-3: 2.8%;
-  --wave-middle-4: 1.6%;
+  --wave-middle-4: 1.5%;
 
   padding:8vmin;
   display:flex;
@@ -248,16 +248,13 @@ h1{ /* legacy, kept for old subpages */
 .scroll-indicator{
   z-index: var(--zindex-scrollIndicator);
   position: fixed;
-  display: grid;
+  display: none;
   grid-template-rows: repeat(3, 20px);
-  grid-template-columns: 20px;
-  grid-row-gap: 10px;
-  left: 10px;
-  bottom: 10px;
-  padding: 15px 10px;
-  background: #36393E;
-  border: 1px solid rgba(114, 200, 119, 1);
-  border-radius: 50px;
+  grid-template-columns: 2px;
+  grid-row-gap: 4px;
+  left: calc(var(--section-padding) / 2 - 2px);
+  bottom: 0;
+  background: linear-gradient(var(--sectionHead-color-arrow), #4BB77A);
   cursor: pointer;
   transition: transform 250ms;
 }
@@ -266,7 +263,9 @@ h1{ /* legacy, kept for old subpages */
 }
 
 .scroll-indicator div{
+  display: none;
   background: linear-gradient(var(--sectionHead-color-arrow), #4BB77A);
+  -webkit-clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
   clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
   animation-name: flashScrollIndicator;
   animation-duration: 2s;
@@ -336,7 +335,7 @@ h1{ /* legacy, kept for old subpages */
 .info{
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 .info article{
   display: grid;
@@ -652,6 +651,19 @@ h1{ /* legacy, kept for old subpages */
     --sectionHead-padding: 40px;
     --sectionHead-size: 80px;
   }
+  .scroll-indicator{
+    grid-template-columns: 20px;
+    grid-row-gap: 4px;
+    left: 10px;
+    bottom: 10px;
+    padding: 15px 10px;
+    background: #36393E;
+    border: 1px solid rgba(114, 200, 119, 1);
+    border-radius: 50px;
+  }
+  .scroll-indicator div{
+    display: initial;
+  }
   .sectionHead{
     padding-top: 40px;
     padding-bottom: 40px;
@@ -679,7 +691,7 @@ h1{ /* legacy, kept for old subpages */
     filter: var(--header-hue-rotate);
   }
   .info{
-    margin-top: 50px;
+    padding-top: 50px;
     padding-left: 30px;
     padding-right: 30px;
   }
