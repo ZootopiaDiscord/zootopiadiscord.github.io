@@ -33,6 +33,7 @@ html,body{
   font-family: 'Open Sans', sans-serif;
   background:#36393E;
   color:white;
+  overflow: hidden; /* IE */
 }
 a {
   color: lightblue;
@@ -637,6 +638,9 @@ h1{ /* legacy, kept for old subpages */
 @supports (background: red){
   #IE-notice{
     display: none;
+  }
+  html,body{
+    overflow: initial;
   }
   section, .scroll-indicator{
     visibility: initial;
