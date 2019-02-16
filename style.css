@@ -33,6 +33,7 @@ html,body{
   font-family: 'Open Sans', sans-serif;
   background:#36393E;
   color:white;
+  overflow: hidden; /* IE */
 }
 a {
   color: lightblue;
@@ -42,6 +43,7 @@ a {
 /* sections */
 
 section{
+  visibility: hidden; /* IE */
   z-index: var(--zindex-section);
   box-sizing: border-box;
   position:relative;
@@ -256,6 +258,7 @@ h1{ /* legacy, kept for old subpages */
 }
 
 .scroll-indicator{
+  visibility: hidden; /* IE */
   z-index: var(--zindex-scrollIndicator);
   position: fixed;
   display: none;
@@ -624,6 +627,27 @@ h1{ /* legacy, kept for old subpages */
 }
 .update ul li:last-child{
   margin-top: 10px;
+}
+
+/* IE */
+
+#IE-notice{
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 600px;
+}
+
+@supports (background: red){
+  #IE-notice{
+    display: none;
+  }
+  html,body{
+    overflow: initial;
+  }
+  section, .scroll-indicator{
+    visibility: initial;
+  }
 }
 
 /* modifiers */
