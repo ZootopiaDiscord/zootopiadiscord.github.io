@@ -23,6 +23,9 @@
   --zindex-section: 20;
   --zindex-scrollIndicator: 30;
   --zindex-modal: 100;
+
+  --mods-halfMargin: 2.5vw;
+  --mods-transition: 500ms;
 }
 
 html,body{
@@ -82,29 +85,33 @@ h1{ /* legacy, kept for old subpages */
   cursor: pointer;
 }
 .sectionHead:before{
+  --arrow-width: 12px;
+  --arrow-height: 22px;
+
   position: absolute;
   content: '';
   top: 46px;
   right: 0;
   width: 0; 
   height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 22px solid var(--zootopia-gradient-light);
+  border-left: var(--arrow-width) solid transparent;
+  border-right: var(--arrow-width) solid transparent;
+  border-bottom: var(--arrow-height) solid var(--zootopia-gradient-light);
   transition: var(--section-collapse-time);
 }
 .sectionHead:after{
+  --width: 100%;
+
   position: absolute;
   content: '';
   height: 2px;
-  width: 100%;
-  top: calc(100% - 30px);
+  width: var(--width);
+  top: calc(var(--width) - 30px);
   background: linear-gradient(90deg, var(--zootopia-gradient-dark), var(--zootopia-gradient-light));
   transition: var(--sectionHead-hover-time);
 }
 .sectionHead img{
   left: 0;
-  height: 60px; /* fallback for IE */
   height: var(--sectionHead-size);
 }
 .sectionHead img:nth-child(2){
@@ -184,7 +191,7 @@ h1{ /* legacy, kept for old subpages */
   display: flex;
   justify-content: center;
   flex-basis: 100%;
-  height: 15vh;
+  height: 15vmax;
   align-self: center;
   background:url('img/zootopia-discord-logo-v1.png');
   background-position:center;
@@ -203,12 +210,14 @@ h1{ /* legacy, kept for old subpages */
   background-repeat:no-repeat;
 }
 .header-link{
+  --size: 23vmin;
+
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 23vmin;
-  height: 23vmin;
+  width: var(--size);
+  height: var(--size);
   margin: 12vmin 0 8vmin 0;
   font-family: 'Exo', sans-serif;
   font-size: 7vmin;
@@ -339,10 +348,12 @@ h1{ /* legacy, kept for old subpages */
   padding-top: 30px;
 }
 .info article{
+  --grid-gap: 30px;
+
   display: grid;
   max-width: 750px;
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
+  grid-row-gap: var(--grid-gap);
+  grid-column-gap: var(--grid-gap);
 }
 .info article p{
   align-self: end;
@@ -526,8 +537,8 @@ h1{ /* legacy, kept for old subpages */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 2.5vw;
-  padding: 0 0 2.5vw 0;
+  margin: 0 var(--mods-halfMargin);
+  padding: 0 0 var(--mods-halfMargin) 0;
 }
 .mods article{
   position: relative;
@@ -541,18 +552,20 @@ h1{ /* legacy, kept for old subpages */
   margin-left: calc(var(--section-padding) / 2);
 }
 .mods .sectionHead{
-  margin: 0 2.5vw;
+  margin: 0 var(--mods-halfMargin);
   flex-basis: 100%;
 }
 .mod{
+  --size: 42.4vw;
+
   overflow:hidden;
   position:relative;
   box-sizing: border-box;
-  width: 42.5vw;
-  height: 42.5vw;
-  margin: 2.5vw;
+  width: var(--size);
+  height: var(--size);
+  margin: var(--mods-halfMargin);
   font-size: 0;
-  transition: 500ms;
+  transition: var(--mods-transition);
   transition-property: hover, box-shadow;
 }
 .mod:hover{
@@ -565,7 +578,7 @@ h1{ /* legacy, kept for old subpages */
   opacity: 0;
 }
 .mod img{
-  transition: 500ms;
+  transition: var(--mods-transition);
   width: 100%;
   height: 100%;
 }
@@ -582,7 +595,7 @@ h1{ /* legacy, kept for old subpages */
   font-weight:100;
   font-size:1.5rem;
   pointer-events: none;
-  transition: 500ms;
+  transition: var(--mods-transition);
 }
 
 /* update */
@@ -648,8 +661,7 @@ h1{ /* legacy, kept for old subpages */
 
 @media only screen and (min-width : 540px) {
   .mod{
-    width: calc(80vw / 3);
-    height: calc(80vw / 3);
+    --size: calc(80vw / 3);
   }
 }
 
@@ -659,6 +671,8 @@ h1{ /* legacy, kept for old subpages */
     
     --sectionHead-padding: 40px;
     --sectionHead-size: 80px;
+
+    --mods-halfMargin: 20px;
   }
   .scroll-indicator{
     grid-template-columns: 20px;
@@ -674,20 +688,17 @@ h1{ /* legacy, kept for old subpages */
     display: initial;
   }
   .sectionHead{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: var(--sectionHead-padding);
+    padding-bottom: var(--sectionHead-padding);
   }
   .sectionHead:before{
+    --arrow-width: 14px;
+    --arrow-height: 26px;
+
     top: 66px;
-    border-left: 14px solid transparent;
-    border-right: 14px solid transparent;
-    border-bottom: 26px solid var(--zootopia-gradient-light);
   }
   .sectionHead:after{
-    top: calc(100% - 40px);
-  }
-  .sectionHead img{
-    height: 80px;
+    top: calc(var(--width) - 40px);
   }
   .sectionHead img:nth-child(2){
     height: 50px;
@@ -700,9 +711,11 @@ h1{ /* legacy, kept for old subpages */
     filter: var(--header-hue-rotate);
   }
   .info{
+    --sidePadding: 60px;
+
     padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: var(--sidePadding);
+    padding-right: var(--sidePadding);
   }
   .info article{
     grid-template-rows: auto auto;
@@ -727,25 +740,16 @@ h1{ /* legacy, kept for old subpages */
       height: 200px;
   }
   .header-link{
+    --size: 150px;
+
     margin: 60px 0 20px 0;
-    width: 150px;
-    height: 150px;
     font-size: 45px;
-  }
-  .modal{
-    max-width:500px;
   }
   .modal-link{
     padding:2vmin;
   }
-  .mods{
-    margin: 0 20px;
-    padding: 0 0 20px 0;
-  }
   .mod{
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+    --size: 200px;
   }
 }
 
