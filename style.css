@@ -266,6 +266,7 @@ h1{ /* legacy, kept for old subpages */
   bottom: 0;
   background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
   cursor: pointer;
+  pointer-events: none;
   transition: transform 250ms;
 }
 .scroll-indicator:active{
@@ -289,7 +290,8 @@ h1{ /* legacy, kept for old subpages */
   animation-delay: 200ms;
 }
 .scroll-indicator-hide{
-  transform: translate(calc(-100% - 10px), 0);
+  --transform: calc(var(--section-padding) / 2);
+  transform: translate(calc(-100% - var(--transform)), 0);
 }
 
 /* modal */
@@ -364,6 +366,7 @@ h1{ /* legacy, kept for old subpages */
   font-size: 150%;
   background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .info article p:not(:first-child){
@@ -683,9 +686,13 @@ h1{ /* legacy, kept for old subpages */
     background: #36393E;
     border: 1px solid rgba(114, 200, 119, 1);
     border-radius: 50px;
+    pointer-events: initial;
   }
   .scroll-indicator div{
     display: initial;
+  }
+  .scroll-indicator-hide{
+    transform: translate(calc(-100% - 10px), 0);
   }
   .sectionHead{
     padding-top: var(--sectionHead-padding);
