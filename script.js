@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
-    if ($(window).scrollTop() == 0) {
-        $('.scroll-indicator').css({ "display": "grid" });
-    }
+    scrollIndicator();
 
     /* open modal */
     $('#join-button').click(function () {
@@ -65,14 +63,6 @@ $(document).ready(function () {
         }, posDifference / 2);
     });
 
-    /* hide scroll indicator */
-    $(window).scroll(function () {
-        $('.scroll-indicator').addClass("scroll-indicator-hide");
-        setTimeout(() => {
-            $('.scroll-indicator').css({ "display": "none" });
-        }, 250);
-    });
-
     /* scroll to rules when scroll indicator clicked */
     $('body').on('click', '.scroll-indicator', function () {
         $('html, body').animate({
@@ -80,3 +70,23 @@ $(document).ready(function () {
         }, 500);
     });
 });
+
+function scrollIndicator() {
+    let shown = false;
+
+    if ($(window).scrollTop() == 0) {
+        $('.scroll-indicator').css({ "display": "grid" });
+        shown = true;
+    }
+
+    /* hide scroll indicator */
+    $(window).scroll(function () {
+        if (shown === true) {
+            shown = false;
+            $('.scroll-indicator').addClass("scroll-indicator-hide");
+            setTimeout(() => {
+                $('.scroll-indicator').css({ "display": "none" });
+            }, 250);
+        }
+    });
+}
