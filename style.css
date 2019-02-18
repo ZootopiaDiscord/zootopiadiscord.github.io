@@ -36,7 +36,7 @@ html,body{
   overflow: hidden; /* IE */
 }
 a {
-  color: lightblue;
+  color: var(--zootopia-gradient-dark);
   text-decoration: none;
 }
 
@@ -141,6 +141,25 @@ h1{ /* legacy, kept for old subpages */
   --wave-middle-3: 2.8%;
   --wave-middle-4: 1.5%;
 
+  --clip-path: polygon(
+    /* outside */
+    0 0, 100% 0,
+    /* outer right */
+    100% calc(95% - var(--wave-side-1)), 95% calc(95% - var(--wave-side-2)), 90% calc(95% - var(--wave-side-3)), 85% calc(95% - var(--wave-side-4)), 80% calc(95% - var(--wave-side-5)),
+    /* top right */
+    75% calc(95% - var(--wave-top)),
+    /* inner right */
+    70% calc(95% - var(--wave-middle-1)), 65% calc(95% - var(--wave-middle-2)), 60% calc(95% - var(--wave-middle-3)), 55% calc(95% - var(--wave-middle-4)),
+    /* middle */
+    50% 95%,
+    /* inner left */
+    45% calc(95% + var(--wave-middle-4)), 40% calc(95% + var(--wave-middle-3)), 35% calc(95% + var(--wave-middle-2)), 30% calc(95% + var(--wave-middle-1)),
+    /* top left */
+    25% calc(95% + var(--wave-top)),
+    /* outer left */
+    20% calc(95% + var(--wave-side-5)), 15% calc(95% + var(--wave-side-4)), 10% calc(95% + var(--wave-side-3)), 5% calc(95% + var(--wave-side-2)), 0% calc(95% + var(--wave-side-1))
+    );
+
   padding:8vmin;
   display:flex;
   justify-content: center;
@@ -148,46 +167,14 @@ h1{ /* legacy, kept for old subpages */
   background:url('img/header.jpg');
   background-position:center;
   background-size:cover;
-  -webkit-clip-path: polygon(
-    /* outside */
-    0 0, 100% 0,
-    /* outer right */
-    100% calc(95% - var(--wave-side-1)), 95% calc(95% - var(--wave-side-2)), 90% calc(95% - var(--wave-side-3)), 85% calc(95% - var(--wave-side-4)), 80% calc(95% - var(--wave-side-5)),
-    /* top right */
-    75% calc(95% - var(--wave-top)),
-    /* inner right */
-    70% calc(95% - var(--wave-middle-1)), 65% calc(95% - var(--wave-middle-2)), 60% calc(95% - var(--wave-middle-3)), 55% calc(95% - var(--wave-middle-4)),
-    /* middle */
-    50% 95%,
-    /* inner left */
-    45% calc(95% + var(--wave-middle-4)), 40% calc(95% + var(--wave-middle-3)), 35% calc(95% + var(--wave-middle-2)), 30% calc(95% + var(--wave-middle-1)),
-    /* top left */
-    25% calc(95% + var(--wave-top)),
-    /* outer left */
-    20% calc(95% + var(--wave-side-5)), 15% calc(95% + var(--wave-side-4)), 10% calc(95% + var(--wave-side-3)), 5% calc(95% + var(--wave-side-2)), 0% calc(95% + var(--wave-side-1))
-    );
-  clip-path: polygon(
-    /* outside */
-    0 0, 100% 0,
-    /* outer right */
-    100% calc(95% - var(--wave-side-1)), 95% calc(95% - var(--wave-side-2)), 90% calc(95% - var(--wave-side-3)), 85% calc(95% - var(--wave-side-4)), 80% calc(95% - var(--wave-side-5)),
-    /* top right */
-    75% calc(95% - var(--wave-top)),
-    /* inner right */
-    70% calc(95% - var(--wave-middle-1)), 65% calc(95% - var(--wave-middle-2)), 60% calc(95% - var(--wave-middle-3)), 55% calc(95% - var(--wave-middle-4)),
-    /* middle */
-    50% 95%,
-    /* inner left */
-    45% calc(95% + var(--wave-middle-4)), 40% calc(95% + var(--wave-middle-3)), 35% calc(95% + var(--wave-middle-2)), 30% calc(95% + var(--wave-middle-1)),
-    /* top left */
-    25% calc(95% + var(--wave-top)),
-    /* outer left */
-    20% calc(95% + var(--wave-side-5)), 15% calc(95% + var(--wave-side-4)), 10% calc(95% + var(--wave-side-3)), 5% calc(95% + var(--wave-side-2)), 0% calc(95% + var(--wave-side-1))
-    );
+  -webkit-clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
   }
   .header-removeClip{
-    -webkit-clip-path: none !important;
-    clip-path: none !important;
+    --clip-path: none !important;
+
+    -webkit-clip-path: var(--clip-path);
+    clip-path: var(--clip-path);
   }
 .logo{
   display: flex;
@@ -277,10 +264,12 @@ h1{ /* legacy, kept for old subpages */
 }
 
 .scroll-indicator div{
+  --clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
+
   display: none;
   background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
-  -webkit-clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
-  clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
+  -webkit-clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
   animation-name: flashScrollIndicator;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -525,16 +514,16 @@ h1{ /* legacy, kept for old subpages */
   border: 1px solid var(--role-color-zpd);
 }
 #role-zootopian:before{
-  background: var(--role-color-zootopian)
+  background: var(--role-color-zootopian);
 }
 #role-znn:before{
-  background: var(--role-color-znn)
+  background: var(--role-color-znn);
 }
 #role-nighthowler:before{
-  background: var(--role-color-nighthowler)
+  background: var(--role-color-nighthowler);
 }
 #role-zpd:before{
-  background: var(--role-color-zpd)
+  background: var(--role-color-zpd);
 }
 
 /* mods */
@@ -667,7 +656,12 @@ h1{ /* legacy, kept for old subpages */
   user-select: none;
 }
 .blur a, .blur .sectionHead, .blur .channel, .blur + .scroll-indicator{pointer-events: none}
-.backBlur{-webkit-backdrop-filter:blur(7.5px);backdrop-filter:blur(7.5px);}
+.backBlur{
+  --backdrop-filter: blur(7.5px);
+
+  -webkit-backdrop-filter: var(--backdrop-filter);
+  backdrop-filter: var(--backdrop-filter);
+}
 .command{
   padding: 0 2px;
   color: rgba(255, 255, 255, 0.8);
@@ -702,10 +696,12 @@ h1{ /* legacy, kept for old subpages */
     --mods-halfMargin: 20px;
   }
   .scroll-indicator{
+    --margin: 10px;
+
     grid-template-columns: 20px;
     grid-row-gap: 4px;
-    left: 10px;
-    bottom: 10px;
+    left: var(--margin);
+    bottom: var(--margin);
     padding: 15px 10px;
     background: #36393E;
     border: 1px solid rgba(114, 200, 119, 1);
