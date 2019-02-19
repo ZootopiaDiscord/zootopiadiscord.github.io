@@ -265,15 +265,27 @@ h1{ /* legacy, kept for old subpages */
 
 .scroll-indicator div{
   --clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
+  --arrow-width: 10px;
+  --arrow-height: 18px;
 
   display: none;
   background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
-  -webkit-clip-path: var(--clip-path);
-  clip-path: var(--clip-path);
+
+  border-left: var(--arrow-width) solid transparent;
+  border-right: var(--arrow-width) solid transparent;
+  border-top: var(--arrow-height) solid var(--zootopia-gradient-light);
+
   animation-name: flashScrollIndicator;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+@supports (clip-path: none) or (-webkit-clip-path: none){
+  .scroll-indicator div{
+    border: 0;
+    -webkit-clip-path: var(--clip-path);
+    clip-path: var(--clip-path);
+  }
 }
 #scroll-indicator-1{
   animation-delay: 400ms;
