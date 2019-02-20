@@ -711,7 +711,7 @@ h1{ /* legacy, kept for old subpages */
   -ms-user-select: none;
   user-select: none;
 }
-.blur a, .blur .sectionHead, .blur .channel, .blur + .scroll-indicator{pointer-events: none}
+.blur a, .blur .sectionHead, .blur .channel{pointer-events: none}
 .backBlur{
   --backdrop-filter: blur(7.5px);
 

@@ -64,7 +64,7 @@ function modal() {
         $('.modal').addClass("modal-show");
         $('section,.scroll-indicator').addClass("blur");
         $('.header').addClass("header-removeClip");
-        $('.header-link, #bukoya').css({ "pointer-events": "none" });
+        $('.header-link, #bukoya, .scroll-indicator').css({ "pointer-events": "none" });
         $('html,body').css({ "overflow": "hidden" });
     });
 
@@ -73,7 +73,7 @@ function modal() {
         $('.modal').removeClass("modal-show");
         $('section,.scroll-indicator').removeClass("blur");
         $('.header').removeClass("header-removeClip");
-        $('.header-link, #bukoya').css({ "pointer-events": "initial" });
+        $('.header-link, #bukoya, .scroll-indicator').css({ "pointer-events": "initial" });
         $('html,body').css({ "overflow": "initial" });
     });
 }
