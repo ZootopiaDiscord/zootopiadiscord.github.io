@@ -21,7 +21,6 @@
   --role-color-nighthowler: #0B2CFB;
   --role-color-zpd: #3C8DAE;
 
-  --zindex-bukoya: 10;
   --zindex-section: 20;
   --zindex-scrollIndicator: 30;
   --zindex-modal: 100;
@@ -251,23 +250,12 @@ h1{ /* legacy, kept for old subpages */
 
 /* background */
 
-.bukoya{
-  z-index: var(--zindex-bukoya);
-  position:fixed;
-  height:50%;
-  width:20%;
-  right:0;
-  pointer-events:none;
-  bottom:-3px;
-  opacity:0.33;
-  background:url("img/bukoya.png");
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:bottom right;
-
-  animation-name: fadeIn;
-  animation-duration: 4s;
-  animation-fill-mode: backwards;
+#bukoya{
+  position: absolute;
+  max-height: 50%;
+  max-width: 20%;
+  right: 0;
+  bottom: 4.6%;
 }
 
 .scroll-indicator{
@@ -785,10 +773,10 @@ h1{ /* legacy, kept for old subpages */
 
 @keyframes fadeIn{
   0%{
-    filter: opacity(0%);
+    opacity: 0;
   }
   100%{
-    filter: opacity(100%);
+    opacity: 1;
   }
 }
 
