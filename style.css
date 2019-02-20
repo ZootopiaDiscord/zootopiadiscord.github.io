@@ -36,6 +36,7 @@ html,body{
   overflow: hidden; /* IE */
 }
 a {
+  color: #4BB77A; /* IE fallback */
   color: var(--zootopia-gradient-dark);
   text-decoration: none;
 }
@@ -267,7 +268,7 @@ h1{ /* legacy, kept for old subpages */
   visibility: hidden; /* IE */
   z-index: var(--zindex-scrollIndicator);
   position: fixed;
-  display: none;
+  display: grid;
   grid-template-rows: repeat(3, 20px);
   grid-template-columns: 2px;
   grid-row-gap: 4px;
@@ -276,7 +277,7 @@ h1{ /* legacy, kept for old subpages */
   background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
   cursor: pointer;
   pointer-events: none;
-  transition: transform 250ms;
+  transition: transform 250ms, padding 500ms, opacity 500ms;
 
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -289,6 +290,7 @@ h1{ /* legacy, kept for old subpages */
 
 .scroll-indicator div{
   --clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
+  --clip-path-up: polygon(20% 100%, 50% 40%, 80% 100%, 100% 100%, 50% 0, 0 100%);
   --arrow-width: 10px;
   --arrow-height: 18px;
 
@@ -299,6 +301,11 @@ h1{ /* legacy, kept for old subpages */
   border-right: var(--arrow-width) solid transparent;
   border-top: var(--arrow-height) solid var(--zootopia-gradient-light);
 
+  -webkit-clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
+
+  transition: 500ms;
+
   animation-name: flashScrollIndicator;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -306,9 +313,7 @@ h1{ /* legacy, kept for old subpages */
 }
 @supports (clip-path: none) or (-webkit-clip-path: none){
   .scroll-indicator div{
-    border: 0;
-    -webkit-clip-path: var(--clip-path);
-    clip-path: var(--clip-path);
+    border: 0 !important;
   }
 }
 #scroll-indicator-1{
@@ -317,9 +322,13 @@ h1{ /* legacy, kept for old subpages */
 #scroll-indicator-2{
   animation-delay: 200ms;
 }
-.scroll-indicator-hide{
-  --transform: calc(var(--section-padding) / 2);
-  transform: translate(calc(-100% - var(--transform)), 0);
+.scroll-indicator-up, .scroll-indicator-down{
+  opacity: 0;
+  visibility: hidden;
+}
+.scroll-indicator-up div{
+  border-top: 0;
+  border-bottom: var(--arrow-height) solid var(--zootopia-gradient-light);
 }
 
 /* modal */
@@ -705,7 +714,7 @@ h1{ /* legacy, kept for old subpages */
   .green{background:rgba(63,73,69,0.75)}
 }
 .blur{
-  filter:blur(20px);
+  filter:blur(20px) !important;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -787,6 +796,13 @@ h1{ /* legacy, kept for old subpages */
   100% {transform: scale(1)}
 }
 
+@keyframes flashScrollIndicatorUp {
+  0%   {transform: rotate(180deg)scale(1);}
+  20%  {transform: rotate(180deg)scale(1.33);}
+  50%  {transform: rotate(180deg)scale(1);}
+  100% {transform: rotate(180deg)scale(1)}
+}
+
 /* scaling */
 
 @media only screen and (min-width : 540px) {
@@ -820,8 +836,28 @@ h1{ /* legacy, kept for old subpages */
   .scroll-indicator div{
     display: initial;
   }
-  .scroll-indicator-hide{
-    transform: translate(calc(-100% - 10px), 0);
+  .scroll-indicator-up, .scroll-indicator-down{
+    opacity: 1;
+    visibility: visible;
+  }
+  .scroll-indicator-up{
+    padding: 9px 10px 11px 10px;
+    grid-template-rows: 20px;
+  }
+  .scroll-indicator-up div:first-child{
+    animation-name: none;
+    -webkit-clip-path: var(--clip-path-up);
+    clip-path: var(--clip-path-up);
+  }
+  .scroll-indicator-up div:not(:first-child), .scroll-indicator-down div:not(:first-child){
+    display: none;
+  }
+  .scroll-indicator-down{
+    padding: 11px 10px 9px 10px;
+    grid-template-rows: 20px;
+  }
+  .scroll-indicator-down div:first-child{
+    animation-name: none;
   }
   .sectionHead{
     padding-top: var(--sectionHead-padding);

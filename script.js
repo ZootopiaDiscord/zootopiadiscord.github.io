@@ -13,30 +13,46 @@ $(document).ready(function () {
 });
 
 function scrollIndicator() {
-    let shown = false;
+    let scrollIndicatorThreshold = 200;
+    let scrollPosCheck;
 
-    /* show scroll indicator only when page is scrolled to top on load */
-    if ($(window).scrollTop() == 0) {
-        $('.scroll-indicator').css({ "display": "grid" });
-        shown = true;
+    /* Point scroll indicator upwards if site not scrolled up on load */
+    if ($(window).scrollTop() >= scrollIndicatorThreshold) {
+        $('.scroll-indicator').addClass("scroll-indicator-up");
     }
 
-    /* hide scroll indicator on first scroll */
-    $(window).scroll(function () {
-        if (shown === true) {
-            shown = false;
-            $('.scroll-indicator').addClass("scroll-indicator-hide");
-            setTimeout(() => {
-                $('.scroll-indicator').css({ "display": "none" });
-            }, 250);
-        }
+    $(window).bind('scroll', function () {
+        clearTimeout(scrollPosCheck);
+        checkScrollPosition();
     });
 
-    /* scroll to rules when scroll indicator clicked */
+    /* Change scroll indicator pointing direction */
+    function checkScrollPosition() {
+        clearTimeout(scrollPosCheck);
+        scrollPosCheck = setTimeout(function () {
+            if ($(window).scrollTop() >= scrollIndicatorThreshold) {
+                $('.scroll-indicator').removeClass("scroll-indicator-down");
+                $('.scroll-indicator').addClass("scroll-indicator-up");
+            } else {
+                $('.scroll-indicator').removeClass("scroll-indicator-up");
+                $('.scroll-indicator').addClass("scroll-indicator-down");
+            }
+        }, 100);
+    };
+
+    /* scroll to rules or top when scroll indicator clicked */
     $('body').on('click', '.scroll-indicator', function () {
-        $('html, body').animate({
-            scrollTop: $('.rules').offset().top
-        }, 500);
+        let scrollDuration = 500;
+
+        if ($(window).scrollTop() >= scrollIndicatorThreshold) {
+            $('html, body').animate({
+                scrollTop: 0
+            }, scrollDuration);
+        } else {
+            $('html, body').animate({
+                scrollTop: $('.rules').offset().top
+            }, scrollDuration);
+        }
     });
 }
 
@@ -84,7 +100,7 @@ function channels() {
     /* scroll to channel */
     $('.channel').click(function () {
         // prevent accidental text selection after click
-        $(this).css({"pointer-events" : "none"});
+        $(this).css({ "pointer-events": "none" });
 
         //calculate distance between clicked element and channels section
         let scrollPosition = $(window).scrollTop();
@@ -93,12 +109,12 @@ function channels() {
         if (posDifference < 0) {
             posDifference = posDifference * (-1);
         }
-        
+
         $('html, body').animate({
             scrollTop: channelsPosition
         }, posDifference / 2);
         setTimeout(() => {
-            $(this).css({"pointer-events" : "initial"});
+            $(this).css({ "pointer-events": "initial" });
             if ($(".channels").hasClass("section-collapse")) {
                 $(".channels").removeClass("section-collapse");
             }
