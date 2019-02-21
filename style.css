@@ -259,7 +259,7 @@ h1{ /* legacy, kept for old subpages */
 }
 
 @supports (clip-path: none) or (-webkit-clip-path: none){
-  .scroll-indicator div{
+  #bukoya{
     bottom: 4.6%;
   }
 }
