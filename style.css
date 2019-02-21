@@ -255,7 +255,13 @@ h1{ /* legacy, kept for old subpages */
   max-height: 50%;
   max-width: 20%;
   right: 0;
-  bottom: 4.6%;
+  bottom: -3px;
+}
+
+@supports (clip-path: none) or (-webkit-clip-path: none){
+  .scroll-indicator div{
+    bottom: 4.6%;
+  }
 }
 
 .scroll-indicator{
@@ -819,10 +825,18 @@ h1{ /* legacy, kept for old subpages */
     left: var(--margin);
     bottom: var(--margin);
     padding: 15px 10px;
-    background: #36393E;
+    background: rgba(54, 57, 62, 1);
     border: 1px solid rgba(114, 200, 119, 1);
     border-radius: 50px;
     pointer-events: initial;
+  }
+  @supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+    .scroll-indicator{
+      --backdrop-filter: blur(6px);
+      background: rgba(54, 57, 62, 0.5);
+      -webkit-backdrop-filter: var(--backdrop-filter);
+      backdrop-filter: var(--backdrop-filter);
+    }
   }
   .scroll-indicator div{
     display: initial;
