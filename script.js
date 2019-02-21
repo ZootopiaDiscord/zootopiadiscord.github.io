@@ -61,19 +61,14 @@ function scrollIndicator() {
 function modal() {
     /* open modal */
     $('#join-button, #bukoya').click(function () {
-        $('.modal').addClass("modal-show");
-        $('section,.scroll-indicator').addClass("blur");
-        $('.header').addClass("header-removeClip");
-        $('.header-link, #bukoya, .scroll-indicator').css({ "pointer-events": "none" });
+        $('.modal-container').addClass("modal-container-show");
         $('html,body').css({ "overflow": "hidden" });
     });
 
     /* close modal */
-    $('section').mouseup(function () {
-        $('.modal').removeClass("modal-show");
-        $('section,.scroll-indicator').removeClass("blur");
-        $('.header').removeClass("header-removeClip");
-        $('.header-link, #bukoya, .scroll-indicator').css({ "pointer-events": "initial" });
+    $('.modal-container').click(function (e) {
+        if (e.target !== e.currentTarget) return;
+        $('.modal-container').removeClass("modal-container-show");
         $('html,body').css({ "overflow": "initial" });
     });
 }
