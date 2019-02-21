@@ -166,6 +166,7 @@ h1{ /* legacy, kept for old subpages */
 
   padding:8vmin;
   display:flex;
+  overflow: hidden;
   justify-content: center;
   flex-wrap:wrap;
   -webkit-clip-path: var(--clip-path);
@@ -313,7 +314,6 @@ h1{ /* legacy, kept for old subpages */
   --arrow-height: 18px;
 
   display: none;
-  background: rgba(114, 200, 119, 1);
 
   border-left: var(--arrow-width) solid transparent;
   border-right: var(--arrow-width) solid transparent;
@@ -331,6 +331,7 @@ h1{ /* legacy, kept for old subpages */
 }
 @supports (clip-path: none) or (-webkit-clip-path: none){
   .scroll-indicator div{
+    background: rgba(114, 200, 119, 1);
     border: 0 !important;
   }
 }

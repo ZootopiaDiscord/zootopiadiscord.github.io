@@ -30,12 +30,13 @@ h1{
 
 .header{
   padding: 80px;
-  background: url('../img/header.jpg');
+  background: url('../img/header1.jpg');
   background-position:center;
   background-size:cover;
 }
 
 .logo{
+  margin: 0 50px;
   height: 200px;
   background:url('../img/zootopia-discord-logo-v1.png');
   background-position:center;
@@ -43,19 +44,12 @@ h1{
   background-repeat:no-repeat;
 }
 
-.bukoya{
-  z-index: 1;
-  position: fixed;
-  height:100%;
-  width:20%;
-  right:0;
-  pointer-events:none;
-  bottom:-3px;
-  opacity:0.33;
-  background:url("../img/bukoya.png");
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:bottom;
+#bukoya{
+  position: absolute;
+  max-height: 50%;
+  max-width: 20%;
+  right: 0;
+  bottom: -3px;
 }
 
 .modal{
