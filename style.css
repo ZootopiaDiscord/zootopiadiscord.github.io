@@ -840,23 +840,14 @@ h1{ /* legacy, kept for old subpages */
     filter: hue-rotate(360deg);
   }
 }
-
-/* 
-  hardcoded because variable changes are not animated
-  sad life
-*/
 @keyframes animateScrollIndicatorArrow{
   0%{
-    -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
-  }
-  50%{
-    -webkit-clip-path: polygon(20% 0, 50% 60%, 50% 60%, 50% 100%, 50% 100%, 0 0%);
-    clip-path: polygon(20% 0, 50% 60%, 50% 60%, 50% 100%, 50% 100%, 0 0%);
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
   100%{
-    -webkit-clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
-    clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
