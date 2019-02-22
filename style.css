@@ -6,6 +6,8 @@
 
   --modal-padding: 4vmin;
 
+  --scrollIndicator-margin: 10px;
+
   --sectionHead-padding: 30px;
   --sectionHead-size: 60px;
   --sectionHead-hover-time: 200ms;
@@ -283,16 +285,17 @@ h1{ /* legacy, kept for old subpages */
   visibility: hidden; /* IE */
   z-index: var(--zindex-scrollIndicator);
   position: fixed;
-  display: grid;
-  grid-template-rows: repeat(3, 20px);
-  grid-template-columns: 2px;
-  grid-row-gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: calc(var(--section-padding) / 2 - 2px);
   bottom: 0;
+  width: 2px;
+  height: 10%;
   background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
   cursor: pointer;
   pointer-events: none;
-  transition: transform 250ms, padding 500ms, opacity 500ms;
+  transition: padding 500ms, filter 500ms, transform 100ms;
 
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -311,19 +314,19 @@ h1{ /* legacy, kept for old subpages */
 
   display: none;
 
+  width: 100%;
+  height: 100%;
+
   border-left: var(--arrow-width) solid transparent;
   border-right: var(--arrow-width) solid transparent;
   border-top: var(--arrow-height) solid var(--zootopia-gradient-light);
+  
+  transform: translate(0, 1px)scaleY(1);
 
   -webkit-clip-path: var(--clip-path);
   clip-path: var(--clip-path);
 
   transition: 500ms;
-
-  animation-name: flashScrollIndicator;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 @supports (clip-path: none) or (-webkit-clip-path: none){
   .scroll-indicator div{
@@ -331,19 +334,12 @@ h1{ /* legacy, kept for old subpages */
     border: 0 !important;
   }
 }
-#scroll-indicator-1{
-  animation-delay: 400ms;
-}
-#scroll-indicator-2{
-  animation-delay: 200ms;
-}
-.scroll-indicator-up, .scroll-indicator-down{
-  opacity: 0;
+.scroll-indicator-up{
+  filter: opacity(0%);
   visibility: hidden;
 }
 .scroll-indicator-up div{
-  border-top: 0;
-  border-bottom: var(--arrow-height) solid var(--zootopia-gradient-light);
+  transform: translate(0, -1px)scaleY(-1);
 }
 
 /* modal */
@@ -386,6 +382,7 @@ h1{ /* legacy, kept for old subpages */
   max-width: 500px;
   background: linear-gradient(135deg, rgba(56, 58, 63, 1), rgba(47, 49, 54, 1) 50%);
   text-align: justify;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 
   animation-name: modal-show;
   animation-duration: 350ms;
@@ -813,13 +810,6 @@ h1{ /* legacy, kept for old subpages */
   }
 }
 
-@keyframes flashScrollIndicator {
-  0%   {transform: scale(1);}
-  20%  {transform: scale(1.33);}
-  50%  {transform: scale(1);}
-  100% {transform: scale(1)}
-}
-
 @keyframes flashScrollIndicatorUp {
   0%   {transform: rotate(180deg)scale(1);}
   20%  {transform: rotate(180deg)scale(1.33);}
@@ -865,13 +855,14 @@ h1{ /* legacy, kept for old subpages */
     --mods-halfMargin: 20px;
   }
   .scroll-indicator{
-    --margin: 10px;
+    --scrollIndicator-margin: 10px;
 
-    grid-template-columns: 20px;
-    grid-row-gap: 4px;
-    left: var(--margin);
-    bottom: var(--margin);
-    padding: 15px 10px;
+    box-sizing: border-box;
+    left: var(--scrollIndicator-margin);
+    bottom: var(--scrollIndicator-margin);
+    padding: var(--scrollIndicator-margin);
+    width: calc(var(--scrollIndicator-margin)*4);
+    height: calc(var(--scrollIndicator-margin)*4);
     background: rgba(54, 57, 62, 1);
     border: 1px solid rgba(114, 200, 119, 1);
     border-radius: 50px;
@@ -880,28 +871,9 @@ h1{ /* legacy, kept for old subpages */
   .scroll-indicator div{
     display: initial;
   }
-  .scroll-indicator-up, .scroll-indicator-down{
-    opacity: 1;
-    visibility: visible;
-  }
   .scroll-indicator-up{
-    padding: 9px 10px 11px 10px;
-    grid-template-rows: 20px;
-  }
-  .scroll-indicator-up div:first-child{
-    animation-name: none;
-    -webkit-clip-path: var(--clip-path-up);
-    clip-path: var(--clip-path-up);
-  }
-  .scroll-indicator-up div:not(:first-child), .scroll-indicator-down div:not(:first-child){
-    display: none;
-  }
-  .scroll-indicator-down{
-    padding: 11px 10px 9px 10px;
-    grid-template-rows: 20px;
-  }
-  .scroll-indicator-down div:first-child{
-    animation-name: none;
+    filter: opacity(100%);
+    visibility: visible;
   }
   .sectionHead{
     padding-top: var(--sectionHead-padding);

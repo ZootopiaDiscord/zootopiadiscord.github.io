@@ -17,6 +17,7 @@ $(document).ready(function () {
 function scrollIndicator() {
     let scrollIndicatorThreshold = 200;
     let scrollPosCheck;
+    let animating = 1;
 
     /* Point scroll indicator upwards if site not scrolled up on load */
     if ($(window).scrollTop() >= scrollIndicatorThreshold) {
@@ -33,18 +34,28 @@ function scrollIndicator() {
         clearTimeout(scrollPosCheck);
         scrollPosCheck = setTimeout(function () {
             if ($(window).scrollTop() >= scrollIndicatorThreshold) {
-                $('.scroll-indicator').removeClass("scroll-indicator-down");
-                $('.scroll-indicator').addClass("scroll-indicator-up");
+                if (animating) {
+                    animating = 0;
+                    $('.scroll-indicator').children('div').css({ "animation-name": "none" });
+                }
+                setTimeout(() => {
+                    $('.scroll-indicator').addClass("scroll-indicator-up");
+                }, 1);
+
             } else {
                 $('.scroll-indicator').removeClass("scroll-indicator-up");
-                $('.scroll-indicator').addClass("scroll-indicator-down");
             }
         }, 100);
     };
 
     /* scroll to rules or top when scroll indicator clicked */
-    $('body').on('click', '.scroll-indicator', function () {
+    $('.scroll-indicator').click(function(){
         let scrollDuration = 500;
+
+        if (animating) {
+            animating = 0;
+            $(this).children('div').css({ "animation-name": "none" });
+        }
 
         if ($(window).scrollTop() >= scrollIndicatorThreshold) {
             $('html, body').animate({
