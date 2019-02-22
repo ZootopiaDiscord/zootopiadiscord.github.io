@@ -799,6 +799,25 @@ h1{ /* legacy, kept for old subpages */
   }
 }
 
+@keyframes flashScrollIndicatorShadow{
+  0%{
+    translate: scale(1);
+    filter: opacity(100%);
+  }
+  20%{
+    transform: scale(1.8);
+    filter: opacity(0%);
+  }
+  99%{
+    transform: scale(1);
+    filter: opacity(0%);
+  }
+  100%{
+    transform: scale(1);
+    filter: opacity(100%);
+  }
+}
+
 /* 
   hardcoded because variable changes are not animated
   sad life
@@ -853,9 +872,25 @@ h1{ /* legacy, kept for old subpages */
     width: calc(var(--scrollIndicator-margin)*4);
     height: calc(var(--scrollIndicator-margin)*4);
     background: rgba(54, 57, 62, 1);
-    border: 1px solid rgba(114, 200, 119, 1);
+    border: 1px solid var(--zootopia-gradient-light);
     border-radius: 50px;
     pointer-events: initial;
+  }
+  .scroll-indicator-shadow{
+    z-index: calc(var(--zindex-scrollIndicator) - 1);
+    position: fixed;
+    content: '';
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background: var(--zootopia-gradient-light);
+    border-radius: 100%;
+    filter: opacity(0%);
+    animation-name: flashScrollIndicatorShadow;
+    animation-duration: 4s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
   }
   .scroll-indicator div{
     display: initial;
