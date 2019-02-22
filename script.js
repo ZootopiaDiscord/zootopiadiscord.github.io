@@ -46,7 +46,7 @@ function scrollIndicator() {
                 if (animating) {
                     animating = 0;
                     $('.scroll-indicator').children('div').css({ "animation-name": "none" });
-                    $('.scroll-indicator-shadow').css({ "animation-name": "none" });
+                    $('.scroll-indicator-shadow').css({ "display": "none" });
                 }
                 setTimeout(() => {
                     $('.scroll-indicator').addClass("scroll-indicator-up");
@@ -65,7 +65,7 @@ function scrollIndicator() {
         if (animating) {
             animating = 0;
             $(this).children('div').css({ "animation-name": "none" });
-            $('.scroll-indicator-shadow').css({ "animation-name": "none" });
+            $('.scroll-indicator-shadow').css({ "display": "none" });
         }
 
         if ($(window).scrollTop() >= scrollIndicatorThreshold) {
@@ -91,7 +91,7 @@ function modal() {
     $('.modal-container').click(function (e) {
         if (e.target !== e.currentTarget) return;
         $('.modal-container').removeClass("modal-container-show");
-        $('html,body').css({ "overflow": "initial" });
+        $('html,body').css({ "overflow": "initial", "overflow-x": "hidden" });
     });
 }
 
