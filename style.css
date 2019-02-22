@@ -138,43 +138,11 @@ h1{ /* legacy, kept for old subpages */
 /* header */
 
 .header{
-  --wave-side-1: 0%;
-  --wave-side-2: 1.4%;
-  --wave-side-3: 2.7%;
-  --wave-side-4: 3.8%;
-  --wave-side-5: 4.6%;
-  --wave-top: 5%;
-  --wave-middle-1: 4.6%;
-  --wave-middle-2: 3.8%;
-  --wave-middle-3: 2.8%;
-  --wave-middle-4: 1.5%;
-
-  --clip-path: polygon(
-    /* outside */
-    0 0, 100% 0,
-    /* outer right */
-    100% calc(95% - var(--wave-side-1)), 95% calc(95% - var(--wave-side-2)), 90% calc(95% - var(--wave-side-3)), 85% calc(95% - var(--wave-side-4)), 80% calc(95% - var(--wave-side-5)),
-    /* top right */
-    75% calc(95% - var(--wave-top)),
-    /* inner right */
-    70% calc(95% - var(--wave-middle-1)), 65% calc(95% - var(--wave-middle-2)), 60% calc(95% - var(--wave-middle-3)), 55% calc(95% - var(--wave-middle-4)),
-    /* middle */
-    50% 95%,
-    /* inner left */
-    45% calc(95% + var(--wave-middle-4)), 40% calc(95% + var(--wave-middle-3)), 35% calc(95% + var(--wave-middle-2)), 30% calc(95% + var(--wave-middle-1)),
-    /* top left */
-    25% calc(95% + var(--wave-top)),
-    /* outer left */
-    20% calc(95% + var(--wave-side-5)), 15% calc(95% + var(--wave-side-4)), 10% calc(95% + var(--wave-side-3)), 5% calc(95% + var(--wave-side-2)), 0% calc(95% + var(--wave-side-1))
-    );
-
   padding:8vmin;
   display:flex;
   overflow: hidden;
   justify-content: center;
   flex-wrap:wrap;
-  -webkit-clip-path: var(--clip-path);
-  clip-path: var(--clip-path);
 
   animation-name: showHeader;
   animation-duration: 1s;
@@ -264,6 +232,12 @@ h1{ /* legacy, kept for old subpages */
   border-radius: 40px;
   transition: 100ms;
 }
+.header svg{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transform: translate(0, 35%);
+}
 
 /* background */
 
@@ -272,13 +246,7 @@ h1{ /* legacy, kept for old subpages */
   max-height: 50%;
   max-width: 20%;
   right: 0;
-  bottom: -3px;
-}
-
-@supports (clip-path: none) or (-webkit-clip-path: none){
-  #bukoya{
-    bottom: 4.6%;
-  }
+  bottom: 3%;
 }
 
 .scroll-indicator{
@@ -962,6 +930,9 @@ h1{ /* legacy, kept for old subpages */
 @media only screen and (min-width : 1000px) {
   :root {
     --section-padding: 15vw;
+  }
+  #bukoya{
+    bottom: 4.6%;
   }
 }
 
