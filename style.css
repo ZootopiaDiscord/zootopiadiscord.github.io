@@ -181,29 +181,29 @@ h1{ /* legacy, kept for old subpages */
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 
-  }
-  .header:before, .header:after{
-    position: absolute;
-    content: '';
-    left: -7px;
-    top: -7px;
-    width: calc(100% + 14px);
-    height: calc(100% + 14px);
-    background:url('img/header.jpg');
-    background-position:center;
-    background-size:cover;
-  }
-  .header:before{
-    z-index: -1;
-    animation-name: changeHeaderBackground;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-fill-mode: both;
-  }
-  .header:after{
-    z-index: -2;
-    filter: blur(7px);
-  }
+}
+.header:before, .header:after{
+  position: absolute;
+  content: '';
+  left: -7px;
+  top: -7px;
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  background:url('img/header.jpg');
+  background-position:center;
+  background-size:cover;
+}
+.header:before{
+  z-index: -1;
+  animation-name: changeHeaderBackground;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.header:after{
+  z-index: -2;
+  filter: blur(7px);
+}
 .logo{
   display: flex;
   justify-content: center;
@@ -296,10 +296,11 @@ h1{ /* legacy, kept for old subpages */
   cursor: pointer;
   pointer-events: none;
   transition: padding 500ms, filter 500ms, transform 100ms;
+  transform-origin: bottom;
 
-  animation-name: fadeIn;
+  animation-name: showHeaderLink;
   animation-duration: 1s;
-  animation-delay: 2.1s;
+  animation-delay: 2.3s;
   animation-fill-mode: backwards;
 }
 .scroll-indicator:active{
@@ -308,7 +309,6 @@ h1{ /* legacy, kept for old subpages */
 
 .scroll-indicator div{
   --clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
-  --clip-path-up: polygon(20% 100%, 50% 40%, 80% 100%, 100% 100%, 50% 0, 0 100%);
   --arrow-width: 10px;
   --arrow-height: 18px;
 
@@ -327,6 +327,12 @@ h1{ /* legacy, kept for old subpages */
   clip-path: var(--clip-path);
 
   transition: 500ms;
+
+  animation-name: animateScrollIndicatorArrow;
+  animation-duration: 0.6s;
+  animation-delay: 2.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
 }
 @supports (clip-path: none) or (-webkit-clip-path: none){
   .scroll-indicator div{
@@ -810,13 +816,6 @@ h1{ /* legacy, kept for old subpages */
   }
 }
 
-@keyframes flashScrollIndicatorUp {
-  0%   {transform: rotate(180deg)scale(1);}
-  20%  {transform: rotate(180deg)scale(1.33);}
-  50%  {transform: rotate(180deg)scale(1);}
-  100% {transform: rotate(180deg)scale(1)}
-}
-
 @keyframes modal-show{
   0%{
     filter: opacity(0%);
@@ -829,6 +828,25 @@ h1{ /* legacy, kept for old subpages */
   100%{
     filter: opacity(100%);
     transform: scale(1);
+  }
+}
+
+/* 
+  hardcoded because variable changes are not animated
+  sad life
+*/
+@keyframes animateScrollIndicatorArrow{
+  0%{
+    -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  50%{
+    -webkit-clip-path: polygon(20% 0, 50% 60%, 50% 60%, 50% 100%, 50% 100%, 0 0%);
+    clip-path: polygon(20% 0, 50% 60%, 50% 60%, 50% 100%, 50% 100%, 0 0%);
+  }
+  100%{
+    -webkit-clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
+    clip-path: polygon(20% 0, 50% 60%, 80% 0, 100% 0%, 50% 100%, 0 0%);
   }
 }
 

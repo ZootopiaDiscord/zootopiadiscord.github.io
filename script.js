@@ -2,6 +2,15 @@ $(document).ready(function () {
 
     window.scrollTo(0, 0);
 
+    /*
+        Without this, indicator arrow needs 2.7 seconds
+        every time window is resized to 768+ pixels width
+        -> 3300 = 2700ms delay + 600ms duration
+    */
+    setTimeout(() => {
+        $('.scroll-indicator').children('div').css({ "animation-delay": "100ms" });
+    }, 3300);
+
     scrollIndicator();
 
     modal();
@@ -49,7 +58,7 @@ function scrollIndicator() {
     };
 
     /* scroll to rules or top when scroll indicator clicked */
-    $('.scroll-indicator').click(function(){
+    $('.scroll-indicator').click(function () {
         let scrollDuration = 500;
 
         if (animating) {
