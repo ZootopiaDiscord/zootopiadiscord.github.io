@@ -240,10 +240,10 @@ h1{ /* legacy, kept for old subpages */
   align-items: center;
   width: var(--size);
   height: var(--size);
-  margin: 12vmin 0 8vmin 0;
+  margin: calc(var(--size) / 2) 0 calc(var(--size) / 3) 0;
   font-family: 'Exo', sans-serif;
-  font-size: 7vmin;
-  font-weight:900;
+  font-size: calc(var(--size) / 3);
+  font-weight: 900;
   text-decoration: none;
   color:#64BE8C;
   text-shadow:1px 2px 1px rgba(0,0,0,0.5);
@@ -855,6 +855,9 @@ h1{ /* legacy, kept for old subpages */
 @media only screen and (min-width : 540px) {
   :root{
     --modal-padding: 3vmin;
+  }
+  .header-link{
+    --size: 18vmin;
   }
   .mod{
     --size: calc(80vw / 3);
