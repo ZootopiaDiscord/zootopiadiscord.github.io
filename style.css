@@ -177,7 +177,7 @@ h1{ /* legacy, kept for old subpages */
   display: flex;
   justify-content: center;
   flex-basis: 100%;
-  height: 15vmax;
+  height: 22vmax;
   align-self: center;
   background:url('img/zootopia-discord-logo-v1.png');
   background-position:center;
@@ -226,7 +226,7 @@ h1{ /* legacy, kept for old subpages */
   transition: 200ms;
 }
 .header-link:hover > img{
-  transform: scale(0.9);
+  transform: translate(-4%, 6%)scale(0.9);
   transition: 200ms;
 }
 .header > svg{
@@ -239,8 +239,7 @@ h1{ /* legacy, kept for old subpages */
 .header-link img{
   position: relative;
   width: 75%;
-  left: -2.5%;
-  top: 1.5%;
+  transform: translate(-4%, 6%)scale(1);
   transition: 500ms;
 }
 
@@ -376,6 +375,10 @@ h1{ /* legacy, kept for old subpages */
   width: 100%;
   height: var(--height);
   background: linear-gradient(90deg, var(--zootopia-gradient-dark), var(--zootopia-gradient-light));
+
+  animation-name: hueRotate;
+  animation-duration: 2s;
+  animation-delay: 100ms;
 }
 .modal-text{
   margin: var(--modal-padding);
@@ -384,6 +387,10 @@ h1{ /* legacy, kept for old subpages */
   margin: 2vmin 0 1vmin 0;
   width: 20%;
   font-size: 0;
+
+  animation-name: hueRotate;
+  animation-duration: 2s;
+  animation-delay: 100ms;
 }
 .modal-link:hover{
   filter: hue-rotate(45deg);
@@ -822,6 +829,15 @@ h1{ /* legacy, kept for old subpages */
   100%{
     transform: scale(1);
     filter: opacity(100%);
+  }
+}
+
+@keyframes hueRotate{
+  0%{
+    filter: hue-rotate(0%);
+  }
+  100%{
+    filter: hue-rotate(360deg);
   }
 }
 
