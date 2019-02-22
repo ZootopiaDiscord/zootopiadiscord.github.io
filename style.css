@@ -379,6 +379,7 @@ h1{ /* legacy, kept for old subpages */
   animation-name: hueRotate;
   animation-duration: 2s;
   animation-delay: 100ms;
+  animation-timing-function: ease-out;
 }
 .modal-text{
   margin: var(--modal-padding);
@@ -387,13 +388,18 @@ h1{ /* legacy, kept for old subpages */
   margin: 2vmin 0 1vmin 0;
   width: 20%;
   font-size: 0;
+  transition: 200ms;
 
   animation-name: hueRotate;
   animation-duration: 2s;
   animation-delay: 100ms;
+  animation-timing-function: ease-out;
 }
 .modal-link:hover{
-  filter: hue-rotate(45deg);
+  transform: scale(1.05);
+}
+.modal-link:active{
+  transform: scale(0.9);
 }
 .modal-link img{
   width: 100%;
