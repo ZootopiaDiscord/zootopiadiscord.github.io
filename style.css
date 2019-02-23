@@ -2,7 +2,7 @@
   --section-padding: 5vw;
   --section-collapse-time: 500ms;
 
-  --content-max-width: 1000px;
+  --content-max-width: 840px;
 
   --modal-padding: 4vmin;
 
@@ -37,6 +37,7 @@ html,body{
   margin:0;
   font-family: 'Open Sans', sans-serif;
   background:#36393E;
+  font-size: 15px;
   color:white;
   overflow: hidden; /* IE */
 }
@@ -412,7 +413,7 @@ h1{ /* legacy, kept for old subpages */
   --grid-gap: 30px;
 
   display: grid;
-  max-width: 750px;
+  max-width: var(--content-max-width);
   grid-row-gap: var(--grid-gap);
   grid-column-gap: var(--grid-gap);
 }
@@ -426,7 +427,7 @@ h1{ /* legacy, kept for old subpages */
 }
 .info article p:first-child{
   font-weight: bold;
-  font-size: 150%;
+  font-size: 160%;
   background: linear-gradient(var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
   -webkit-background-clip: text;
   background-clip: text;
@@ -457,6 +458,7 @@ h1{ /* legacy, kept for old subpages */
   list-style:decimal;
   margin:0;
   padding-left:28px;
+  font-weight: bold;
 }
 .rules ul > li{
   padding-bottom:25px;
@@ -464,6 +466,8 @@ h1{ /* legacy, kept for old subpages */
 .rules ol{
   list-style:lower-alpha; 
   padding-left:28px;
+  font-weight: initial;
+  color: rgba(255, 255, 255, 0.8);
 }
 .rules ol > li{
   margin-top:10px;
@@ -950,10 +954,7 @@ h1{ /* legacy, kept for old subpages */
     grid-template-columns: auto auto;
   }
   .info article p:first-child{
-    font-size: 170%;
-  }
-  .info article p:not(:first-child){
-    font-size: 80%;
+    font-size: 200%;
   }
   .info article p:nth-child(3){
     grid-column: 2;
