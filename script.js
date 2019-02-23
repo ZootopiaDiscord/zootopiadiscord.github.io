@@ -45,7 +45,6 @@ function scrollIndicator() {
             if ($(window).scrollTop() >= scrollIndicatorThreshold) {
                 if (animating) {
                     animating = 0;
-                    $('.scroll-indicator').children('div').css({ "animation-name": "none" });
                     $('.scroll-indicator-shadow').css({ "display": "none" });
                 }
                 setTimeout(() => {
@@ -64,7 +63,6 @@ function scrollIndicator() {
 
         if (animating) {
             animating = 0;
-            $(this).children('div').css({ "animation-name": "none" });
             $('.scroll-indicator-shadow').css({ "display": "none" });
         }
 
