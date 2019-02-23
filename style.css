@@ -141,9 +141,11 @@ h1{ /* legacy, kept for old subpages */
 
 .header{
   padding:8vmin;
-  display:flex;
-  justify-content: center;
-  flex-wrap:wrap;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
+  justify-items: center;
+  
   background: #98D9FF; /* taken from image, for illusion on the edges */
 
   animation-name: showHeader;
@@ -177,16 +179,9 @@ h1{ /* legacy, kept for old subpages */
   -webkit-clip-path: var(--clip-path);
     clip-path: var(--clip-path);
 }
-.logo{
-  display: flex;
-  justify-content: center;
-  flex-basis: 100%;
-  height: 22vmax;
+#zoopLogo{
+  max-width: 100%;
   align-self: center;
-  background:url('img/zootopia-discord-logo-v1.png');
-  background-position:center;
-  background-size:contain;
-  background-repeat:no-repeat;
 
   animation-name: showLogo;
   animation-duration: 1s;
@@ -405,6 +400,7 @@ h1{ /* legacy, kept for old subpages */
   display: flex;
   justify-content: center;
   padding-top: 30px;
+  padding-bottom: var(--sectionHead-padding);
 }
 .info article{
   --grid-gap: 30px;
