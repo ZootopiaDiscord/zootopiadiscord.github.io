@@ -2,6 +2,15 @@ $(document).ready(function () {
 
     window.scrollTo(0, 0);
 
+    /* load Discord invite link from invite.txt */
+    $.get('invite.txt', function (data) {
+        $(".modal").append(
+            '<a href="' + data + '" class="modal-link">\
+                <img src="img/headers/join.svg" alt="join">\
+            </a>'
+        );
+    });
+
     /*
         Without this, indicator arrow needs 2.7 seconds
         every time window is resized to 768+ pixels width

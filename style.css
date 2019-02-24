@@ -394,9 +394,6 @@ h1{ /* legacy, kept for old subpages */
 .modal-link:hover{
   transform: scale(1.05);
 }
-.modal-link:active{
-  transform: scale(0.9);
-}
 .modal-link img{
   width: 100%;
 }
