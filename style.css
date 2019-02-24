@@ -451,25 +451,42 @@ h1{ /* legacy, kept for old subpages */
   animation-fill-mode: backwards;
 }
 
-.rules ul{
+#ul-rules{
   list-style:decimal;
   margin:0;
   padding-left: 16px;
   font-weight: bold;
 }
-.rules ol{
+#ul-rules ol{
   list-style:lower-alpha; 
   margin-bottom: 25px;
   padding-left: 16px;
   font-weight: initial;
   color: rgba(255, 255, 255, 0.8);
 }
-.rules ol > li{
+#ul-rules ol > li{
   margin-top:10px;
 }
-.rules ol > li > ol > li{
+#ul-rules ol > li > ol > li{
   list-style: lower-roman;
   margin-top:2px;
+}
+
+#ul-zpd, #ul-other{
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+#ul-zpd{
+  list-style: circle;
+  padding-left: 18px;
+}
+#ul-other{
+  list-style: none;
+}
+#ul-zpd li, #ul-other li{
+  margin-top:10px;
 }
 
 /* channels */
