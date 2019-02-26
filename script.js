@@ -115,6 +115,9 @@ function channels() {
             case "verified-channels":
                 $('.verified').toggleClass("channelCategory-hideVerified");
                 break;
+            case "rp-channels":
+                $('.rp').toggleClass("channelCategory-hideRP");
+                break;
             case "nsfw-channels":
                 $('.nsfw').toggleClass("channelCategory-hideNSFW");
                 break;
