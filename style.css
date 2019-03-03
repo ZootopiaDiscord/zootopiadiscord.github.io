@@ -484,6 +484,8 @@ h1{ /* legacy, kept for old subpages */
 }
 #ul-other{
   list-style: none;
+  font-weight: bold;
+  color: white;
 }
 #ul-zpd li, #ul-other li{
   margin-top:10px;
@@ -601,7 +603,9 @@ h1{ /* legacy, kept for old subpages */
 }
 .roles ul li:nth-child(even){
   margin-top: 10px;
-  margin-bottom: 30px;
+}
+.roles ul li:nth-child(even):not(:last-child){
+  margin-bottom: 32px;
 }
 #role-zootopian{
   border: 1px solid var(--role-color-zootopian);
