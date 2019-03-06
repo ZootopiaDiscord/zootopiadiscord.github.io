@@ -1,0 +1,242 @@
+html,body{
+  margin:0;
+  font-family: 'Open Sans', sans-serif;
+  background:#36393E;
+  color:white;
+}
+a {
+  color: lightblue;
+}
+section{
+  position:relative;
+  padding-left:5%;
+  padding-right:5%;
+  padding-bottom:25px;
+  margin:0 auto;
+}
+
+h1{
+  font-size:2.5rem;
+  margin:0;
+  padding-top:25px;
+  padding-bottom:25px;
+}
+
+.header{
+  padding:8vmin;
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  background:url('/img/header1.jpg');
+  background-position:center;
+  background-size:cover;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+  height: 15vh;
+  align-self: center;
+  background:url('/img/zootopia-discord-logo-v1.png');
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+.cflogo{
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+  height:200px;
+  align-self: center;
+  background:url('/img/crimefileslogo.png');
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+.header-link{
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:8vmin 0 0 0;
+  padding:10px 30px;
+  font-family: 'Exo', sans-serif;
+  font-size:200%;
+  font-weight:900;
+  text-decoration: none;
+  color:#64BE8C;
+  text-shadow:1px 2px 1px rgba(0,0,0,0.5);
+  background:rgba(255,255,255,0.25);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius: 1000px;
+  transition:500ms;
+}
+.header-link:hover{
+  background:rgba(255,255,255,0.4);
+  border:1px solid rgba(255,255,255,0);
+  transition:100ms;
+}
+#join-button{
+  cursor:pointer;
+}
+
+.bukoya{
+  position:fixed;
+  height:100%;
+  width:20%;
+  right:0;
+  pointer-events:none;
+  bottom:-3px;
+  opacity:0.33;
+  background:url("/img/bukoya.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:bottom;
+}
+
+.modal-container{
+  display: none;
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.75);
+}
+.modal-container-show{
+  display: block;
+}
+.modal{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%; /* compatibility */
+  width: calc(100% - 8vmin);
+  max-width: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(47, 49, 54, 1);
+  text-align: justify;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+  animation-name: modal-show;
+  animation-duration: 350ms;
+  animation-fill-mode: backwards;
+}
+.modal-text{
+  margin: 4vmin;
+}
+.modal-link{
+  box-sizing: border-box;
+  width:100%;
+  padding:3.5vmin;
+  background:rgba(255,255,255,0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size:200%;
+  font-weight:100;
+  color:white;
+  text-decoration:none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:200ms;
+}
+.modal-link:hover{
+  background:rgba(255,255,255,0.125);
+}
+
+.info{
+  max-width: 520px;
+}
+.info p:first-child{
+  font-size: 170%;
+  font-weight: bold;
+}
+
+.rules ul{
+  list-style:decimal;
+  margin:0;
+  padding-left:28px;
+}
+.rules ul > li{
+  padding-bottom:25px;
+}
+.rules ol{
+  list-style:lower-alpha; 
+  padding-left:28px;
+}
+.rules ol > li{
+  margin-top:10px;
+}
+.rules ol > li > ol > li{
+  list-style: lower-roman;
+  margin-top:2px;
+}
+
+.update{
+  padding-top:25px;
+  text-align: center;
+  font-size:85%;
+}
+
+.grey{background:rgba(46,49,54,1)}
+.green{background:rgba(63,73,69,1)}
+
+@keyframes modal-show{
+  0%{
+    opacity: 0;
+    transform: translate(-50%, -50%)scale(0);
+  }
+  60%{
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1.05);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1);
+  }
+}
+
+@media only screen and (min-width : 768px) {
+
+  section{
+    padding-left:10%;
+    padding-right:10%;
+  }
+
+  .logo{
+      height: 200px;
+  }
+  .header-link{
+    margin:8vmin 4vmin 0 4vmin;
+    padding: 30px 60px;
+    font-size: 300%;
+  }
+  .header-link:before{
+    transform:skew(-20deg);
+  }
+  .modal-link{
+    padding:2vmin;
+  }
+  .info{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width : 1450px) {
+
+  section{
+    padding-left:20%;
+    padding-right:20%;
+  }
+  .mods h1{
+    margin-left:calc(20vw - 40px);
+  }
+}
