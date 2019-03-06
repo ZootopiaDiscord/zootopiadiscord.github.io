@@ -114,15 +114,30 @@ function channels() {
         switch ($(this).attr('id')) {
             case "verified-channels":
                 $('.verified').toggleClass("channelCategory-hideVerified");
+                if (!($(this).is(':checked'))) {
+                    $('#rp-channels').prop('checked', false);
+                    $('.rp').addClass("channelCategory-hideRP");
+                    $('#nsfw-channels').prop('checked', false);
+                    $('.nsfw').addClass("channelCategory-hideNSFW");
+                }
                 break;
             case "rp-channels":
                 $('.rp').toggleClass("channelCategory-hideRP");
+                checkVerifiedChannels();
                 break;
             case "nsfw-channels":
                 $('.nsfw').toggleClass("channelCategory-hideNSFW");
+                checkVerifiedChannels();
                 break;
             default:
                 break;
+        }
+
+        function checkVerifiedChannels() {
+            if (!($('#verified-channels').is(':checked'))) {
+                $('#verified-channels').prop('checked', true);
+                $('.verified').removeClass("channelCategory-hideVerified");
+            }
         }
     });
 
