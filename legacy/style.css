@@ -151,6 +151,14 @@ h1{
   background:rgba(255,255,255,0.125);
 }
 
+.info{
+  max-width: 520px;
+}
+.info p:first-child{
+  font-size: 170%;
+  font-weight: bold;
+}
+
 .rules ul{
   list-style:decimal;
   margin:0;
@@ -217,6 +225,10 @@ h1{
   }
   .modal-link{
     padding:2vmin;
+  }
+  .info{
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
