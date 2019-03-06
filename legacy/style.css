@@ -180,10 +180,8 @@ h1{
 }
 
 .update{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-top:25px;
+  text-align: center;
   font-size:85%;
 }
 
@@ -242,7 +240,3 @@ h1{
     margin-left:calc(20vw - 40px);
   }
 }
-
-}
-
-
