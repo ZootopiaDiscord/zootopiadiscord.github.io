@@ -124,6 +124,10 @@ h1{
   background: rgba(47, 49, 54, 1);
   text-align: justify;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+  animation-name: modal-show;
+  animation-duration: 350ms;
+  animation-fill-mode: backwards;
 }
 .modal-text{
   margin: 4vmin;
@@ -177,6 +181,21 @@ h1{
 
 .grey{background:rgba(46,49,54,1)}
 .green{background:rgba(63,73,69,1)}
+
+@keyframes modal-show{
+  0%{
+    opacity: 0;
+    transform: translate(-50%, -50%)scale(0);
+  }
+  60%{
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1.05);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1);
+  }
+}
 
 @media only screen and (min-width : 768px) {
 
