@@ -46,6 +46,9 @@ a {
   color: var(--zootopia-gradient-dark);
   text-decoration: none;
 }
+a:not(.channel):hover{
+  text-decoration: underline;
+}
 
 /* sections */
 
@@ -98,6 +101,10 @@ h1{ /* legacy, kept for old subpages */
   padding-bottom: var(--sectionHead-padding);
   max-width: var(--content-max-width);
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .sectionHead:before{
   --arrow-width: 12px;
@@ -154,6 +161,10 @@ h1{ /* legacy, kept for old subpages */
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .header:before, .header:after{
   position: absolute;
@@ -485,6 +496,11 @@ h1{ /* legacy, kept for old subpages */
   margin-left: 26px;
   text-transform: uppercase;
   cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .channels article ul li:first-child:before{
   position: absolute;
@@ -530,6 +546,10 @@ h1{ /* legacy, kept for old subpages */
 }
 #channel-checkboxes{
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .channels input{
   cursor: pointer;
