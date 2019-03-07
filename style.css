@@ -383,7 +383,7 @@ h1{ /* legacy, kept for old subpages */
   margin: var(--modal-padding);
 }
 .modal-link{
-  margin: 2vmin 0 1vmin 0;
+  margin: calc(var(--modal-padding) / 2) 0 calc(var(--modal-padding) / 4) 0;
   width: 20%;
   font-size: 0;
   transition: 200ms;
@@ -883,7 +883,7 @@ h1{ /* legacy, kept for old subpages */
   :root {
     --section-padding: 10vw;
 
-    --modal-padding: 2vmin;
+    --modal-padding: 16px;
     
     --sectionHead-padding: 40px;
     --sectionHead-size: 80px;
@@ -926,6 +926,9 @@ h1{ /* legacy, kept for old subpages */
   .scroll-indicator-up{
     filter: opacity(100%);
     visibility: visible;
+  }
+  .modal-link{
+    margin: var(--modal-padding) 0 calc(var(--modal-padding) / 2) 0;
   }
   .sectionHead{
     padding-top: var(--sectionHead-padding);
