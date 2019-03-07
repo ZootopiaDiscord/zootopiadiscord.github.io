@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 
 function generateRules() {
-    $.get('rules.txt', function (data) {
+    $.get('sections/rules.txt', function (data) {
         let rawRules = data.split('\n');
         let rules = "";
         for (let index = 0; index < rawRules.length; index++) {
@@ -27,11 +27,11 @@ function generateRules() {
         rules += "</ol>"
         $("#ul-rules").html(rules);
     });
-    $.get('rules_other.txt', function (data) {
+    $.get('sections/rules_other.txt', function (data) {
         let rulesOther = "<li>" + data + "</li>";
         $("#ul-other").html(rulesOther);
     });
-    $.get('rules_zpd.txt', function (data) {
+    $.get('sections/rules_zpd.txt', function (data) {
         let rawRulesZPD = data.split('\n');
         let rulesZPD = "";
         for (let index = 0; index < rawRulesZPD.length; index++) {
@@ -45,7 +45,7 @@ function generateChannels() {
     let firstCategory = true;
     let serverID = 164188105031680000;
 
-    $.get('channels.txt', function (data) {
+    $.get('sections/channels.txt', function (data) {
         let rawChannels = data.split('\n');
         let channels = "";
 
@@ -114,7 +114,7 @@ function generateChannels() {
 }
 
 function generateRoles() {
-    $.get('roles.txt', function (data) {
+    $.get('sections/roles.txt', function (data) {
         let rawRoles = data.split('\n');
         let roles = "";
         for (let index = 0; index < rawRoles.length; index += 2) {
@@ -139,7 +139,7 @@ function generateRoles() {
 }
 
 function generateMods() {
-    $.get('mods.txt', function (data) {
+    $.get('sections/mods.txt', function (data) {
         let rawMods = data.split('\n');
         let mods = "";
         for (let index = 0; index < rawMods.length; index += 2) {
