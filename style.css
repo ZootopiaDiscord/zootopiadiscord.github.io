@@ -22,7 +22,7 @@
   --zootopia-gradient-dark: #4BB77A;
   --role-color-zootopian: #1DAE86;
   --role-color-znn: #E54D42;
-  --role-color-rp: rgba(112, 57, 135, 1);
+  --role-color-rp: rgba(154, 92, 180, 1);
   --role-color-nighthowler: #0B2CFB;
   --role-color-zpd: #3C8DAE;
 
@@ -611,31 +611,31 @@ h1{ /* legacy, kept for old subpages */
 #role-zootopian{
   border: 1px solid var(--role-color-zootopian);
 }
-#role-znn{
+#role-znnstaffznnhead{
   border: 1px solid var(--role-color-znn);
 }
-#role-rp{
+#role-role-player{
   border: 1px solid var(--role-color-rp);
 }
 #role-nighthowler{
   border: 1px solid var(--role-color-nighthowler);
 }
-#role-zpd{
+#role-zootopianpolice{
   border: 1px solid var(--role-color-zpd);
 }
 #role-zootopian:before{
   background: var(--role-color-zootopian);
 }
-#role-znn:before{
+#role-znnstaffznnhead:before{
   background: var(--role-color-znn);
 }
-#role-rp:before{
+#role-role-player:before{
   background: var(--role-color-rp);
 }
 #role-nighthowler:before{
   background: var(--role-color-nighthowler);
 }
-#role-zpd:before{
+#role-zootopianpolice:before{
   background: var(--role-color-zpd);
 }
 

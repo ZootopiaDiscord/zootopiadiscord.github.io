@@ -2,6 +2,7 @@ $(document).ready(function () {
     generateRules();
     generateMods();
     generateChannels();
+    generateRoles();
 });
 
 function generateRules() {
@@ -105,6 +106,28 @@ function generateChannels() {
         }
         channels += '</ul>';
         $(".channels").children("article").append(channels);
+    });
+}
+
+function generateRoles() {
+    $.get('roles.txt', function (data) {
+        let rawRoles = data.split('\n');
+        let roles = "";
+        for (let index = 0; index < rawRoles.length; index += 2) {
+            let roleID = rawRoles[index];
+            roleID = roleID.replace(/\s+/g, "");
+            roleID = roleID.replace(/\//g, "");
+            roleID = roleID.toLowerCase();
+
+            roles += '<li id="role-';
+            roles += roleID;
+            roles += '">'
+            roles += rawRoles[index];
+            roles += '</li><li>';
+            roles += rawRoles[index + 1];
+            roles += '</li>';
+        }
+        $('.roles').children("article").children("ul").html(roles);
     });
 }
 
