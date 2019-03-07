@@ -89,7 +89,7 @@ function scrollIndicator() {
 
 function modal() {
     /* open modal */
-    $('#join-button, #bukoya').click(function () {
+    $('#join-button').click(function () {
         $('.modal-container').addClass("modal-container-show");
         $('html,body').css({ "overflow": "hidden" });
     });

@@ -194,6 +194,7 @@ h1{ /* legacy, kept for old subpages */
 #zoopLogo{
   max-width: 100%;
   align-self: center;
+  pointer-events: none;
 
   animation-name: showLogo;
   animation-duration: 1s;
@@ -251,6 +252,7 @@ h1{ /* legacy, kept for old subpages */
   max-width: 20%;
   right: 0;
   bottom: 3%;
+  pointer-events: none;
 }
 
 .scroll-indicator{
