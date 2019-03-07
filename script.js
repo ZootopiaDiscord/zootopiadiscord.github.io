@@ -3,6 +3,7 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
 
     generateRules();
+    generateMods();
 
     /* load Discord invite link from invite.txt */
     $.get('invite.txt', function (data) {
@@ -118,6 +119,23 @@ function generateRules() {
             rulesZPD += "<li>" + rawRulesZPD[index] + "</li>"
         }
         $("#ul-zpd").html(rulesZPD);
+    });
+}
+
+function generateMods() {
+    $.get('mods.txt', function (data) {
+        let rawMods = data.split('\n');
+        let mods = "";
+        for (let index = 0; index < rawMods.length; index += 2) {
+            mods += '<div class="mod"><a href="http://discordapp.com/users/';
+            mods += rawMods[index + 1];
+            mods += '"><img src="img/avatars/';
+            mods += rawMods[index];
+            mods += '.jpg"></a><h2>'
+            mods += rawMods[index];
+            mods += '</h2></div>'
+        }
+        $(".mods").children("article").html(mods);
     });
 }
 
