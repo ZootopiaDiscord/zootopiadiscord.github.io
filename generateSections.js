@@ -88,7 +88,14 @@ function generateChannels() {
                     channels += rawChannels[index + 3];
                     channels += '">';
                     channels += rawChannels[index].substring(1);
-                    channels += '</a></li><li>';
+                    channels += '</a></li>';
+                    if (categoryClasses == "everyone") {
+                        channels += '<li>'
+                    } else {
+                        channels += '<li class="';
+                        channels += categoryClasses;
+                        channels += '">'
+                    }
                     channels += rawChannels[index + 2];
                     channels += '</li>'
                     break;
