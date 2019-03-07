@@ -115,16 +115,19 @@ function generateRoles() {
         let roles = "";
         for (let index = 0; index < rawRoles.length; index += 2) {
             let roleID = rawRoles[index];
-            roleID = roleID.replace(/\s+/g, "");
-            roleID = roleID.replace(/\//g, "");
-            roleID = roleID.toLowerCase();
-
+            roleID = roleID.replace(/\s+/g, "")
+                .replace(/\//g, "")
+                .toLowerCase();
+            let roleDescription = rawRoles[index + 1];
+            roleDescription = roleDescription.replace(/<channel>/g, '<span class="channel">')
+                .replace(/<command>/g, '<span class="command">')
+                .replace(/<\/>/g, '</span>');
             roles += '<li id="role-';
             roles += roleID;
             roles += '">'
             roles += rawRoles[index];
             roles += '</li><li>';
-            roles += rawRoles[index + 1];
+            roles += roleDescription;
             roles += '</li>';
         }
         $('.roles').children("article").children("ul").html(roles);

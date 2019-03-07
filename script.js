@@ -142,7 +142,7 @@ function channels() {
     });
 
     /* scroll to channel */
-    $('.channel').click(function () {
+    $('section').on("click", ".channel", function () {
         // prevent accidental text selection after click
         $(this).css({ "pointer-events": "none" });
 
