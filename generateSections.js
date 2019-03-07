@@ -17,7 +17,11 @@ function generateRules() {
                 rules += "<li>" + rawRules[index].substring(1) + "</li><ol>";
             }
             else {
-                rules += "<li>" + rawRules[index] + "</li>"
+                let rule = rawRules[index];
+                rule = rule.replace(/<channel>/g, '<span class="channel">')
+                    .replace(/<command>/g, '<span class="command">')
+                    .replace(/<\/>/g, '</span>');
+                rules += "<li>" + rule + "</li>"
             }
         }
         rules += "</ol>"

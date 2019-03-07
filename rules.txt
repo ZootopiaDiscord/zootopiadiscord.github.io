@@ -12,7 +12,7 @@ No pornographic or suggestive material or discussion outside of the NSFW channel
 
 >Be mindful of a few taboos
 Politics are strictly banned. Political discussions never end well and no one leaves happy.
-Do not spoil any kind of media, no matter its age. Simply use spoiler tags. <span class="command">||spoiler here||</span>
+Do not spoil any kind of media, no matter its age. Simply use spoiler tags. <command>||spoiler here||</>
 Do <u>not</u> ping the Zootopian Police role except for emergencies such as a raid or troll. You may always ping or DM individual ZPD members when needed.
 
 >Keep account usernames and avatars clean
