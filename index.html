@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:100|Exo:900" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="generateSections.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -100,84 +101,14 @@
         </div>
 
         <article>
-            <ul>
-                <li>Be respectful to everyone in the community.
-                    <ol>
-                        <li>
-                            No racism, sexism, homophobic or xenophobic remarks, joking or not.
-                        </li>
-                        <li>
-                            If you have an opinion, say it respectfully and back it up with reason.
-                        </li>
-                        <li>
-                            Don't be a jerk. Refrain from insults and trash talking about other server members.
-                        </li>
-                        <li>
-                            No shit-talking and gossiping about other server members even in channels that they are not
-                            in or viewing. The age old saying applies - treat others how you’d like to be treated.
-                        </li>
-                    </ol>
-                <li>Keep chat clean and civil.
-                    <ol>
-                        <li>
-                            No unrelated and/or out-of-context memes. If it doesn’t contribute to the current
-                            conversation in a channel, don’t post it in that channel.
-                        </li>
-                        <li>
-                            No spamming of meaningless text, emojis or images. 3 or more lines or images is considered
-                            spam.
-                        </li>
-                        <li>
-                            Limit excessive roleplay in public channels. For light, unplanned RP, go to <span
-                                class="channel">rp-lite</span>. For
-                            planned, story driven RPs, please visit our RP server, linked in <span
-                                class="channel">role-playing</span>
-                        </li>
-                        <li>
-                            No pornographic or suggestive material or discussion outside of the NSFW channels, and no
-                            discussion of illegal subjects such as drugs, piracy, etc. If you have to ask yourself, if
-                            what you want to post is NSFW, the answer is yes.
-                        </li>
-                        <li>
-                            Politics are strictly banned. Political discussions never end well and no one leaves happy.
-                        </li>
-                    </ol>
-                <li>Keep account usernames and avatars clean
-                    <ol>
-                        <li>
-                            No (overtly) offensive pictures for avatars
-                        </li>
-                        <li>
-                            No NSFW avatars. Cropped images are fine as long as the avatar itself is SFW.
-                        </li>
-                        <li>
-                            Legible Usernames - Your username has to be appropriate and legible. Having usernames that
-                            purposely offend or meant to evade rules are not allowed. This also include usernames that
-                            block text in any kind of form or way. We will ask you to change your username and if you do
-                            not comply you will be banned (or changed to the ZPD’s discretion)
-                        </li>
-                        <li>
-                            Legible Messages - Zalgo or other obstruction methods in messages are strictly banned. They
-                            can crash some versions of mobile Discord and are overall annoying and pointless.
-                        </li>
-                    </ol>
-                <li>The ZPD are here to help
-                    <ol>
-                        <li>
-                            ZPD have full discretion to remove content or users deemed unpleasant or unwelcome by
-                            community members.
-                        </li>
-                        <li>
-                            ZPD have full discretion to change channel topic.
-                        </li>
-                        <li>
-                            Do NOT ping the Zootopia Police role except for emergencies such as a raid or troll. You can
-                            ping individual ZPD members that are online if ZPD presence is needed for other things.
-                        </li>
-                        <li>
-                            The ZPD will provide a rationale for any actions taken but their decisions are final.
-                        </li>
-                    </ol>
+            <ul id="ul-rules">
+                <!-- generated by generateSections.js -->
+            </ul>
+            <ul id="ul-other">
+                <!-- generated by generateSections.js -->
+            </ul>
+            <ul id="ul-zpd">
+                <!-- generated by generateSections.js -->
             </ul>
         </article>
     </section>
@@ -195,162 +126,15 @@
                 <input type="checkbox" id="verified-channels" name="verified channels" checked>
                 <label for="verified-channels">Verified</label>
 
-                <input type="checkbox" id="nsfw-channels" name="nsfw channels">
+                <input type="checkbox" id="rp-channels" name="role-playing section">
+                <label for="rp-channels">Role-playing</label>
+
+                <input type="checkbox" id="nsfw-channels" name="nsfw section">
                 <label for="nsfw-channels">NSFW</label>
             </div>
 
-            <ul>
-                <li>
-                    General
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/164188105031680000">general</a>
-                </li>
-                <li>
-                    General discussion
-                </li>
-                <li class="verified">
-                    <a href="https://discordapp.com/channels/164188105031680000/183684545952874496">lounge</a>
-                </li>
-                <li class="verified">
-                    A cozy corner for verified members. Serious discussion only, please.
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/201189463374692352">zootopia</a>
-                </li>
-                <li>
-                    Zootopia and related discussion only
-                </li>
-                <li class="verified">
-                    <a href="https://discordapp.com/channels/164188105031680000/329478900646150159">rp-lite</a>
-                </li>
-                <li class="verified">
-                    For light, unplanned RP
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    ZNN
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/165880283902509056">znn</a>
-                </li>
-                <li>
-                    Zootopia News Network related channel. All their posts appear here.
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/177906466643116033">znn-submissions</a>
-                </li>
-                <li>
-                    This channel is for submitting your work to ZNN
-                </li>
-            </ul>
-            <ul class="verified">
-                <li>
-                    Hobbies
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/187758250723115009">art</a>
-                </li>
-                <li>
-                    For discussion of art
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/182625034487988225">writing</a>
-                </li>
-                <li>
-                    For writers and lovers of writing
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/264311545008226314">media</a>
-                </li>
-                <li>
-                    Media discussion - TV, Anime, Movies, Books, etc
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/289242794051108864">nerdcorner</a>
-                </li>
-                <li>
-                    Discuss coding / math / science and related topics
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/178728057237012480">gaming</a>
-                </li>
-                <li>
-                    Gaming news and discussion
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/188501012946878466">role-playing</a>
-                </li>
-                <li>
-                    Visit our dedicated Zootopia Role-Playing server
-                </li>
-            </ul>
-            <ul class="nsfw verified channelCategory-hideNSFW">
-                <li>
-                    NSFW
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/164417080911855616">nsfw</a>
-                </li>
-                <li>
-                    NSFW discussion. NSFW specific rules are pinned.
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/339778846565859328">nsfw-images</a>
-                </li>
-                <li>
-                    NSFW images. NSFW specific rules are pinned.
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    Meta
-                </li>
-                <li class="verified">
-                    <a href="https://discordapp.com/channels/164188105031680000/495394279896907797">submissions</a>
-                </li>
-                <li class="verified">
-                    Submissions for server events, like fanfic/art competitions
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/331973980959277066">feedback</a>
-                </li>
-                <li>
-                    Leave any serious feedback and suggestions you have
-                </li>
-                <li class="verified">
-                    <a href="https://discordapp.com/channels/164188105031680000/332010507437342721">voting</a>
-                </li>
-                <li class="verified">
-                    Vote for changes to the server
-                </li>
-                <li class="verified">
-                    <a href="https://discordapp.com/channels/164188105031680000/210760739940597761">events</a>
-                </li>
-                <li class="verified">
-                    Various events including movie nights and gaming sessions
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/199721087523749888">music-bot</a>
-                </li>
-                <li>
-                    Listen to music in voice chat
-                </li>
-                <li>
-                    <a
-                        href="https://discordapp.com/channels/164188105031680000/202857406189797376">gazelle-backstage</a>
-                </li>
-                <li>
-                    Please use bot commands mostly in here
-                </li>
-                <li>
-                    <a href="https://discordapp.com/channels/164188105031680000/301717155454386178">casino</a>
-                </li>
-                <li>
-                    Use Gazelle's Games/Gambling commands here
-                </li>
-            </ul>
+            <!-- generated by generateSections.js -->
+
         </article>
     </section>
 
@@ -363,47 +147,7 @@
 
         <article>
             <ul>
-                <li id="role-zootopian">Zootopian</li>
-                <li>
-                    Verified members of the server.
-                </li>
-                <li>Artist / Writer</li>
-                <li>
-                    These are self-assignable roles.
-                    With these, you can ask for requests or feedback.
-                    Assign them to yourself with <span class="command">.iam writer</span> or <span class="command">.iam
-                        artist</span> in <span class="channel">gazelle-backstage</span>.
-                    Remove them with <span class="command">.iamnot artist</span> and <span class="command">.iamnot
-                        writer</span>.
-                </li>
-                <li>Event Groups</li>
-                <li>
-                    We have roles for the different events on our server.
-                    They are all self-assignable and will result in getting notified for the selected type of event.
-                </li>
-                <li id="role-znn">ZNN Staff / ZNN Head</li>
-                <li>
-                    Correspondents of the Zootopia News Network, or ZNN Staff.
-                    If you have any feedback, suggestions or content you would like to submit, please use the <span
-                        class="channel">znn</span> or
-                    <span class="channel">znn-submissions</span> channel.
-                </li>
-                <li id="role-nighthowler">Nighthowler</li>
-                <li>
-                    Access to NSFW channels.
-                    To request access, DM any online member of the ZPD.
-                </li>
-                <li id="role-zpd">Zootopian Police</li>
-                <li>
-                    Admins of the server.
-                    They will be in-charge of ensuring this server remains a peaceful, constructive and enjoyable place
-                    for
-                    everyone.
-                    Temporary channels can be requested from any member of the ZPD if you wish to have a separate
-                    channel
-                    for discussion.
-                    If you find any disturbances in the chatroom, please message a member of the ZPD directly.
-                </li>
+                <!-- generated by generateSections.js -->
             </ul>
         </article>
     </section>
@@ -415,63 +159,15 @@
             <img src="img/headers/zpd-title.svg" alt="Zootopian Police">
         </div>
 
-
         <article>
-            <div class="mod">
-                <a href="http://discordapp.com/users/309624059954593792">
-                    <img src="img/avatars/benny.jpg">
-                </a>
-                <h2>Benny</h2>
-            </div>
-            <div class="mod">
-                <a href="http://discordapp.com/users/89482334021107712">
-                    <img src="img/avatars/coggy.jpg">
-                </a>
-                <h2>coggy9</h2>
-            </div>
-            <div class="mod">
-                <a href="http://discordapp.com/users/164237918607507457">
-                    <img src="img/avatars/lyoko.jpg">
-                </a>
-                <h2>Lyoko</h2>
-            </div>
-            <div class="mod">
-                <a href="http://discordapp.com/users/141386211276226561">
-                    <img src="img/avatars/mrwilde.jpg">
-                </a>
-                <h2>Ninja-Lombax</h2>
-            </div>
-            <div class="mod">
-                <a href="http://discordapp.com/users/164187586682814464">
-                    <img src="img/avatars/poog.jpg">
-                </a>
-                <h2>Poog</h2>
-            </div>
-            <div class="mod">
-                <a href="http://discordapp.com/users/213405973333671938">
-                    <img src="img/avatars/satfox.jpg">
-                </a>
-                <h2>SatFox</h2>
-            </div>
-            <div class="mod">
-                <a href="http://discordapp.com/users/246462023737671680">
-                    <img src="img/avatars/shaded_essence.jpg">
-                </a>
-                <h2>Shaded Essence</h2>
-            </div>
-            <div class="mod">
-                <a href="http://discordapp.com/users/210522341363417089">
-                    <img src="img/avatars/telly.jpg">
-                </a>
-                <h2>Telly</h2>
-            </div>
+            <!-- generated by generateSections.js -->
         </article>
     </section>
 
     <section class="update grey backBlur">
         <ul>
             <li>
-                Last revision: 24 Feb. 2019
+                Last revision: 07 Mar. 2019
             </li>
             <li>
                 Code: <a href="https://tawmy.xyz">Tawmy</a>

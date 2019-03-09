@@ -22,6 +22,7 @@
   --zootopia-gradient-dark: #4BB77A;
   --role-color-zootopian: #1DAE86;
   --role-color-znn: #E54D42;
+  --role-color-rp: rgba(154, 92, 180, 1);
   --role-color-nighthowler: #0B2CFB;
   --role-color-zpd: #3C8DAE;
 
@@ -453,27 +454,44 @@ h1{ /* legacy, kept for old subpages */
   animation-fill-mode: backwards;
 }
 
-.rules ul{
+#ul-rules{
   list-style:decimal;
   margin:0;
-  padding-left:28px;
+  padding-left: 16px;
   font-weight: bold;
 }
-.rules ul > li{
-  padding-bottom:25px;
-}
-.rules ol{
+#ul-rules ol{
   list-style:lower-alpha; 
-  padding-left:28px;
+  margin-bottom: 25px;
+  padding-left: 16px;
   font-weight: initial;
   color: rgba(255, 255, 255, 0.8);
 }
-.rules ol > li{
+#ul-rules ol > li{
   margin-top:10px;
 }
-.rules ol > li > ol > li{
+#ul-rules ol > li > ol > li{
   list-style: lower-roman;
   margin-top:2px;
+}
+
+#ul-zpd, #ul-other{
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+#ul-zpd{
+  list-style: circle;
+  padding-left: 18px;
+}
+#ul-other{
+  list-style: none;
+  font-weight: bold;
+  color: white;
+}
+#ul-zpd li, #ul-other li{
+  margin-top:10px;
 }
 
 /* channels */
@@ -540,7 +558,7 @@ h1{ /* legacy, kept for old subpages */
   background: var(--channel-background-active);
   color: white;
 }
-.channelCategory-hide, .channelCategory-hideVerified, .channelCategory-hideNSFW{
+.channelCategory-hide, .channelCategory-hideVerified, .channelCategory-hideNSFW, .channelCategory-hideRP{
   display: none !important;
 }
 .channelCategory-closed:before{
@@ -597,30 +615,38 @@ h1{ /* legacy, kept for old subpages */
 }
 .roles ul li:nth-child(even){
   margin-top: 10px;
-  margin-bottom: 30px;
+}
+.roles ul li:nth-child(even):not(:last-child){
+  margin-bottom: 32px;
 }
 #role-zootopian{
   border: 1px solid var(--role-color-zootopian);
 }
-#role-znn{
+#role-znnstaffznnhead{
   border: 1px solid var(--role-color-znn);
+}
+#role-role-player{
+  border: 1px solid var(--role-color-rp);
 }
 #role-nighthowler{
   border: 1px solid var(--role-color-nighthowler);
 }
-#role-zpd{
+#role-zootopianpolice{
   border: 1px solid var(--role-color-zpd);
 }
 #role-zootopian:before{
   background: var(--role-color-zootopian);
 }
-#role-znn:before{
+#role-znnstaffznnhead:before{
   background: var(--role-color-znn);
+}
+#role-role-player:before{
+  background: var(--role-color-rp);
 }
 #role-nighthowler:before{
   background: var(--role-color-nighthowler);
 }
-#role-zpd:before{
+#role-zootopianpolice:before{
   background: var(--role-color-zpd);
 }
 

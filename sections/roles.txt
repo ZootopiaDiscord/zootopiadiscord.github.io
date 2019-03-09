@@ -1,0 +1,14 @@
+Zootopian
+Verified members of the server
+Artist / Writer
+These are self-assignable roles. With these, you can ask for requests or feedback. Assign them to yourself with <command>.iam writer</> or <command>.iam artist</> in <channel>gazelle-backstage</>. Remove them with <command>.iamnot artist</> and <command>.iamnot writer</>.
+Event Groups
+We have roles for the different events on our server. They are all self-assignable and will result in getting notified for the selected type of event.
+ZNN Staff / ZNN Head
+Correspondents of the Zootopia News Network, or ZNN Staff. If you have any feedback, suggestions or content you would like to submit, please use the <channel>znn</> or <channel>znn-submissions</> channel.
+Role-player
+Self-assignable role to get access to the role-playing section of the server. Role-playing specific additional rules and etiquette are pinned in the role-playing <channel>lobby</>.
+Nighthowler
+Access to NSFW channels. To request access, DM any online member of the ZPD.
+Zootopian Police
+Admins of the server. They will be in charge of ensuring this server remains a peaceful, constructive and enjoyable place for everyone. Temporary channels can be requested from any member of the ZPD if you wish to have a separate channel for discussion. If you find any disturbances in the chatroom, please message a member of the ZPD directly.

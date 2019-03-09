@@ -1,0 +1,117 @@
+>General
+everyone
+
+#general
+everyone
+General discussion
+164188105031680000
+
+#lounge
+verified
+A cozy corner for verified members. Serious discussion only, please.
+201189463374692352
+
+#zootopia
+everyone
+Zootopia and related discussion only
+201189463374692352
+
+>ZNN
+everyone
+
+#znn
+everyone
+Zootopia News Network related channel. All their posts appear here.
+165880283902509056
+
+#znn-submissions
+everyone
+This channel is for submitting your work to ZNN
+177906466643116033
+
+>Hobbies
+verified
+
+#art
+everyone
+For discussion of art
+187758250723115009
+
+#writing
+everyone
+For writers and lovers of writing
+182625034487988225
+
+#media
+everyone
+Media discussion - TV, Anime, Movies, Books, etc
+264311545008226314
+
+#nerdcorner
+everyone
+Discuss coding / math / science and related topics
+289242794051108864
+
+#gaming
+everyone
+Gaming news and discussion
+178728057237012480
+
+>>RP
+verified rp
+
+#rp-info
+everyone
+Additional rules and etiquette for the role-playing section
+//TODO
+
+#profiles
+everyone
+Post your character sheet in here! A template you can used is pinned.
+//TODO
+
+#lobby
+everyone
+General role-playing discussion
+//TODO
+
+#rp-namehere
+everyone
+Active RP story
+//TODO
+
+>>NSFW
+nsfw verified
+
+#nsfw
+everyone
+NSFW discussion. NSFW specific rules are pinned.
+164417080911855616
+
+#nsfw-images
+everyone
+NSFW images. NSFW specific rules are pinned.
+339778846565859328
+
+>Meta
+everyone
+
+#feedback
+everyone
+Leave any serious feedback and suggestions you have. Suggestions server events, like fanfic/art competitions, also go here.
+331973980959277066
+
+#events
+verified
+Various events including movie nights and gaming sessions
+210760739940597761
+
+#gazelle-backstage
+everyone
+Please use bot commands mostly in here
+202857406189797376
+
+#casino
+everyone
+Use Gazelle's Games/Gambling commands here
+301717155454386178

@@ -104,7 +104,7 @@ function modal() {
 
 function channels() {
     /* collapse / open channel category */
-    $('.channels article ul li:first-child').click(function () {
+    $('.channels').on("click", "ul li:first-child", function () {
         $(this).parent("ul").children("li").not(".channels article ul li:first-child").toggleClass("channelCategory-hide");
         $(this).parent("ul").children("li:first-child").toggleClass("channelCategory-closed");
     });
@@ -114,17 +114,35 @@ function channels() {
         switch ($(this).attr('id')) {
             case "verified-channels":
                 $('.verified').toggleClass("channelCategory-hideVerified");
+                if (!($(this).is(':checked'))) {
+                    $('#rp-channels').prop('checked', false);
+                    $('.rp').addClass("channelCategory-hideRP");
+                    $('#nsfw-channels').prop('checked', false);
+                    $('.nsfw').addClass("channelCategory-hideNSFW");
+                }
+                break;
+            case "rp-channels":
+                $('.rp').toggleClass("channelCategory-hideRP");
+                checkVerifiedChannels();
                 break;
             case "nsfw-channels":
                 $('.nsfw').toggleClass("channelCategory-hideNSFW");
+                checkVerifiedChannels();
                 break;
             default:
                 break;
         }
+
+        function checkVerifiedChannels() {
+            if (!($('#verified-channels').is(':checked'))) {
+                $('#verified-channels').prop('checked', true);
+                $('.verified').removeClass("channelCategory-hideVerified");
+            }
+        }
     });
 
     /* scroll to channel */
-    $('.channel').click(function () {
+    $('section').on("click", ".channel", function () {
         // prevent accidental text selection after click
         $(this).css({ "pointer-events": "none" });
 
