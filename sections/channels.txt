@@ -63,22 +63,22 @@ verified rp
 #rp-info
 everyone
 Additional rules and etiquette for the role-playing section
-//TODO
+554270626336997416
 
 #profiles
 everyone
 Post your character sheet in here! A template you can used is pinned.
-//TODO
+554270891157225475
 
 #lobby
 everyone
 General role-playing discussion
-//TODO
+554270973935747087
 
-#rp-namehere
+#rp-lite
 everyone
-Active RP story
-//TODO
+Casual role-play anyone can join anytime
+554271003275034644
 
 >>NSFW
 nsfw verified
@@ -97,7 +97,7 @@ NSFW images. NSFW specific rules are pinned.
 everyone
 
 #feedback
-everyone
+verified
 Leave any serious feedback and suggestions you have. Suggestions server events, like fanfic/art competitions, also go here.
 331973980959277066
 
