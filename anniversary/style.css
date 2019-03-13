@@ -1,3 +1,8 @@
+:root{
+    --zootopia-gradient-light: #90DA6E;
+    --zootopia-gradient-dark: #4BB77A;
+}
+
 html,body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -76,19 +81,74 @@ section:nth-child(even) a img{
     border: 8px solid #90DA6E;
 }
 
+section ul{
+    max-width: 500px;
+}
+
+section ul li:first-child{
+    margin-bottom: 20px;
+    font-size: 200%;
+    font-weight: 700;
+
+    background: linear-gradient(90deg, var(--zootopia-gradient-light), var(--zootopia-gradient-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer{
+    margin-top: 25px;
+    padding: 25px 0;
+    background: rgba(46,49,54,1);
+}
+
+section ul, footer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li:first-child{
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+footer ul{
+    text-align: center;
+}
+
+footer ul li:first-child{
+}
+
+footer a{
+    color: #4BB77A;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
 @media only screen and (min-width : 540px) {
     section{
         padding: 50px;
         grid-template-columns: 200px auto;
     }
+
     section:nth-child(odd){
         grid-template-columns: auto 200px;
         justify-content: right;
     }
+
+    section:nth-child(odd) ul li:first-child{
+        text-align: right;
+    }
+
     section:nth-child(odd) a{
         grid-row-start: 1;
         grid-column-start: 2;
     }
+
     section a:after{
         position: absolute;
     }
