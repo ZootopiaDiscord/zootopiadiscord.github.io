@@ -6,12 +6,9 @@ html,body{
     color: white;
 }
 
-section{
-    z-index: 10;
+header{
+    z-index: 20;
     position: relative;
-}
-
-#header{
     padding: 12vmin 0;
     overflow: hidden;
     display: flex;
@@ -19,7 +16,7 @@ section{
     align-items: center;
 }
 
-#header:before{
+header:before{
     z-index: -1;
     position: absolute;
     content: '';
@@ -33,6 +30,57 @@ section{
     filter: blur(7px);
 }
 
-#header img{
+header img{
     max-width: 80%;
+}
+
+section{
+    z-index: 10;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-column-gap: 50px;
+    align-items: center;
+    text-align: justify;
+}
+
+section a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+section a:after{
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+
+/* CREDIT FOR ARTISTS */
+
+.weketa:after{
+    content:'Credit: Weketa'
+}
+
+section a img{
+    box-sizing: border-box;
+    position: relative;
+    width: 200px;
+    border-radius: 10px;
+    border: 8px solid #4BB77A;
+}
+
+section:nth-child(odd){
+    grid-template-columns: auto 200px;
+    justify-content: right;
+}
+
+section:nth-child(odd) a{
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+section:nth-child(even) a img{
+    border: 8px solid #90DA6E;
 }
