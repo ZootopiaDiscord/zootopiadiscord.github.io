@@ -1,11 +1,11 @@
 Zootopian
-Verified members of the server
+Verified members of the server.
 Artist / Writer
 These are self-assignable roles. With these, you can ask for requests or feedback. Assign them to yourself with <command>.iam writer</> or <command>.iam artist</> in <channel>gazelle-backstage</>. Remove them with <command>.iamnot artist</> and <command>.iamnot writer</>.
 Event Groups
-We have roles for the different events on our server. They are all self-assignable and will result in getting notified for the selected type of event.
+We have roles for the different events on our server. They are all self-assignable and will result in getting notified for the selected type of event.<br><br>Currently these are: <command>movie-night</>, <command>party-games</>, <command>storytime</>, <command>nsfw-party-games</>, and <command>nsfw-storytime</>.
 ZNN Staff / ZNN Head
-Correspondents of the Zootopia News Network, or ZNN Staff. If you have any feedback, suggestions or content you would like to submit, please use the <channel>znn</> or <channel>znn-submissions</> channel.
+Correspondents of the Zootopia News Network, or ZNN Staff. If you have any feedback, suggestions or content you would like to submit, please use <channel>znn</> or <channel>znn-submissions</>.
 Role-player
 Self-assignable role to get access to the role-playing section of the server. Role-playing specific additional rules and etiquette are found in <channel>rp-info</>.
 Nighthowler

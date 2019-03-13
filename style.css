@@ -650,7 +650,7 @@ h1{ /* legacy, kept for old subpages */
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 .mod{
   --size: 42.4vw;
