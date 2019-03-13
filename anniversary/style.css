@@ -1,3 +1,38 @@
 html,body{
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #36393E;
+    font-size: 15px;
+    color: white;
+}
+
+section{
+    z-index: 10;
+    position: relative;
+}
+
+#header{
+    padding: 12vmin 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header:before{
+    z-index: -1;
+    position: absolute;
+    content: '';
+    left: -10px;
+    top: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: url('../img/header.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: blur(7px);
+}
+
+#header img{
+    max-width: 80%;
 }
