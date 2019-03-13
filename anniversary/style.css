@@ -36,9 +36,10 @@ header img{
 
 section{
     z-index: 10;
-    padding: 50px;
+    padding: 10vmin 5vmin;
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: auto;
+    grid-row-gap: 25px;
     grid-column-gap: 50px;
     align-items: center;
     text-align: justify;
@@ -54,13 +55,13 @@ section a{
 section a:after{
     width: 100%;
     left: 0;
-    position: absolute;
 }
 
 /* CREDIT FOR ARTISTS */
 
 .weketa:after{
-    content:'Credit: Weketa'
+    content:'\a Credit:\aWeketa';
+    white-space: pre;
 }
 
 section a img{
@@ -71,16 +72,24 @@ section a img{
     border: 8px solid #4BB77A;
 }
 
-section:nth-child(odd){
-    grid-template-columns: auto 200px;
-    justify-content: right;
-}
-
-section:nth-child(odd) a{
-    grid-row-start: 1;
-    grid-column-start: 2;
-}
-
 section:nth-child(even) a img{
     border: 8px solid #90DA6E;
+}
+
+@media only screen and (min-width : 540px) {
+    section{
+        padding: 50px;
+        grid-template-columns: 200px auto;
+    }
+    section:nth-child(odd){
+        grid-template-columns: auto 200px;
+        justify-content: right;
+    }
+    section:nth-child(odd) a{
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+    section a:after{
+        position: absolute;
+    }
 }
