@@ -134,6 +134,7 @@ footer a:hover{
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25);
 }
 .channel{
+    white-space: nowrap;
     background: #3C414E;
     color: #738BD7;
     transition: 100ms;
