@@ -57,11 +57,22 @@ section a{
     color: white;
     text-decoration: none;
     text-align: center;
+    transition: 500ms;
 }
 
 section a:after{
     width: 100%;
     left: 0;
+}
+
+/* these two are for Safari being stupid */
+
+section a:visited img{
+    order: 8px solid #4BB77A;
+}
+
+section:nth-child(even) a:visited img{
+    border: 8px solid #90DA6E;
 }
 
 /* CREDIT FOR ARTISTS */
@@ -175,5 +186,13 @@ footer a:hover{
 
     section a:after{
         position: absolute;
+    }
+}
+
+@media not all and (hover: none){
+    section a:hover{
+        box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+        transform: scale(1.02);
+        transition: 150ms;
     }
 }
