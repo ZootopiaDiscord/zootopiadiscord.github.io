@@ -54,7 +54,7 @@ section{
 
 section a{
     position: relative;
-    color: white;
+    color: #4BB77A;
     text-decoration: none;
     text-align: center;
 }
@@ -118,15 +118,6 @@ footer ul{
     text-align: center;
 }
 
-footer a{
-    color: #4BB77A;
-    text-decoration: none;
-}
-
-footer a:hover{
-    text-decoration: underline;
-}
-
 .command{
     padding: 0 2px;
     white-space: nowrap;
@@ -184,6 +175,9 @@ footer a:hover{
 }
 
 @media not all and (hover: none){
+    section a:hover:not(.channel){
+        text-decoration: underline;
+    }
     section a:hover > img{
         box-shadow: 0 5px 30px rgba(0,0,0,0.5);
         transform: scale(1.02);
