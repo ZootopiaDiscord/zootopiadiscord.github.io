@@ -65,6 +65,12 @@ section{
 section:not(.header){
   overflow: hidden;
 }
+section:not(.header):not(.info){
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 2.1s;
+  animation-fill-mode: backwards;
+}
 .section-collapse{
   max-height: calc(var(--sectionHead-padding) * 2 + var(--sectionHead-size));
 }
@@ -435,13 +441,6 @@ h1{ /* legacy, kept for old subpages */
 }
 
 /* rules */
-
-.rules{
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-delay: 2.1s;
-  animation-fill-mode: backwards;
-}
 
 #ul-rules{
   list-style:decimal;
