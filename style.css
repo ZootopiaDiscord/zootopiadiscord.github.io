@@ -4,7 +4,7 @@
 
   --content-max-width: 840px;
 
-  --modal-padding: 4vmin;
+  --modal-padding: 3vmin;
 
   --scrollIndicator-margin: 10px;
 
@@ -379,8 +379,8 @@ h1{ /* legacy, kept for old subpages */
   margin: var(--modal-padding);
 }
 .modal-link{
-  margin: calc(var(--modal-padding) / 2) 0 calc(var(--modal-padding) / 4) 0;
-  width: 20%;
+  margin: var(--modal-padding) 0 calc(var(--modal-padding) / 4) 0;
+  width: 30%;
   font-size: 0;
   transition: 200ms;
 
@@ -866,10 +866,13 @@ h1{ /* legacy, kept for old subpages */
 
 @media only screen and (min-width : 540px) {
   :root{
-    --modal-padding: 3vmin;
+    --modal-padding: 2vmin;
   }
   .header-link{
     --size: 18vmin;
+  }
+  .modal-link{
+    width: 20%;
   }
   .mod{
     --size: calc(80vw / 3);
