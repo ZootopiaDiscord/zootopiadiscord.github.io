@@ -29,13 +29,14 @@ header:before{
     top: -10px;
     width: calc(100% + 20px);
     height: calc(100% + 20px);
-    background: url('../img/header.jpg');
+    background: url('img/header.jpg');
     background-position: center;
     background-size: cover;
-    filter: blur(7px);
+    filter: brightness(80%);
 }
 
 header img{
+    width: 450px;
     max-width: 80%;
 }
 
@@ -103,9 +104,9 @@ section ul li:first-child{
 }
 
 footer{
-    margin-top: 25px;
-    padding: 25px 0;
+    padding: 25px;
     background: rgba(46,49,54,1);
+    font-size: 85%;
 }
 
 section ul, footer ul{
@@ -141,7 +142,7 @@ footer ul{
     content: '#';
 }
 
-@media only screen and (min-width : 540px) {
+@media only screen and (min-width : 600px) {
     section{
         padding: 50px;
         grid-template-columns: 200px auto;
