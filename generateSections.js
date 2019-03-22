@@ -146,7 +146,7 @@ function generateMods() {
             mods += '<div class="mod"><a href="http://discordapp.com/users/';
             mods += rawMods[index + 1];
             mods += '"><img src="img/avatars/';
-            mods += rawMods[index];
+            mods += rawMods[index+1];
             mods += '.jpg"></a><h2>'
             mods += rawMods[index];
             mods += '</h2></div>'
