@@ -1,7 +1,7 @@
 Zootopian
 Verified members of the server.
 Artist / Writer
-These are self-assignable roles. With these, you can ask for requests or feedback. Assign them to yourself with <command>.iam writer</> or <command>.iam artist</> in <channel>gazelle-backstage</>. Remove them with <command>.iamnot artist</> and <command>.iamnot writer</>.
+These are self-assignable roles. With these, you can ask for requests or feedback. Assign them to yourself with <command>!join writer</> or <command>!join artist</> in <channel>gazelle-backstage</>. Remove them with <command>!leave artist</> and <command>!leave writer</>.
 Event Groups
 We have roles for the different events on our server. They are all self-assignable and will result in getting notified for the selected type of event.<br><br>Currently these are: <command>movie-night</>, <command>party-games</>, <command>storytime</>, <command>nsfw-party-games</>, and <command>nsfw-storytime</>.
 ZNN Staff / ZNN Head
