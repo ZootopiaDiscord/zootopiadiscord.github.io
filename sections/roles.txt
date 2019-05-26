@@ -1,5 +1,7 @@
 Zootopian
 Verified members of the server.
+Hustler
+Nitro boosting members of the server. Thank you so much for your contribution!
 Artist / Writer
 These are self-assignable roles. With these, you can ask for requests or feedback. Assign them to yourself with <command>!join writer</> or <command>!join artist</> in <channel>gazelle-backstage</>. Remove them with <command>!leave artist</> and <command>!leave writer</>.
 Event Groups

@@ -25,6 +25,7 @@
   --role-color-rp: rgba(154, 92, 180, 1);
   --role-color-nighthowler: #0B2CFB;
   --role-color-zpd: #3C8DAE;
+  --role-color-hustler: #F283FC;
 
   --zindex-section: 20;
   --zindex-scrollIndicator: 30;
@@ -614,6 +615,9 @@ h1{ /* legacy, kept for old subpages */
 #role-zootopianpolice{
   border: 1px solid var(--role-color-zpd);
 }
+#role-hustler{
+  border: 1px solid var(--role-color-hustler);
+}
 #role-zootopian:before{
   background: var(--role-color-zootopian);
 }
@@ -628,6 +632,9 @@ h1{ /* legacy, kept for old subpages */
 }
 #role-zootopianpolice:before{
   background: var(--role-color-zpd);
+}
+#role-hustler:before{
+  background: var(--role-color-hustler);
 }
 
 /* mods */
