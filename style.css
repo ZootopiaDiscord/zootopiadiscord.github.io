@@ -869,6 +869,55 @@ h1{ /* legacy, kept for old subpages */
   }
 }
 
+/* reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  :root{
+    --section-collapse-time: 0ms;
+  }
+  section:not(.header):not(.info){
+    animation: none;
+  }
+  .header{
+    animation: none;
+  }
+  .header:before{
+    display: none;
+  }
+  #zoopLogo{
+    animation: none;
+  }
+  .header-link{
+    animation: none;
+  }
+  .scroll-indicator{
+    animation: none;
+  }
+  .scroll-indicator div{
+    animation: none;
+  }
+  .modal:before{
+    animation: none;
+  }
+  .modal-link{
+    animation: none;
+  }
+  .info article p{
+    animation: none;
+  }
+
+  @keyframes modal-show{
+    0%{
+      filter: opacity(0%);
+      transform: scale(0.9);
+    }
+    100%{
+      filter: opacity(100%);
+      transform: scale(1);
+    }
+  }
+}
+
 /* scaling */
 
 @media only screen and (min-width : 540px) {
