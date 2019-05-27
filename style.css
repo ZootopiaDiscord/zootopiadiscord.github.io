@@ -1087,3 +1087,58 @@ h1{ /* legacy, kept for old subpages */
     filter: var(--header-hue-rotate);
   }
 }
+
+/* light theme */
+
+@media (prefers-color-scheme: light) {
+  :root{
+    --channel-background: #F1F3F1;
+    --channel-background-active: #738BD7;
+  }
+  html, body{
+    background: initial;
+    color: initial;
+  }
+  .header svg path{
+    fill: white;
+  }
+  .modal{
+    background: white;
+  }
+  #ul-other{
+    color: initial;
+  }
+  #ul-rules ol{
+    color: rgba(0, 0, 0, 0.8);
+  }
+  #ul-zpd{
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .roles ul li:nth-child(odd){
+    border: 1px solid #B9BBBE;
+  }
+  .roles ul li:nth-child(odd):before{
+    background: #B9BBBE;
+  }
+  .mod h2{
+    color: white;
+  }
+  .command{
+    background: #F8F9F9;
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: none;
+  }
+  .grey{
+    --channel-background: #ededed;
+    background: #F3F3F3;
+  }
+
+  @media only screen and (min-width : 768px) {
+    .scroll-indicator{
+      background: #F3F3F3;
+    }
+    .mod:hover{
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
