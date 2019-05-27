@@ -1137,6 +1137,8 @@ h1{ /* legacy, kept for old subpages */
     .scroll-indicator{
       background: #F3F3F3;
     }
+  }
+  @media not all and (hover: none){
     .mod:hover{
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     }
