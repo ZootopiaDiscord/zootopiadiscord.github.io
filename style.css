@@ -238,7 +238,6 @@ h1{ /* legacy, kept for old subpages */
   position: relative;
   width: 75%;
   transform: translate(-4%, 6%)scale(1);
-  transition: 500ms;
 }
 
 /* background */
@@ -380,18 +379,28 @@ h1{ /* legacy, kept for old subpages */
   margin: var(--modal-padding);
 }
 .modal-link{
+  position: relative;
   margin: var(--modal-padding) 0 calc(var(--modal-padding) / 4) 0;
   width: 30%;
   font-size: 0;
-  transition: 200ms;
 
   animation-name: hueRotate;
   animation-duration: 2s;
   animation-delay: 100ms;
   animation-timing-function: ease-out;
 }
-.modal-link:hover{
-  transform: scale(1.05);
+.modal-link:after{
+  display: none;
+  position: absolute;
+  content: '';
+  bottom: 1px;
+  right: 0;
+  height: 2px;
+  width: 65%;
+  background: linear-gradient(90deg, var(--zootopia-gradient-dark), var(--zootopia-gradient-light));
+}
+.modal-link:hover:after{
+  display: initial;
 }
 .modal-link img{
   width: 100%;
@@ -1055,11 +1064,7 @@ h1{ /* legacy, kept for old subpages */
     text-decoration: underline;
   }
   .header-link:hover{
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.33);
-    transition: 200ms;
-  }
-  .header-link:hover > img{
-    transform: translate(-4%, 6%)scale(0.9);
+    background: rgba(0, 0, 0, 0.33);
     transition: 200ms;
   }
   .channels li:nth-child(even) a:hover, .channel:hover{
