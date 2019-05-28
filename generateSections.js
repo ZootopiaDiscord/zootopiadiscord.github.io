@@ -35,7 +35,13 @@ function generateRules() {
         let rawRulesZPD = data.split('\n');
         let rulesZPD = "";
         for (let index = 0; index < rawRulesZPD.length; index++) {
-            rulesZPD += "<li>" + rawRulesZPD[index] + "</li>"
+            if (rawRulesZPD[index].length < 2) {
+                rulesZPD += "</ol>"
+            } else if (rawRulesZPD[index].substring(0, 1) == ">") {
+                rulesZPD += "<li>" + rawRulesZPD[index].substring(1) + "</li><ol>";
+            } else {
+                rulesZPD += "<li>" + rawRulesZPD[index] + "</li>"
+            }
         }
         $("#ul-zpd").html(rulesZPD);
     });
@@ -146,7 +152,7 @@ function generateMods() {
             mods += '<div class="mod"><a href="http://discordapp.com/users/';
             mods += rawMods[index + 1];
             mods += '"><img src="img/avatars/';
-            mods += rawMods[index+1];
+            mods += rawMods[index + 1];
             mods += '.jpg" alt="';
             mods += rawMods[index];
             mods += '"></a><h2>';

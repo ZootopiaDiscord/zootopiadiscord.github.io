@@ -458,7 +458,7 @@ h1{ /* legacy, kept for old subpages */
   padding-left: 16px;
   font-weight: bold;
 }
-#ul-rules ol{
+#ul-rules ol, #ul-zpd ol{
   list-style:lower-alpha; 
   margin-bottom: 25px;
   padding-left: 16px;

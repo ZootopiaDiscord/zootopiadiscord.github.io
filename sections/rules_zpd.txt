@@ -1,3 +1,6 @@
-ZPD have full discretion to remove content or users deemed unpleasant or unwelcome by community members.
-ZPD have full discretion to change channel topic.
+These rules are enforced by ZPD interpretation and discretion.
 The ZPD will provide a rationale for any actions taken but their decisions are final.
+>The ZPD have full discretion to:
+change channel topic.
+remove content or users deemed unpleasant or unwelcome by community members.
+take action if the rules are pushed or bent, including openly arguing over punishments or instructions.
