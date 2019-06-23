@@ -47,6 +47,11 @@ everyone
 Media discussion - TV, Anime, Movies, Books, etc
 264311545008226314
 
+#anime
+weeb
+Japanese media discussion - Anime, Manga, Light Novels, etc (requires role)
+592053536574013665
+
 #nerdcorner
 everyone
 Discuss coding / math / science and related topics

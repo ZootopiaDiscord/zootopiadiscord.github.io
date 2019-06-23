@@ -12,5 +12,7 @@ Role-player
 Self-assignable role to get access to the role-playing section of the server. Role-playing specific additional rules and etiquette are found in <channel>rp-info</>.
 Nighthowler
 Access to NSFW channels. To request access, DM any online member of the ZPD.
+Weeb
+Self-assignable role to get access to the anime channel. Some rules apply and are pinned in the channel.
 Zootopian Police
 Admins of the server. They will be in charge of ensuring this server remains a peaceful, constructive and enjoyable place for everyone. Temporary channels can be requested from any member of the ZPD if you wish to have a separate channel for discussion. If you find any disturbances in the chatroom, please message a member of the ZPD directly.
