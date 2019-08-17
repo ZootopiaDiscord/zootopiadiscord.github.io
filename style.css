@@ -1108,7 +1108,7 @@ h1{ /* legacy, kept for old subpages */
     fill: white;
   }
   .modal{
-    background: white;
+    color: white;
   }
   #ul-other{
     color: initial;
@@ -1118,6 +1118,12 @@ h1{ /* legacy, kept for old subpages */
   }
   #ul-zpd{
     color: rgba(0, 0, 0, 0.8);
+  }
+  #ul-zpd ol{
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .channels article ul li:first-child:before{
+    border-top: 9px solid #000;
   }
   .roles ul li:nth-child(odd){
     border: 1px solid #B9BBBE;
