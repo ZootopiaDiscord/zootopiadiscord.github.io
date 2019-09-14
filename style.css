@@ -665,16 +665,14 @@ h1{ /* legacy, kept for old subpages */
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 .mod{
   --size: 42.4vw;
 
-  overflow:hidden;
   position:relative;
   box-sizing: border-box;
   width: var(--size);
-  height: var(--size);
   margin: var(--mods-halfMargin);
   font-size: 0;
   transition: var(--mods-transition);
@@ -683,22 +681,25 @@ h1{ /* legacy, kept for old subpages */
 .mod img{
   transition: var(--mods-transition);
   width: 100%;
-  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.33);
 }
 .mod h2{
   box-sizing: border-box;
-  position:absolute;
-  margin:0;
-  padding:10px;
-  width:100%;
-  bottom:0%;
-  left:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,0) , rgba(0,0,0,0.75)); 
-  font-family: 'Roboto', sans-serif;
-  font-weight:100;
-  font-size:1.5rem;
+  margin: 0;
+  padding: var(--mods-halfMargin) 0 0 0;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
   pointer-events: none;
   transition: var(--mods-transition);
+}
+.mod a{
+  color: white;
+  text-decoration: none;
+}
+.mod a:hover{
+  text-decoration: none !important;
 }
 
 /* update */
@@ -1037,7 +1038,7 @@ h1{ /* legacy, kept for old subpages */
     margin: 60px 0 20px 0;
   }
   .mod{
-    --size: 200px;
+    --size: 140px;
   }
   .mods .sectionHead{
     width: calc(100% - var(--section-padding)*2 + var(--mods-halfMargin)*2);
@@ -1075,14 +1076,9 @@ h1{ /* legacy, kept for old subpages */
     background: var(--channel-background-active);
     color: white;
   }
-  .mod:hover{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
-  }
   .mod:hover img{
     transform: scale(1.1);
-  }
-  .mod:hover h2{
-    opacity: 0;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.5)
   }
   .sectionHead:hover > img:nth-child(2){
     filter: var(--header-hue-rotate);
@@ -1131,9 +1127,6 @@ h1{ /* legacy, kept for old subpages */
   .roles ul li:nth-child(odd):before{
     background: #B9BBBE;
   }
-  .mod h2{
-    color: white;
-  }
   .command{
     background: #F8F9F9;
     color: rgba(0, 0, 0, 0.8);
@@ -1147,11 +1140,6 @@ h1{ /* legacy, kept for old subpages */
   @media only screen and (min-width : 768px) {
     .scroll-indicator{
       background: #F3F3F3;
-    }
-  }
-  @media not all and (hover: none){
-    .mod:hover{
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     }
   }
 }

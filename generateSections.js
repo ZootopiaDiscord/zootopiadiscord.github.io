@@ -155,9 +155,9 @@ function generateMods() {
             mods += rawMods[index + 1];
             mods += '.jpg" alt="';
             mods += rawMods[index];
-            mods += '"></a><h2>';
+            mods += '"><h2>';
             mods += rawMods[index];
-            mods += '</h2></div>'
+            mods += '</h2></a></div>'
         }
         $(".mods").children("article").html(mods);
     });
