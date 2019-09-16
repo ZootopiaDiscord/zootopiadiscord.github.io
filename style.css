@@ -1219,6 +1219,28 @@ h1{ /* legacy, kept for old subpages */
   .roles ul li:nth-child(odd):before{
     background: #B9BBBE;
   }
+  .bot{
+    background: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0 , 0.2),0 0 0 1px rgba(185, 187, 190, 0.3);
+  }
+  .bot-head{
+    background: #F6F6F7;
+  }
+  .bot-original-name{
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .bot-foot{
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .bot-roles{
+    color: black;
+  }
+  .bot-role{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  .bot-description{
+    color: black;
+  }
   .command{
     background: #F8F9F9;
     color: rgba(0, 0, 0, 0.8);
