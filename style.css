@@ -1127,6 +1127,9 @@ h1{ /* legacy, kept for old subpages */
   .roles ul li:nth-child(odd):before{
     background: #B9BBBE;
   }
+  .mod a{
+    color: black;
+  }
   .command{
     background: #F8F9F9;
     color: rgba(0, 0, 0, 0.8);
