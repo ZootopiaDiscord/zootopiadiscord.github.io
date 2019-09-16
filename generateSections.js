@@ -3,6 +3,8 @@ $(document).ready(function () {
     generateMods();
     generateChannels();
     generateRoles();
+    generateBots();
+    generateMinorBots();
 });
 
 function generateRules() {
@@ -141,6 +143,56 @@ function generateRoles() {
             roles += '</li>';
         }
         $('.roles').children("article").children("ul").html(roles);
+    });
+}
+
+function generateBots() {
+    $.get('sections/bots.txt', function (data) {
+        let rawBots = data.split('\n');
+        let bots = "";
+
+        for (let index = 0; index < rawBots.length; index += 4) {
+            bots += '<div class="bot"><div class="bot-head"><img src="img/bots/';
+            bots += rawBots[index];
+            bots += '.jpg">';
+            bots += rawBots[index];
+            if (rawBots[index+1].length > 1){
+                bots += '<span class="bot-original-name">'
+                bots += rawBots[index+1];
+                bots += '</span>';
+            }
+            bots += '</div><div class="bot-foot">PURPOSE<div class="bot-roles">'
+            let roles = rawBots[index+2].split(', ');
+            for (let index2 = 0; index2 < roles.length; index2++) {
+                bots += '<div class="bot-role">';
+                bots += roles[index2];
+                bots += '</div>';
+            }
+            bots += '</div><div class="bot-description">';
+            bots += rawBots[index+3];
+            bots += '</div></div></div>';
+        }
+
+        $(".bots").children("article").children("#bots-major").html(bots);
+    });
+}
+
+function generateMinorBots() {
+    $.get('sections/bots_minor.txt', function (data) {
+        let rawBots = data.split('\n');
+        let bots = "";
+
+        for (let index = 0; index < rawBots.length; index += 2) {
+            bots += '<div class="bot"><img src="img/bots/';
+            bots += rawBots[index];
+            bots += '.jpg"><div class="bot-minor-info"><span class="bot-minor-name">'
+            bots += rawBots[index];
+            bots += '</div><div class="bot-minor-description">';
+            bots += rawBots[index+1];
+            bots += '</div></div>';
+        }
+
+        $(".bots").children("article").children("#bots-minor").html(bots);
     });
 }
 
