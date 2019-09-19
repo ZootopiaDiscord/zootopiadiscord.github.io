@@ -101,15 +101,15 @@ NSFW images. NSFW specific rules are pinned.
 >Meta
 everyone
 
-#feedback
-verified
-Leave any serious feedback and suggestions you have. Suggestions server events, like fanfic/art competitions, also go here.
-331973980959277066
-
 #events
 verified
 Various events including movie nights and gaming sessions
 210760739940597761
+
+#feedback
+verified
+Leave any serious feedback and suggestions you have. Suggestions server events, like fanfic/art competitions, also go here.
+331973980959277066
 
 #gazelle-backstage
 everyone

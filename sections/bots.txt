@@ -1,0 +1,12 @@
+Gazelle
+Nadeko
+Casino, Logging
+Gazelle is our oldest bot. Here basically from the beginning, she has helped us in many ways over time. We use her mostly for moderation purposes these days. She's also the casino's manager though.
+Judy Hopps
+Sweetie
+Collections, Event Scheduling, Anti-Spam, Anti-Raid, Miscellaneous Moderation
+We added Sweetie to help with frequent raids and spam management as a whole. Her collections have also become a loved part of the server.
+Amadeus
+
+Profiles, AniList Data, Logging, Miscellaneous Moderation
+Created specifically for our server, Amadeus offers moderation functionality the other bots are lacking. It also has extensive user profiles that help people link more profiles than Discord itself offers.
