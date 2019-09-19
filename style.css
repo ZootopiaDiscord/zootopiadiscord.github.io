@@ -1241,6 +1241,9 @@ h1{ /* legacy, kept for old subpages */
   .bot-description{
     color: black;
   }
+  .mods a{
+    color: black;
+  }
   .command{
     background: #F8F9F9;
     color: rgba(0, 0, 0, 0.8);
