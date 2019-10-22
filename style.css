@@ -33,7 +33,7 @@
 
   --bot-margin: 18px;
 
-  --mods-halfMargin: 2.5vw;
+  --mods-margin: 20px;
   --mods-transition: 500ms;
 }
 
@@ -740,32 +740,22 @@ h1{ /* legacy, kept for old subpages */
 
 /* mods */
 
-.mods{
-  margin: 0 var(--mods-halfMargin);
-  padding: 0 0 var(--mods-halfMargin) 0;
-
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto;
-  justify-items: center;
-}
-.mods .sectionHead{
-  width: calc(100% - var(--section-padding));
-}
 .mods article{
-  position: relative;
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
   max-width: 1000px;
 }
-.mod{
-  --size: 42.4vw;
 
+#mods-wrapper{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 calc(var(--section-padding) * -1 / 2);
+}
+.mod{
   position:relative;
   box-sizing: border-box;
-  width: var(--size);
-  margin: var(--mods-halfMargin);
+  width: 140px;
+  margin: calc(var(--section-padding) / 2);
   font-size: 0;
   transition: var(--mods-transition);
   transition-property: hover, box-shadow;
@@ -779,7 +769,7 @@ h1{ /* legacy, kept for old subpages */
 .mod h2{
   box-sizing: border-box;
   margin: 0;
-  padding: var(--mods-halfMargin) 0 0 0;
+  padding: var(--mods-margin) 0 0 0;
   font-size: 20px;
   font-weight: 300;
   text-align: center;
@@ -1032,12 +1022,9 @@ h1{ /* legacy, kept for old subpages */
   .modal-link{
     width: 20%;
   }
-  .mod{
-    --size: calc(80vw / 3);
-  }
 }
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 740px) {
   :root {
     --section-padding: 10vw;
 
@@ -1045,8 +1032,6 @@ h1{ /* legacy, kept for old subpages */
     
     --sectionHead-padding: 40px;
     --sectionHead-size: 80px;
-
-    --mods-halfMargin: 20px;
   }
   .scroll-indicator{
     --scrollIndicator-margin: 10px;
@@ -1124,16 +1109,17 @@ h1{ /* legacy, kept for old subpages */
   .mods > .sectionHead > img:nth-child(2){
     height: 40px;
   }
+  #mods-wrapper{
+    margin: 0 calc(var(--mods-margin) * -1);
+    justify-content: center;
+  }
+  .mod{
+    margin: calc(var(--mods-margin));
+  }
   .header-link{
     --size: 150px;
 
     margin: 60px 0 20px 0;
-  }
-  .mod{
-    --size: 140px;
-  }
-  .mods .sectionHead{
-    width: calc(100% - var(--section-padding)*2 + var(--mods-halfMargin)*2);
   }
 }
 

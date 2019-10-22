@@ -211,6 +211,6 @@ function generateMods() {
             mods += rawMods[index];
             mods += '</h2></a></div>'
         }
-        $(".mods").children("article").html(mods);
+        $(".mods").children("article").children("#mods-wrapper").html(mods);
     });
 }
