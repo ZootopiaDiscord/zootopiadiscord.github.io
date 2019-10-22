@@ -26,6 +26,7 @@
   --role-color-nighthowler: #0B2CFB;
   --role-color-zpd: #3C8DAE;
   --role-color-hustler: #F283FC;
+  --role-color-weeb: #F78B24;
 
   --zindex-section: 20;
   --zindex-scrollIndicator: 30;
@@ -629,6 +630,9 @@ h1{ /* legacy, kept for old subpages */
 #role-hustler{
   border: 1px solid var(--role-color-hustler);
 }
+#role-weeb{
+  border: 1px solid var(--role-color-weeb);
+}
 #role-zootopian:before{
   background: var(--role-color-zootopian);
 }
@@ -646,6 +650,9 @@ h1{ /* legacy, kept for old subpages */
 }
 #role-hustler:before{
   background: var(--role-color-hustler);
+}
+#role-weeb:before{
+  background: var(--role-color-weeb);
 }
 
 /* bots */
