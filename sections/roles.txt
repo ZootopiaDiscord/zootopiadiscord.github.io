@@ -1,9 +1,9 @@
 Zootopian
-Verified members of the server. Grants access to the full selection of channels and other permissions.
+Verified members of the server. Grants access to the full selection of channels and other permissions. The system is explained in <channel>verification</>.
 Hustler
 Nitro boosting members of the server. Thank you so much for your contribution!
 Zootopian Police
-Admins of the server. They will be in charge of ensuring this server remains a peaceful, constructive and enjoyable place for everyone. Temporary channels can be requested from any member of the ZPD if you wish to have a separate channel for discussion. If you find any disturbances in the chatroom, please message a member of the ZPD directly.
+Moderators of the server. They will be in charge of ensuring this server remains a peaceful, constructive and enjoyable place for everyone. Temporary channels can be requested from any member of the ZPD if you wish to have a separate channel for discussion. If you find any disturbances in the chatroom, please message a member of the ZPD directly.
 Artist / Writer
 These are self-assignable roles. With these, you can ask for requests or feedback. Assign them to yourself with <command>!join writer</> or <command>!join artist</> in <channel>gazelle-backstage</>. Remove them with <command>!leave artist</> and <command>!leave writer</>.
 Event Groups
