@@ -144,11 +144,13 @@ function generateRoles() {
         }
         $('.roles').children("article").html(roles);
 
-        $('.roles article').masonry({
-            itemSelector: '.role',
-            fitWidth: true,
-            transitionDuration: 0
-          });
+        setTimeout(() => {
+            $('.roles article').masonry({
+                itemSelector: '.role',
+                fitWidth: true,
+                transitionDuration: 0
+            });
+        }, 2000);
     });
 }
 
