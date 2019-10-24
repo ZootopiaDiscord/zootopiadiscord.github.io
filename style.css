@@ -90,7 +90,7 @@ article{
   margin: 0 auto;
   max-width: var(--content-max-width);
   transform-origin: top;
-  transition: var(--section-collapse-time);
+  transition: transform var(--section-collapse-time), opacity var(--section-collapse-time);
 }
 
 h1{ /* legacy, kept for old subpages */
@@ -578,24 +578,29 @@ h1{ /* legacy, kept for old subpages */
 
 /* roles */
 
-.roles article{
-  text-align: justify;
-}
-
-.roles ul{
+.role{
+  box-sizing: border-box;
   position: relative;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  margin: 10px;
+  padding: var(--bot-margin);
+  width: 250px;
+
+  background: #36393E;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(32 ,34 ,37, 0.6);
+  border-radius: 5px;
 }
-.roles ul li:nth-child(odd){
+.role ul{
+  margin-bottom: 0;
+}
+.role-top{
   display: inline-block;
   position: relative;
+  margin-bottom: var(--bot-margin);
   border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 100px;
   padding: 4px 12px 4px 30px;
 }
-.roles ul li:nth-child(odd):before{
+.role-top:before{
   position: absolute;
   content: '';
   top: 50%;
@@ -606,52 +611,46 @@ h1{ /* legacy, kept for old subpages */
   background: rgba(255, 255, 255, 1);
   border-radius: 100%;
 }
-.roles ul li:nth-child(even){
-  margin-top: 10px;
-}
-.roles ul li:nth-child(even):not(:last-child){
-  margin-bottom: 32px;
-}
-#role-zootopian{
+#role-zootopian .role-top{
   border: 1px solid var(--role-color-zootopian);
 }
-#role-znnstaffznnhead{
+#role-znnstaffznnhead .role-top{
   border: 1px solid var(--role-color-znn);
 }
-#role-role-player{
+#role-role-player .role-top{
   border: 1px solid var(--role-color-rp);
 }
-#role-nighthowler{
+#role-nighthowler .role-top{
   border: 1px solid var(--role-color-nighthowler);
 }
-#role-zootopianpolice{
+#role-zootopianpolice .role-top{
   border: 1px solid var(--role-color-zpd);
 }
-#role-hustler{
+#role-hustler .role-top{
   border: 1px solid var(--role-color-hustler);
 }
-#role-weeb{
+#role-weeb .role-top{
   border: 1px solid var(--role-color-weeb);
 }
-#role-zootopian:before{
+#role-zootopian .role-top:before{
   background: var(--role-color-zootopian);
 }
-#role-znnstaffznnhead:before{
+#role-znnstaffznnhead .role-top:before{
   background: var(--role-color-znn);
 }
-#role-role-player:before{
+#role-role-player .role-top:before{
   background: var(--role-color-rp);
 }
-#role-nighthowler:before{
+#role-nighthowler .role-top:before{
   background: var(--role-color-nighthowler);
 }
-#role-zootopianpolice:before{
+#role-zootopianpolice .role-top:before{
   background: var(--role-color-zpd);
 }
-#role-hustler:before{
+#role-hustler .role-top:before{
   background: var(--role-color-hustler);
 }
-#role-weeb:before{
+#role-weeb .role-top:before{
   background: var(--role-color-weeb);
 }
 
@@ -719,7 +718,6 @@ h1{ /* legacy, kept for old subpages */
 }
 
 .bot-description{
-  text-align: justify;
   font-size: 1rem;
   font-weight: 400;
   color: white;
@@ -1206,10 +1204,14 @@ h1{ /* legacy, kept for old subpages */
   .channels article ul li:first-child:before{
     border-top: 9px solid #000;
   }
-  .roles ul li:nth-child(odd){
+  .role{
+    background: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0 , 0.2),0 0 0 1px rgba(185, 187, 190, 0.3);
+  }
+  .role-top{
     border: 1px solid #B9BBBE;
   }
-  .roles ul li:nth-child(odd):before{
+  .role-top:before{
     background: #B9BBBE;
   }
   .bot{

@@ -134,15 +134,21 @@ function generateRoles() {
             roleDescription = roleDescription.replace(/<channel>/g, '<span class="channel">')
                 .replace(/<command>/g, '<span class="command">')
                 .replace(/<\/>/g, '</span>');
-            roles += '<li id="role-';
+            roles += '<div class="role" id="role-';
             roles += roleID;
-            roles += '">'
+            roles += '"><div class="role-top">'
             roles += rawRoles[index];
-            roles += '</li><li>';
+            roles += '</div><div class="role-bottom">';
             roles += roleDescription;
-            roles += '</li>';
+            roles += '</div></div>';
         }
-        $('.roles').children("article").children("ul").html(roles);
+        $('.roles').children("article").html(roles);
+
+        $('.roles article').masonry({
+            itemSelector: '.role',
+            fitWidth: true,
+            transitionDuration: 0
+          });
     });
 }
 
