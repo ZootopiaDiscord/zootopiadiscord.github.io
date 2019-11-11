@@ -578,6 +578,10 @@ h1{ /* legacy, kept for old subpages */
 
 /* roles */
 
+#roles-container{
+  margin: 0 auto;
+}
+
 .role{
   box-sizing: border-box;
   position: relative;

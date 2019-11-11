@@ -142,10 +142,10 @@ function generateRoles() {
             roles += roleDescription;
             roles += '</div></div>';
         }
-        $('.roles').children("article").html(roles);
+        $('#roles-container').html(roles);
 
         setTimeout(() => {
-            $('.roles article').masonry({
+            $('#roles-container').masonry({
                 itemSelector: '.role',
                 fitWidth: true,
                 transitionDuration: 0
