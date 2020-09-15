@@ -1,26 +1,3 @@
->Info
-everyone
-
-#info
-everyone
-General information about the server
-624145982220926986
-
-#rules
-everyone
-Rules of the server. Please make sure you understand all of them.
-622463022635548672
-
-#verification
-everyone
-Information about our verification system
-622717687562371102
-
-#more
-everyone
-Additional sections that can be accessed by verified members.
-630864764003942444
-
 >General
 everyone
 
