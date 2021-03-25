@@ -4,3 +4,5 @@ The ZPD will provide a rationale for any actions taken but their decisions are f
 change channel topic.
 remove content or users deemed unpleasant or unwelcome by community members.
 take action if the rules are pushed or bent, including openly arguing over punishments or instructions.
+
+Ban appeals may be sent via email to zpd (at) zootopiadiscord (dot) com at any time.
