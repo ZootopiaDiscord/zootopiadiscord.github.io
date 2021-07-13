@@ -29,13 +29,26 @@ everyone
 This channel is for submitting your work to ZNN
 177906466643116033
 
->Hobbies
+>Art
 everyone
 
-#art
+#art-creations
 everyone
-For discussion of art
+Any content you made yourself or content that includes your character(s) goes here!
 187758250723115009
+
+#art-zootopia
+everyone
+Any non-self made Zootopia related content goes in here!
+837216088005541888
+
+#art-other
+everyone
+Any non-self made non-Zootopian content goes in here!
+837216151134011412
+
+>Hobbies
+everyone
 
 #writing
 everyone
@@ -98,10 +111,20 @@ everyone
 NSFW discussion. NSFW specific rules are pinned.
 164417080911855616
 
-#nsfw-images
+#nsfw-creations
 everyone
-NSFW images. NSFW specific rules are pinned.
+Any NSFW content you made yourself or NSFW content that includes your character(s) goes here!
+837232416023379988
+
+#nsfw-zootopia
+everyone
+Any non-self made Zootopia related NSFW content goes in here!
 339778846565859328
+
+#nsfw-other
+everyone
+Any non-self made non-Zootopian NSFW content goes in here!
+837232495681994783
 
 >Meta
 everyone
