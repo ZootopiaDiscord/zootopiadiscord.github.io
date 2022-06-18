@@ -4,12 +4,8 @@ Hustler
 Nitro boosting members of the server. Thank you so much for your contribution!
 Zootopian Police
 Moderators of the server. They will be in charge of ensuring this server remains a peaceful, constructive and enjoyable place for everyone. Temporary channels can be requested from any member of the ZPD if you wish to have a separate channel for discussion. If you find any disturbances in the chatroom, please message a member of the ZPD directly.
-Artist / Writer
-These are self-assignable roles. With these, you can ask for requests or feedback. Assign them to yourself with <command>!join writer</> or <command>!join artist</> in <channel>gazelle-backstage</>. Remove them with <command>!leave artist</> and <command>!leave writer</>.
 Event Groups
-We have roles for the different events on our server. They are all self-assignable and will result in getting notified for the selected type of event.<br><br>Currently these are:<br><ul><li><command>movie-night</></li><li><command>party-games</></li><li><command>storytime</></li><li><command>nsfw-party-games</></li><li><command>nsfw-storytime</></li></ul>
-ZNN Staff / ZNN Head
-Correspondents of the Zootopia News Network, or ZNN Staff. If you have any feedback, suggestions or content you would like to submit, please use <channel>znn</> or <channel>znn-submissions</>.
+We have roles for the different events on our server. They are all self-assignable and will result in getting notified for the selected type of event.<br><br>Currently these are:<br><ul><li><command>movie-night</></li><li><command>party-games</></li><li><command>nsfw-party-games</></li></ul>
 Role-player
 Self-assignable role to get access to the role-playing section of the server. Role-playing specific additional rules and etiquette are found in <channel>rp-info</>.
 Nighthowler

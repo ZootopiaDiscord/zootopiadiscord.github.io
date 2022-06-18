@@ -16,19 +16,6 @@ everyone
 Zootopia and related discussion only
 201189463374692352
 
->ZNN
-everyone
-
-#znn
-everyone
-Zootopia News Network related channel. All their posts appear here.
-165880283902509056
-
-#znn-submissions
-everyone
-This channel is for submitting your work to ZNN
-177906466643116033
-
 >Art
 everyone
 
@@ -55,7 +42,7 @@ everyone
 For writers and lovers of writing
 182625034487988225
 
-#media
+#movies-music-tv
 everyone
 Media discussion - TV, Movies, Music, Books, etc
 264311545008226314

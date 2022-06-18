@@ -20,8 +20,7 @@
 
   --zootopia-gradient-light: #90DA6E;
   --zootopia-gradient-dark: #4BB77A;
-  --role-color-zootopian: #1DAE86;
-  --role-color-znn: #E54D42;
+  --role-color-zootopian: #72af80;
   --role-color-rp: rgba(154, 92, 180, 1);
   --role-color-nighthowler: #0B2CFB;
   --role-color-zpd: #3C8DAE;
@@ -618,9 +617,6 @@ h1{ /* legacy, kept for old subpages */
 #role-zootopian .role-top{
   border: 1px solid var(--role-color-zootopian);
 }
-#role-znnstaffznnhead .role-top{
-  border: 1px solid var(--role-color-znn);
-}
 #role-role-player .role-top{
   border: 1px solid var(--role-color-rp);
 }
@@ -638,9 +634,6 @@ h1{ /* legacy, kept for old subpages */
 }
 #role-zootopian .role-top:before{
   background: var(--role-color-zootopian);
-}
-#role-znnstaffznnhead .role-top:before{
-  background: var(--role-color-znn);
 }
 #role-role-player .role-top:before{
   background: var(--role-color-rp);
