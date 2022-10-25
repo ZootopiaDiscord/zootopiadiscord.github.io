@@ -6,7 +6,3 @@ Judy Hopps
 Sweetie
 Collections, Event Scheduling, Anti-Spam, Anti-Raid, Miscellaneous Moderation
 We added Sweetie to help with frequent raids and spam management as a whole. Her collections have also become a loved part of the server.
-Amadeus
-
-Profiles, AniList Data, Logging, Miscellaneous Moderation
-Created specifically for our server, Amadeus offers moderation functionality the other bots are lacking. It also has extensive user profiles that help people link more profiles than Discord itself offers.
