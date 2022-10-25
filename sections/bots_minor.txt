@@ -1,4 +1,2 @@
-Rythm
-Plays music in Voice Chat
 DISBOARD
 Refreshes our DISBOARD listing
