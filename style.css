@@ -64,12 +64,6 @@ section{
 section:not(.header){
   overflow: hidden;
 }
-section:not(.header):not(.info){
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-delay: 2.1s;
-  animation-fill-mode: backwards;
-}
 .section-collapse{
   max-height: calc(var(--sectionHead-padding) * 2 + var(--sectionHead-size));
 }
@@ -159,17 +153,12 @@ h1{ /* legacy, kept for old subpages */
   
   background: #98D9FF; /* taken from image, for illusion on the edges */
 
-  animation-name: showHeader;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: backwards;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-.header:before, .header:after{
+.header:after{
   position: absolute;
   content: '';
   left: 0;
@@ -180,29 +169,16 @@ h1{ /* legacy, kept for old subpages */
   background-position:center;
   background-size:cover;
 }
-.header:before{
-  z-index: -1;
-  animation-name: changeHeaderBackground;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-}
 .header:after{
   --clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   z-index: -2;
   filter: blur(7px);
-  -webkit-clip-path: var(--clip-path);
-    clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
 }
 #zoopLogo{
   max-width: 100%;
   align-self: center;
   pointer-events: none;
-
-  animation-name: showLogo;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: backwards;
 }
 .header-link{
   --size: 23vmin;
@@ -219,11 +195,6 @@ h1{ /* legacy, kept for old subpages */
   border-radius: 50%;
   cursor: pointer;
   transition: 500ms;
-
-  animation-name: showHeaderLink;
-  animation-duration: 1s;
-  animation-delay: 2.3s;
-  animation-fill-mode: backwards;
 }
 .header > svg{
   position: absolute;
@@ -263,11 +234,6 @@ h1{ /* legacy, kept for old subpages */
   cursor: pointer;
   pointer-events: none;
   transition: padding 500ms, filter 500ms, transform 100ms;
-
-  animation-name: showHeaderLink;
-  animation-duration: 1s;
-  animation-delay: 2.3s;
-  animation-fill-mode: backwards;
 }
 .scroll-indicator:active > div{
   transform: scale(0.75);
@@ -295,12 +261,6 @@ h1{ /* legacy, kept for old subpages */
   background-position: center;
 
   transition: 500ms;
-
-  animation-name: animateScrollIndicatorArrow;
-  animation-duration: 0.6s;
-  animation-delay: 2.7s;
-  animation-timing-function: linear;
-  animation-fill-mode: backwards;
 }
 .scroll-indicator-up{
   filter: opacity(0%);
@@ -422,10 +382,6 @@ h1{ /* legacy, kept for old subpages */
 .info article p{
   align-self: end;
   margin: 0;
-
-  animation-name: showInfoParagraph;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
 }
 .info article p:first-child{
   font-weight: bold;
@@ -814,69 +770,6 @@ h1{ /* legacy, kept for old subpages */
 
 /* keyframes */
 
-@keyframes showHeader{
-  0%{
-    transform: translate(0, -25%);
-    filter: opacity(0%);
-  }
-  100%{
-    transform: translate(0, 0);
-    filter: opacity(100%);
-  }
-}
-
-@keyframes changeHeaderBackground{
-  0%{
-    filter: opacity(100%);
-  }
-  100%{
-    filter: opacity(0%);
-    display: none;
-  }
-}
-
-@keyframes showLogo{
-  0%{
-    transform: translate(0, -10%);
-    filter: opacity(0%);
-  }
-  100%{
-    transform: translate(0, 0);
-    filter: opacity(100%);
-  }
-}
-
-@keyframes showHeaderLink{
-  0%{
-    transform: scale(0.5);
-    filter: opacity(0%);
-  }
-  100%{
-    transform: scale(1);
-    filter: opacity(100%);
-  }
-}
-
-@keyframes showInfoParagraph{
-  0%{
-    transform: translate(0, -20%);
-    filter: opacity(0%);
-  }
-  100%{
-    transform: translate(0, 0);
-    filter: opacity(100%);
-  }
-}
-
-@keyframes fadeIn{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
 @keyframes modal-show{
   0%{
     filter: opacity(0%);
@@ -913,20 +806,10 @@ h1{ /* legacy, kept for old subpages */
 
 @keyframes hueRotate{
   0%{
-    filter: hue-rotate(0%);
+    filter: hue-rotate(0deg);
   }
   100%{
     filter: hue-rotate(360deg);
-  }
-}
-@keyframes animateScrollIndicatorArrow{
-  0%{
-    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-  }
-  100%{
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
@@ -936,34 +819,10 @@ h1{ /* legacy, kept for old subpages */
   :root{
     --section-collapse-time: 0ms;
   }
-  section:not(.header):not(.info){
-    animation: none;
-  }
-  .header{
-    animation: none;
-  }
-  .header:before{
-    display: none;
-  }
-  #zoopLogo{
-    animation: none;
-  }
-  .header-link{
-    animation: none;
-  }
-  .scroll-indicator{
-    animation: none;
-  }
-  .scroll-indicator div{
-    animation: none;
-  }
   .modal:before{
     animation: none;
   }
   .modal-link{
-    animation: none;
-  }
-  .info article p{
     animation: none;
   }
 
